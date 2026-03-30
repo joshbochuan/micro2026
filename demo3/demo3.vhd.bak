@@ -1,0 +1,12 @@
+use work.sevenseg_pkg.all;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity demo3 is
+    port(A : in std_logic_vector(3 down to 0);
+	      B : in std_logic_vector(3 down to 0);
+			H0 : out std_logic_vector(6 down to 0);
+			H1 : out std_logic_vector(6 down to 0));
+end demo3;
+
+architecture structure of demo3 is
+end demo3;
