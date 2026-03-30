@@ -1,0 +1,32 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity fulladd is
+	port (cin, x, y : in std_logic;
+		   s, cout : out std_logic);
+end fulladd;
+
+architecture func of fulladd is
+begin
+	s <= x xor y xor cin;
+	cout <= (x and y) or (cin and x) or (cin and y);
+end func;
+
+entity add1 is
+port (
+	A: in std_logic_vector(7 downto 0);
+	B: in std_logic_vector(7 downto 0);
+	C: in std_logic_vector(7 downto 0);
+)
+end add1;
+
+component fulladd
+	port (cin, x, y : in std_logic;
+			s, cout : out std_logic);
+end component;
+
+architecture a of add1 is
+	signal C: std_logic_vector(7 downto 0;
+begin
+
+end a;

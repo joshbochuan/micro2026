@@ -1,0 +1,23 @@
+|segmentDisplay2
+x => e2.DATAIN
+y => c2.DATAIN
+y => a1.DATAIN
+y => d1.DATAIN
+y => e1.DATAIN
+y => f1.DATAIN
+a1 <= y.DB_MAX_OUTPUT_PORT_TYPE
+b1 <= <GND>
+c1 <= <GND>
+d1 <= y.DB_MAX_OUTPUT_PORT_TYPE
+e1 <= y.DB_MAX_OUTPUT_PORT_TYPE
+f1 <= y.DB_MAX_OUTPUT_PORT_TYPE
+g1 <= <VCC>
+a2 <= <GND>
+b2 <= <GND>
+c2 <= y.DB_MAX_OUTPUT_PORT_TYPE
+d2 <= <GND>
+e2 <= x.DB_MAX_OUTPUT_PORT_TYPE
+f2 <= <VCC>
+g2 <= <GND>
+
+

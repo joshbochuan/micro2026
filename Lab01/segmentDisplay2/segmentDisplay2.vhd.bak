@@ -1,0 +1,28 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity segmentDisplay2 is
+    Port (
+        x, y : in  STD_LOGIC;
+        a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2 : out STD_LOGIC
+    );
+end segmentDisplay2;
+
+architecture BooleanLogic of segmentDisplay2 is
+begin
+	-- 03, 12
+	a1 <= x;
+	b1 <= 1;
+	c1 <= 1;
+	d1 <= x;
+	e1 <= x;
+	f1 <= x;
+	g1 <= 0;
+	a2 <= x;
+	b2 <= 1;
+	c2 <= y;
+	d2 <= 1;
+	e2 <= y;
+	f2 <= 0;
+	g2 <= 1;
+end BooleanLogic;
