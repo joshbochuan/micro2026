@@ -1,0 +1,30 @@
+|target1
+LEDR[0] << alu1:FA0.res
+LEDR[1] << alu1:FA0.cout
+SW[0] => alu1:FA0.b
+SW[1] => alu1:FA0.a
+SW[2] => alu1:FA0.cin
+SW[3] => alu1:FA0.ctrl[0]
+SW[4] => alu1:FA0.ctrl[1]
+SW[5] => alu1:FA0.ctrl[2]
+SW[6] => alu1:FA0.ctrl[3]
+
+
+|target1|alu1:FA0
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => cout.IN1
+cin => cout.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
