@@ -1,0 +1,8 @@
+Library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity target2 is
+	Port (
+		SW: in std_logic_vector(17 downto 0);
+	)
+end target2;

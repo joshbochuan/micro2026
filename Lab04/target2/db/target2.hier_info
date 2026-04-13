@@ -1,0 +1,243 @@
+|target2
+SW[0] => alu7:ALU.b[0]
+SW[1] => alu7:ALU.b[1]
+SW[2] => alu7:ALU.b[2]
+SW[3] => alu7:ALU.b[3]
+SW[4] => alu7:ALU.b[4]
+SW[5] => alu7:ALU.b[5]
+SW[6] => alu7:ALU.b[6]
+SW[7] => alu7:ALU.a[0]
+SW[8] => alu7:ALU.a[1]
+SW[9] => alu7:ALU.a[2]
+SW[10] => alu7:ALU.a[3]
+SW[11] => alu7:ALU.a[4]
+SW[12] => alu7:ALU.a[5]
+SW[13] => alu7:ALU.a[6]
+SW[14] => alu7:ALU.ctrl[0]
+SW[15] => alu7:ALU.ctrl[1]
+SW[16] => alu7:ALU.ctrl[2]
+SW[17] => alu7:ALU.ctrl[3]
+HEX0[0] <= a.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= d.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= e.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= f.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= g.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] <= d.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= d.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= e.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= f.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target2|alu7:ALU
+a[0] => alu1:GEN_ALU:0:ALU_INST.a
+a[1] => alu1:GEN_ALU:1:ALU_INST.a
+a[2] => alu1:GEN_ALU:2:ALU_INST.a
+a[3] => alu1:GEN_ALU:3:ALU_INST.a
+a[4] => alu1:GEN_ALU:4:ALU_INST.a
+a[5] => alu1:GEN_ALU:5:ALU_INST.a
+a[6] => alu1:GEN_ALU:6:ALU_INST.a
+b[0] => alu1:GEN_ALU:0:ALU_INST.b
+b[1] => alu1:GEN_ALU:1:ALU_INST.b
+b[2] => alu1:GEN_ALU:2:ALU_INST.b
+b[3] => alu1:GEN_ALU:3:ALU_INST.b
+b[4] => alu1:GEN_ALU:4:ALU_INST.b
+b[5] => alu1:GEN_ALU:5:ALU_INST.b
+b[6] => alu1:GEN_ALU:6:ALU_INST.b
+cin => alu1:GEN_ALU:0:ALU_INST.cin
+ctrl[0] => alu1:GEN_ALU:0:ALU_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:1:ALU_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:2:ALU_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:3:ALU_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:4:ALU_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:5:ALU_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:6:ALU_INST.ctrl[0]
+ctrl[1] => alu1:GEN_ALU:0:ALU_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:1:ALU_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:2:ALU_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:3:ALU_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:4:ALU_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:5:ALU_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:6:ALU_INST.ctrl[1]
+ctrl[2] => alu1:GEN_ALU:0:ALU_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:1:ALU_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:2:ALU_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:3:ALU_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:4:ALU_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:5:ALU_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:6:ALU_INST.ctrl[2]
+ctrl[3] => alu1:GEN_ALU:0:ALU_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:1:ALU_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:2:ALU_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:3:ALU_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:4:ALU_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:5:ALU_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:6:ALU_INST.ctrl[3]
+res[0] <= alu1:GEN_ALU:0:ALU_INST.res
+res[1] <= alu1:GEN_ALU:1:ALU_INST.res
+res[2] <= alu1:GEN_ALU:2:ALU_INST.res
+res[3] <= alu1:GEN_ALU:3:ALU_INST.res
+res[4] <= alu1:GEN_ALU:4:ALU_INST.res
+res[5] <= alu1:GEN_ALU:5:ALU_INST.res
+res[6] <= alu1:GEN_ALU:6:ALU_INST.res
+cout <= alu1:GEN_ALU:6:ALU_INST.cout
+
+
+|target2|alu7:ALU|alu1:\GEN_ALU:0:ALU_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => cout.IN1
+cin => cout.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target2|alu7:ALU|alu1:\GEN_ALU:1:ALU_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => cout.IN1
+cin => cout.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target2|alu7:ALU|alu1:\GEN_ALU:2:ALU_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => cout.IN1
+cin => cout.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target2|alu7:ALU|alu1:\GEN_ALU:3:ALU_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => cout.IN1
+cin => cout.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target2|alu7:ALU|alu1:\GEN_ALU:4:ALU_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => cout.IN1
+cin => cout.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target2|alu7:ALU|alu1:\GEN_ALU:5:ALU_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => cout.IN1
+cin => cout.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target2|alu7:ALU|alu1:\GEN_ALU:6:ALU_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => cout.IN1
+cin => cout.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+
+
