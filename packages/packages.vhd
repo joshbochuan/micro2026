@@ -3,6 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use work.all; -- uses all packages available in this directory
 use work.adder_pkg.all;
 use work.sevenseg_pkg.all;
+use work.alu_pkg.all;
 
 entity packages is
 	port (

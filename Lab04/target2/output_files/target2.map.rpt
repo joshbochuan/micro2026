@@ -1,5 +1,5 @@
 Analysis & Synthesis report for target2
-Mon Apr 13 18:04:32 2026
+Wed Apr 15 09:31:02 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -14,17 +14,18 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:6:ALU_INST"
- 10. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:5:ALU_INST"
- 11. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:4:ALU_INST"
- 12. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:3:ALU_INST"
- 13. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:2:ALU_INST"
- 14. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:1:ALU_INST"
- 15. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:0:ALU_INST"
- 16. Port Connectivity Checks: "alu7:ALU"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:7:ALU_LAST:ALU_LAST_INST"
+ 10. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:6:ALU_MSB:ALU_MSB_INST"
+ 11. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 12. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 13. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 14. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 15. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 16. Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST"
+ 17. Port Connectivity Checks: "alu7:ALU"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -51,13 +52,13 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 13 18:04:32 2026           ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 15 09:31:02 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; target2                                         ;
 ; Top-level Entity Name              ; target2                                         ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 51                                              ;
-;     Total combinational functions  ; 51                                              ;
+; Total logic elements               ; 54                                              ;
+;     Total combinational functions  ; 54                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 32                                              ;
@@ -186,16 +187,16 @@ on the Quartus Prime software download page.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 51           ;
+; Estimated Total logic elements              ; 54           ;
 ;                                             ;              ;
-; Total combinational functions               ; 51           ;
+; Total combinational functions               ; 54           ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 35           ;
-;     -- 3 input functions                    ; 7            ;
-;     -- <=2 input functions                  ; 9            ;
+;     -- 4 input functions                    ; 40           ;
+;     -- 3 input functions                    ; 8            ;
+;     -- <=2 input functions                  ; 6            ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 51           ;
+;     -- normal mode                          ; 54           ;
 ;     -- arithmetic mode                      ; 0            ;
 ;                                             ;              ;
 ; Total registers                             ; 0            ;
@@ -207,27 +208,28 @@ on the Quartus Prime software download page.
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; SW[17]~input ;
-; Maximum fan-out                             ; 18           ;
-; Total fan-out                               ; 225          ;
-; Average fan-out                             ; 1.96         ;
+; Maximum fan-out                             ; 19           ;
+; Total fan-out                               ; 242          ;
+; Average fan-out                             ; 2.05         ;
 +---------------------------------------------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
-+----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name ; Library Name ;
-+----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+-------------+--------------+
-; |target2                         ; 51 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |target2                                   ; target2     ; work         ;
-;    |alu7:ALU|                    ; 37 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU                          ; alu7        ; work         ;
-;       |alu1:\GEN_ALU:0:ALU_INST| ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:0:ALU_INST ; alu1        ; work         ;
-;       |alu1:\GEN_ALU:1:ALU_INST| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:1:ALU_INST ; alu1        ; work         ;
-;       |alu1:\GEN_ALU:2:ALU_INST| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:2:ALU_INST ; alu1        ; work         ;
-;       |alu1:\GEN_ALU:3:ALU_INST| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:3:ALU_INST ; alu1        ; work         ;
-;       |alu1:\GEN_ALU:4:ALU_INST| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:4:ALU_INST ; alu1        ; work         ;
-;       |alu1:\GEN_ALU:5:ALU_INST| ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:5:ALU_INST ; alu1        ; work         ;
-;       |alu1:\GEN_ALU:6:ALU_INST| ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:6:ALU_INST ; alu1        ; work         ;
-+----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                          ; Entity Name ; Library Name ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+-------------+--------------+
+; |target2                                           ; 54 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |target2                                                     ; target2     ; work         ;
+;    |alu7:ALU|                                      ; 40 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU                                            ; alu7        ; work         ;
+;       |alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST       ; alu1        ; work         ;
+;       |alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
+;       |alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
+;       |alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
+;       |alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
+;       |alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
+;       |alu1:\GEN_ALU:6:ALU_MSB:ALU_MSB_INST|       ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:6:ALU_MSB:ALU_MSB_INST       ; alu1        ; work         ;
+;       |alu1:\GEN_ALU:7:ALU_LAST:ALU_LAST_INST|     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target2|alu7:ALU|alu1:\GEN_ALU:7:ALU_LAST:ALU_LAST_INST     ; alu1        ; work         ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -246,84 +248,101 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:6:ALU_INST"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; less ; Input  ; Info     ; Stuck at GND                                                                        ;
-; set  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:7:ALU_LAST:ALU_LAST_INST"                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; set      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:5:ALU_INST"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; less ; Input  ; Info     ; Stuck at GND                                                                        ;
-; set  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:6:ALU_MSB:ALU_MSB_INST" ;
++------+-------+----------+-------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                         ;
++------+-------+----------+-------------------------------------------------+
+; less ; Input ; Info     ; Stuck at GND                                    ;
++------+-------+----------+-------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:4:ALU_INST"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; less ; Input  ; Info     ; Stuck at GND                                                                        ;
-; set  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST"                                    ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; less     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; set      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:3:ALU_INST"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; less ; Input  ; Info     ; Stuck at GND                                                                        ;
-; set  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST"                                    ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; less     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; set      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:2:ALU_INST"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; less ; Input  ; Info     ; Stuck at GND                                                                        ;
-; set  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST"                                    ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; less     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; set      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:1:ALU_INST"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; less ; Input  ; Info     ; Stuck at GND                                                                        ;
-; set  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST"                                    ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; less     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; set      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:0:ALU_INST"                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; less ; Input  ; Info     ; Stuck at GND                                                                        ;
-; set  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST"                                    ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; less     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; set      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu7:ALU"                                                                           ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu7:ALU|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST"                                          ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; less     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; res      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; set      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu7:ALU"                                                                               ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -332,15 +351,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 32                          ;
-; cycloneiii_lcell_comb ; 53                          ;
-;     normal            ; 53                          ;
+; cycloneiii_lcell_comb ; 56                          ;
+;     normal            ; 56                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 35                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 7.37                        ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 8.39                        ;
 +-----------------------+-----------------------------+
 
 
@@ -359,7 +378,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Mon Apr 13 18:04:23 2026
+    Info: Processing started: Wed Apr 15 09:30:52 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off target2 -c target2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
@@ -371,13 +390,13 @@ Info (12021): Found 2 design units, including 0 entities, in source file sevense
     Info (12022): Found design unit 2: sevenseg_pkg-body File: C:/Users/User/micro2026/Lab04/target2/sevenseg_pkg.vhd Line: 10
 Info (12021): Found 5 design units, including 2 entities, in source file alu_pkg.vhd
     Info (12022): Found design unit 1: alu_pkg File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 4
-    Info (12022): Found design unit 2: alu1-structural File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 47
-    Info (12022): Found design unit 3: alu7-structural File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 82
-    Info (12023): Found entity 1: alu1 File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 34
-    Info (12023): Found entity 2: alu7 File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 71
+    Info (12022): Found design unit 2: alu1-structural File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 49
+    Info (12022): Found design unit 3: alu7-structural File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 87
+    Info (12023): Found entity 1: alu1 File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 35
+    Info (12023): Found entity 2: alu7 File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 76
 Info (12127): Elaborating entity "target2" for the top level hierarchy
 Info (12128): Elaborating entity "alu7" for hierarchy "alu7:ALU" File: C:/Users/User/micro2026/Lab04/target2/target2.vhd Line: 23
-Info (12128): Elaborating entity "alu1" for hierarchy "alu7:ALU|alu1:\GEN_ALU:0:ALU_INST" File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 87
+Info (12128): Elaborating entity "alu1" for hierarchy "alu7:ALU|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST" File: C:/Users/User/micro2026/Lab04/target2/alu_pkg.vhd Line: 95
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "packages" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity packages -section_id Top was ignored
@@ -406,14 +425,14 @@ Warning (20013): Ignored 24 assignments for entity "packages" -- entity does not
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity packages -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 83 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 51 logic cells
+    Info (21061): Implemented 54 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
     Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Mon Apr 13 18:04:32 2026
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Processing ended: Wed Apr 15 09:31:02 2026
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:25
 
 

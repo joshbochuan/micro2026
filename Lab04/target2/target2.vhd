@@ -23,10 +23,10 @@ begin
 	ALU: alu7 port map (
 		a => a,
 		b => b,
-		cin => '0',
 		ctrl => ctrl,
 		res => res,
-		cout => open
+		cout => open,
+		overflow => open
 	);
 	HEX0 <= hex_to_7seg(res(3 downto 0));
 	HEX1 <= hex_to_7seg("0"&res(6 downto 4));

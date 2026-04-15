@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition"
 
-// DATE "04/13/2026 18:04:54"
+// DATE "04/15/2026 09:31:26"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -58,8 +58,8 @@ output 	[6:0] HEX1;
 // SW[3]	=>  Location: PIN_AD27,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SW[9]	=>  Location: PIN_AB25,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SW[8]	=>  Location: PIN_AC25,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// SW[7]	=>  Location: PIN_AB26,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SW[0]	=>  Location: PIN_AB28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SW[7]	=>  Location: PIN_AB26,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SW[1]	=>  Location: PIN_AC28,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SW[2]	=>  Location: PIN_AC27,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SW[14]	=>  Location: PIN_AA23,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -68,8 +68,8 @@ output 	[6:0] HEX1;
 // SW[11]	=>  Location: PIN_AB24,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SW[4]	=>  Location: PIN_AB27,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SW[5]	=>  Location: PIN_AC26,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// SW[6]	=>  Location: PIN_AD26,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // SW[13]	=>  Location: PIN_AA24,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SW[6]	=>  Location: PIN_AD26,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -97,39 +97,53 @@ wire \HEX1[3]~output_o ;
 wire \HEX1[4]~output_o ;
 wire \HEX1[5]~output_o ;
 wire \HEX1[6]~output_o ;
-wire \SW[17]~input_o ;
-wire \SW[2]~input_o ;
+wire \SW[14]~input_o ;
 wire \SW[16]~input_o ;
-wire \ALU|GEN_ALU:2:ALU_INST|Bnegate~combout ;
+wire \SW[3]~input_o ;
+wire \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ;
+wire \SW[17]~input_o ;
 wire \SW[1]~input_o ;
-wire \ALU|GEN_ALU:1:ALU_INST|Bnegate~combout ;
+wire \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ;
+wire \SW[8]~input_o ;
 wire \SW[7]~input_o ;
 wire \SW[0]~input_o ;
-wire \ALU|GEN_ALU:0:ALU_INST|AandB~combout ;
-wire \SW[8]~input_o ;
-wire \ALU|GEN_ALU:1:ALU_INST|cout~0_combout ;
+wire \ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0_combout ;
+wire \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ;
+wire \SW[2]~input_o ;
+wire \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ;
 wire \SW[9]~input_o ;
-wire \ALU|GEN_ALU:2:ALU_INST|set~combout ;
-wire \SW[15]~input_o ;
-wire \SW[14]~input_o ;
-wire \ALU|GEN_ALU:2:ALU_INST|res~0_combout ;
-wire \ALU|GEN_ALU:2:ALU_INST|res~1_combout ;
-wire \ALU|GEN_ALU:2:ALU_INST|res~2_combout ;
-wire \ALU|GEN_ALU:0:ALU_INST|Bnegate~combout ;
-wire \ALU|GEN_ALU:0:ALU_INST|Ainvert~combout ;
-wire \ALU|GEN_ALU:0:ALU_INST|res~0_combout ;
-wire \SW[3]~input_o ;
-wire \ALU|GEN_ALU:3:ALU_INST|res~1_combout ;
-wire \ALU|GEN_ALU:3:ALU_INST|Bnegate~combout ;
+wire \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ;
 wire \SW[10]~input_o ;
-wire \ALU|GEN_ALU:2:ALU_INST|cout~0_combout ;
-wire \ALU|GEN_ALU:3:ALU_INST|set~combout ;
-wire \ALU|GEN_ALU:3:ALU_INST|res~0_combout ;
-wire \ALU|GEN_ALU:3:ALU_INST|res~2_combout ;
-wire \ALU|GEN_ALU:1:ALU_INST|res~1_combout ;
-wire \ALU|GEN_ALU:1:ALU_INST|Ainvert~combout ;
-wire \ALU|GEN_ALU:1:ALU_INST|res~0_combout ;
-wire \ALU|GEN_ALU:1:ALU_INST|res~2_combout ;
+wire \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ;
+wire \SW[15]~input_o ;
+wire \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ;
+wire \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ;
+wire \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ;
+wire \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ;
+wire \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ;
+wire \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ;
+wire \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ;
+wire \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ;
+wire \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ;
+wire \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ;
+wire \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ;
+wire \SW[13]~input_o ;
+wire \SW[6]~input_o ;
+wire \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|Bnegate~combout ;
+wire \SW[5]~input_o ;
+wire \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ;
+wire \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ;
+wire \SW[4]~input_o ;
+wire \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ;
+wire \SW[11]~input_o ;
+wire \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ;
+wire \SW[12]~input_o ;
+wire \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ;
+wire \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|set~combout ;
+wire \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~2_combout ;
+wire \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~3_combout ;
+wire \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~5_combout ;
+wire \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ;
 wire \a~0_combout ;
 wire \b~0_combout ;
 wire \c~0_combout ;
@@ -137,28 +151,17 @@ wire \d~0_combout ;
 wire \e~0_combout ;
 wire \f~0_combout ;
 wire \g~0_combout ;
-wire \SW[13]~input_o ;
-wire \ALU|GEN_ALU:3:ALU_INST|cout~0_combout ;
-wire \SW[4]~input_o ;
-wire \ALU|GEN_ALU:4:ALU_INST|Bnegate~combout ;
-wire \SW[11]~input_o ;
-wire \ALU|GEN_ALU:4:ALU_INST|cout~0_combout ;
-wire \SW[12]~input_o ;
-wire \SW[5]~input_o ;
-wire \ALU|GEN_ALU:5:ALU_INST|Bnegate~combout ;
-wire \ALU|GEN_ALU:6:ALU_INST|res~1_combout ;
-wire \ALU|GEN_ALU:6:ALU_INST|res~2_combout ;
-wire \SW[6]~input_o ;
-wire \ALU|GEN_ALU:6:ALU_INST|res~0_combout ;
-wire \ALU|GEN_ALU:6:ALU_INST|res~3_combout ;
-wire \ALU|GEN_ALU:5:ALU_INST|res~1_combout ;
-wire \ALU|GEN_ALU:5:ALU_INST|set~combout ;
-wire \ALU|GEN_ALU:5:ALU_INST|res~0_combout ;
-wire \ALU|GEN_ALU:5:ALU_INST|res~2_combout ;
-wire \ALU|GEN_ALU:4:ALU_INST|res~1_combout ;
-wire \ALU|GEN_ALU:4:ALU_INST|set~combout ;
-wire \ALU|GEN_ALU:4:ALU_INST|res~0_combout ;
-wire \ALU|GEN_ALU:4:ALU_INST|res~2_combout ;
+wire \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~1_combout ;
+wire \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~0_combout ;
+wire \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout ;
+wire \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ;
+wire \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ;
+wire \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ;
+wire \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ;
+wire \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ;
+wire \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ;
+wire \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ;
+wire \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ;
 wire \d~1_combout ;
 wire \b~1_combout ;
 wire \c~1_combout ;
@@ -355,24 +358,14 @@ defparam \HEX1[6]~output .bus_hold = "false";
 defparam \HEX1[6]~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X115_Y14_N8
-cycloneive_io_ibuf \SW[17]~input (
-	.i(SW[17]),
+// Location: IOIBUF_X115_Y10_N8
+cycloneive_io_ibuf \SW[14]~input (
+	.i(SW[14]),
 	.ibar(gnd),
-	.o(\SW[17]~input_o ));
+	.o(\SW[14]~input_o ));
 // synopsys translate_off
-defparam \SW[17]~input .bus_hold = "false";
-defparam \SW[17]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X115_Y15_N8
-cycloneive_io_ibuf \SW[2]~input (
-	.i(SW[2]),
-	.ibar(gnd),
-	.o(\SW[2]~input_o ));
-// synopsys translate_off
-defparam \SW[2]~input .bus_hold = "false";
-defparam \SW[2]~input .simulate_z_as = "z";
+defparam \SW[14]~input .bus_hold = "false";
+defparam \SW[14]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X115_Y13_N1
@@ -385,21 +378,41 @@ defparam \SW[16]~input .bus_hold = "false";
 defparam \SW[16]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y17_N18
-cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_INST|Bnegate (
-// Equation(s):
-// \ALU|GEN_ALU:2:ALU_INST|Bnegate~combout  = \SW[2]~input_o  $ (\SW[16]~input_o )
+// Location: IOIBUF_X115_Y13_N8
+cycloneive_io_ibuf \SW[3]~input (
+	.i(SW[3]),
+	.ibar(gnd),
+	.o(\SW[3]~input_o ));
+// synopsys translate_off
+defparam \SW[3]~input .bus_hold = "false";
+defparam \SW[3]~input .simulate_z_as = "z";
+// synopsys translate_on
 
-	.dataa(gnd),
-	.datab(\SW[2]~input_o ),
-	.datac(\SW[16]~input_o ),
+// Location: LCCOMB_X114_Y15_N0
+cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate (
+// Equation(s):
+// \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  = \SW[16]~input_o  $ (\SW[3]~input_o )
+
+	.dataa(\SW[16]~input_o ),
+	.datab(gnd),
+	.datac(\SW[3]~input_o ),
 	.datad(gnd),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:2:ALU_INST|Bnegate~combout ),
+	.combout(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:2:ALU_INST|Bnegate .lut_mask = 16'h3C3C;
-defparam \ALU|GEN_ALU:2:ALU_INST|Bnegate .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate .lut_mask = 16'h5A5A;
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X115_Y14_N8
+cycloneive_io_ibuf \SW[17]~input (
+	.i(SW[17]),
+	.ibar(gnd),
+	.o(\SW[17]~input_o ));
+// synopsys translate_off
+defparam \SW[17]~input .bus_hold = "false";
+defparam \SW[17]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X115_Y14_N1
@@ -412,21 +425,31 @@ defparam \SW[1]~input .bus_hold = "false";
 defparam \SW[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y15_N26
-cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_INST|Bnegate (
+// Location: LCCOMB_X114_Y18_N8
+cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate (
 // Equation(s):
-// \ALU|GEN_ALU:1:ALU_INST|Bnegate~combout  = \SW[16]~input_o  $ (\SW[1]~input_o )
+// \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  = \SW[1]~input_o  $ (\SW[16]~input_o )
 
 	.dataa(gnd),
-	.datab(gnd),
+	.datab(\SW[1]~input_o ),
 	.datac(\SW[16]~input_o ),
-	.datad(\SW[1]~input_o ),
+	.datad(gnd),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:1:ALU_INST|Bnegate~combout ),
+	.combout(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:1:ALU_INST|Bnegate .lut_mask = 16'h0FF0;
-defparam \ALU|GEN_ALU:1:ALU_INST|Bnegate .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate .lut_mask = 16'h3C3C;
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X115_Y4_N22
+cycloneive_io_ibuf \SW[8]~input (
+	.i(SW[8]),
+	.ibar(gnd),
+	.o(\SW[8]~input_o ));
+// synopsys translate_off
+defparam \SW[8]~input .bus_hold = "false";
+defparam \SW[8]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X115_Y15_N1
@@ -449,49 +472,66 @@ defparam \SW[0]~input .bus_hold = "false";
 defparam \SW[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y15_N24
-cycloneive_lcell_comb \ALU|GEN_ALU:0:ALU_INST|AandB (
+// Location: LCCOMB_X114_Y14_N0
+cycloneive_lcell_comb \ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0 (
 // Equation(s):
-// \ALU|GEN_ALU:0:ALU_INST|AandB~combout  = (\SW[16]~input_o  & (!\SW[0]~input_o  & (\SW[7]~input_o  $ (\SW[17]~input_o )))) # (!\SW[16]~input_o  & (\SW[0]~input_o  & (\SW[7]~input_o  $ (\SW[17]~input_o ))))
+// \ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0_combout  = (\SW[0]~input_o  & (\SW[17]~input_o  $ ((\SW[7]~input_o )))) # (!\SW[0]~input_o  & (((\SW[16]~input_o ))))
 
-	.dataa(\SW[16]~input_o ),
+	.dataa(\SW[17]~input_o ),
 	.datab(\SW[7]~input_o ),
-	.datac(\SW[17]~input_o ),
+	.datac(\SW[16]~input_o ),
 	.datad(\SW[0]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:0:ALU_INST|AandB~combout ),
+	.combout(\ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:0:ALU_INST|AandB .lut_mask = 16'h1428;
-defparam \ALU|GEN_ALU:0:ALU_INST|AandB .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0 .lut_mask = 16'h66F0;
+defparam \ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: IOIBUF_X115_Y4_N22
-cycloneive_io_ibuf \SW[8]~input (
-	.i(SW[8]),
-	.ibar(gnd),
-	.o(\SW[8]~input_o ));
-// synopsys translate_off
-defparam \SW[8]~input .bus_hold = "false";
-defparam \SW[8]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y15_N28
-cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_INST|cout~0 (
+// Location: LCCOMB_X114_Y15_N2
+cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 (
 // Equation(s):
-// \ALU|GEN_ALU:1:ALU_INST|cout~0_combout  = (\ALU|GEN_ALU:1:ALU_INST|Bnegate~combout  & ((\ALU|GEN_ALU:0:ALU_INST|AandB~combout ) # (\SW[17]~input_o  $ (\SW[8]~input_o )))) # (!\ALU|GEN_ALU:1:ALU_INST|Bnegate~combout  & 
-// (\ALU|GEN_ALU:0:ALU_INST|AandB~combout  & (\SW[17]~input_o  $ (\SW[8]~input_o ))))
+// \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  = (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & ((\ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0_combout ) # (\SW[8]~input_o  $ (\SW[17]~input_o )))) # 
+// (!\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & (\ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0_combout  & (\SW[8]~input_o  $ (\SW[17]~input_o ))))
 
-	.dataa(\ALU|GEN_ALU:1:ALU_INST|Bnegate~combout ),
-	.datab(\ALU|GEN_ALU:0:ALU_INST|AandB~combout ),
-	.datac(\SW[17]~input_o ),
-	.datad(\SW[8]~input_o ),
+	.dataa(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datab(\SW[8]~input_o ),
+	.datac(\ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0_combout ),
+	.datad(\SW[17]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:1:ALU_INST|cout~0_combout ),
+	.combout(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:1:ALU_INST|cout~0 .lut_mask = 16'h8EE8;
-defparam \ALU|GEN_ALU:1:ALU_INST|cout~0 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 .lut_mask = 16'hB2E8;
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X115_Y15_N8
+cycloneive_io_ibuf \SW[2]~input (
+	.i(SW[2]),
+	.ibar(gnd),
+	.o(\SW[2]~input_o ));
+// synopsys translate_off
+defparam \SW[2]~input .bus_hold = "false";
+defparam \SW[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y15_N12
+cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate (
+// Equation(s):
+// \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  = \SW[16]~input_o  $ (\SW[2]~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\SW[16]~input_o ),
+	.datad(\SW[2]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate .lut_mask = 16'h0FF0;
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: IOIBUF_X115_Y16_N8
@@ -504,188 +544,22 @@ defparam \SW[9]~input .bus_hold = "false";
 defparam \SW[9]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y17_N6
-cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_INST|set (
+// Location: LCCOMB_X114_Y15_N30
+cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 (
 // Equation(s):
-// \ALU|GEN_ALU:2:ALU_INST|set~combout  = \SW[17]~input_o  $ (\ALU|GEN_ALU:2:ALU_INST|Bnegate~combout  $ (\ALU|GEN_ALU:1:ALU_INST|cout~0_combout  $ (\SW[9]~input_o )))
+// \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  = (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  & ((\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ) # (\SW[17]~input_o  $ (\SW[9]~input_o )))) # 
+// (!\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  & (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & (\SW[17]~input_o  $ (\SW[9]~input_o ))))
 
 	.dataa(\SW[17]~input_o ),
-	.datab(\ALU|GEN_ALU:2:ALU_INST|Bnegate~combout ),
-	.datac(\ALU|GEN_ALU:1:ALU_INST|cout~0_combout ),
+	.datab(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
 	.datad(\SW[9]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:2:ALU_INST|set~combout ),
+	.combout(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:2:ALU_INST|set .lut_mask = 16'h6996;
-defparam \ALU|GEN_ALU:2:ALU_INST|set .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: IOIBUF_X115_Y6_N15
-cycloneive_io_ibuf \SW[15]~input (
-	.i(SW[15]),
-	.ibar(gnd),
-	.o(\SW[15]~input_o ));
-// synopsys translate_off
-defparam \SW[15]~input .bus_hold = "false";
-defparam \SW[15]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X115_Y10_N8
-cycloneive_io_ibuf \SW[14]~input (
-	.i(SW[14]),
-	.ibar(gnd),
-	.o(\SW[14]~input_o ));
-// synopsys translate_off
-defparam \SW[14]~input .bus_hold = "false";
-defparam \SW[14]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y17_N16
-cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_INST|res~0 (
-// Equation(s):
-// \ALU|GEN_ALU:2:ALU_INST|res~0_combout  = (\SW[15]~input_o  & (\ALU|GEN_ALU:2:ALU_INST|set~combout  & ((!\SW[14]~input_o )))) # (!\SW[15]~input_o  & (((\ALU|GEN_ALU:2:ALU_INST|Bnegate~combout  & \SW[14]~input_o ))))
-
-	.dataa(\ALU|GEN_ALU:2:ALU_INST|set~combout ),
-	.datab(\SW[15]~input_o ),
-	.datac(\ALU|GEN_ALU:2:ALU_INST|Bnegate~combout ),
-	.datad(\SW[14]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:2:ALU_INST|res~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:2:ALU_INST|res~0 .lut_mask = 16'h3088;
-defparam \ALU|GEN_ALU:2:ALU_INST|res~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y17_N26
-cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_INST|res~1 (
-// Equation(s):
-// \ALU|GEN_ALU:2:ALU_INST|res~1_combout  = (!\SW[15]~input_o  & ((\SW[14]~input_o ) # (\SW[16]~input_o  $ (\SW[2]~input_o ))))
-
-	.dataa(\SW[14]~input_o ),
-	.datab(\SW[16]~input_o ),
-	.datac(\SW[2]~input_o ),
-	.datad(\SW[15]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:2:ALU_INST|res~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:2:ALU_INST|res~1 .lut_mask = 16'h00BE;
-defparam \ALU|GEN_ALU:2:ALU_INST|res~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y17_N28
-cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_INST|res~2 (
-// Equation(s):
-// \ALU|GEN_ALU:2:ALU_INST|res~2_combout  = (\ALU|GEN_ALU:2:ALU_INST|res~0_combout ) # ((\ALU|GEN_ALU:2:ALU_INST|res~1_combout  & (\SW[17]~input_o  $ (\SW[9]~input_o ))))
-
-	.dataa(\SW[17]~input_o ),
-	.datab(\ALU|GEN_ALU:2:ALU_INST|res~0_combout ),
-	.datac(\ALU|GEN_ALU:2:ALU_INST|res~1_combout ),
-	.datad(\SW[9]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:2:ALU_INST|res~2_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:2:ALU_INST|res~2 .lut_mask = 16'hDCEC;
-defparam \ALU|GEN_ALU:2:ALU_INST|res~2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y15_N16
-cycloneive_lcell_comb \ALU|GEN_ALU:0:ALU_INST|Bnegate (
-// Equation(s):
-// \ALU|GEN_ALU:0:ALU_INST|Bnegate~combout  = \SW[16]~input_o  $ (\SW[0]~input_o )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\SW[16]~input_o ),
-	.datad(\SW[0]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:0:ALU_INST|Bnegate~combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:0:ALU_INST|Bnegate .lut_mask = 16'h0FF0;
-defparam \ALU|GEN_ALU:0:ALU_INST|Bnegate .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y15_N6
-cycloneive_lcell_comb \ALU|GEN_ALU:0:ALU_INST|Ainvert (
-// Equation(s):
-// \ALU|GEN_ALU:0:ALU_INST|Ainvert~combout  = \SW[17]~input_o  $ (\SW[7]~input_o )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\SW[17]~input_o ),
-	.datad(\SW[7]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:0:ALU_INST|Ainvert~combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:0:ALU_INST|Ainvert .lut_mask = 16'h0FF0;
-defparam \ALU|GEN_ALU:0:ALU_INST|Ainvert .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y15_N10
-cycloneive_lcell_comb \ALU|GEN_ALU:0:ALU_INST|res~0 (
-// Equation(s):
-// \ALU|GEN_ALU:0:ALU_INST|res~0_combout  = (\ALU|GEN_ALU:0:ALU_INST|Bnegate~combout  & (\SW[15]~input_o  $ (((\ALU|GEN_ALU:0:ALU_INST|Ainvert~combout ) # (\SW[14]~input_o ))))) # (!\ALU|GEN_ALU:0:ALU_INST|Bnegate~combout  & 
-// (\ALU|GEN_ALU:0:ALU_INST|Ainvert~combout  & (\SW[15]~input_o  $ (\SW[14]~input_o ))))
-
-	.dataa(\SW[15]~input_o ),
-	.datab(\ALU|GEN_ALU:0:ALU_INST|Bnegate~combout ),
-	.datac(\ALU|GEN_ALU:0:ALU_INST|Ainvert~combout ),
-	.datad(\SW[14]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:0:ALU_INST|res~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:0:ALU_INST|res~0 .lut_mask = 16'h5468;
-defparam \ALU|GEN_ALU:0:ALU_INST|res~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: IOIBUF_X115_Y13_N8
-cycloneive_io_ibuf \SW[3]~input (
-	.i(SW[3]),
-	.ibar(gnd),
-	.o(\SW[3]~input_o ));
-// synopsys translate_off
-defparam \SW[3]~input .bus_hold = "false";
-defparam \SW[3]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y17_N10
-cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_INST|res~1 (
-// Equation(s):
-// \ALU|GEN_ALU:3:ALU_INST|res~1_combout  = (!\SW[15]~input_o  & ((\SW[14]~input_o ) # (\SW[16]~input_o  $ (\SW[3]~input_o ))))
-
-	.dataa(\SW[14]~input_o ),
-	.datab(\SW[16]~input_o ),
-	.datac(\SW[3]~input_o ),
-	.datad(\SW[15]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:3:ALU_INST|res~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:3:ALU_INST|res~1 .lut_mask = 16'h00BE;
-defparam \ALU|GEN_ALU:3:ALU_INST|res~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y17_N24
-cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_INST|Bnegate (
-// Equation(s):
-// \ALU|GEN_ALU:3:ALU_INST|Bnegate~combout  = \SW[3]~input_o  $ (\SW[16]~input_o )
-
-	.dataa(gnd),
-	.datab(\SW[3]~input_o ),
-	.datac(\SW[16]~input_o ),
-	.datad(gnd),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:3:ALU_INST|Bnegate~combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:3:ALU_INST|Bnegate .lut_mask = 16'h3C3C;
-defparam \ALU|GEN_ALU:3:ALU_INST|Bnegate .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 .lut_mask = 16'hD4E8;
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: IOIBUF_X115_Y4_N15
@@ -698,268 +572,221 @@ defparam \SW[10]~input .bus_hold = "false";
 defparam \SW[10]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y17_N4
-cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_INST|cout~0 (
+// Location: LCCOMB_X114_Y15_N8
+cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|set (
 // Equation(s):
-// \ALU|GEN_ALU:2:ALU_INST|cout~0_combout  = (\ALU|GEN_ALU:2:ALU_INST|Bnegate~combout  & ((\ALU|GEN_ALU:1:ALU_INST|cout~0_combout ) # (\SW[17]~input_o  $ (\SW[9]~input_o )))) # (!\ALU|GEN_ALU:2:ALU_INST|Bnegate~combout  & 
-// (\ALU|GEN_ALU:1:ALU_INST|cout~0_combout  & (\SW[17]~input_o  $ (\SW[9]~input_o ))))
+// \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout  = \SW[17]~input_o  $ (\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  $ (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  $ (\SW[10]~input_o )))
 
 	.dataa(\SW[17]~input_o ),
-	.datab(\ALU|GEN_ALU:2:ALU_INST|Bnegate~combout ),
-	.datac(\ALU|GEN_ALU:1:ALU_INST|cout~0_combout ),
-	.datad(\SW[9]~input_o ),
+	.datab(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
+	.datad(\SW[10]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:2:ALU_INST|cout~0_combout ),
+	.combout(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:2:ALU_INST|cout~0 .lut_mask = 16'hD4E8;
-defparam \ALU|GEN_ALU:2:ALU_INST|cout~0 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|set .lut_mask = 16'h6996;
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|set .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y17_N22
-cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_INST|set (
-// Equation(s):
-// \ALU|GEN_ALU:3:ALU_INST|set~combout  = \SW[10]~input_o  $ (\ALU|GEN_ALU:3:ALU_INST|Bnegate~combout  $ (\ALU|GEN_ALU:2:ALU_INST|cout~0_combout  $ (\SW[17]~input_o )))
-
-	.dataa(\SW[10]~input_o ),
-	.datab(\ALU|GEN_ALU:3:ALU_INST|Bnegate~combout ),
-	.datac(\ALU|GEN_ALU:2:ALU_INST|cout~0_combout ),
-	.datad(\SW[17]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:3:ALU_INST|set~combout ),
-	.cout());
+// Location: IOIBUF_X115_Y6_N15
+cycloneive_io_ibuf \SW[15]~input (
+	.i(SW[15]),
+	.ibar(gnd),
+	.o(\SW[15]~input_o ));
 // synopsys translate_off
-defparam \ALU|GEN_ALU:3:ALU_INST|set .lut_mask = 16'h6996;
-defparam \ALU|GEN_ALU:3:ALU_INST|set .sum_lutc_input = "datac";
+defparam \SW[15]~input .bus_hold = "false";
+defparam \SW[15]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y17_N8
-cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_INST|res~0 (
+// Location: LCCOMB_X114_Y15_N10
+cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 (
 // Equation(s):
-// \ALU|GEN_ALU:3:ALU_INST|res~0_combout  = (\SW[14]~input_o  & (\ALU|GEN_ALU:3:ALU_INST|Bnegate~combout  & ((!\SW[15]~input_o )))) # (!\SW[14]~input_o  & (((\ALU|GEN_ALU:3:ALU_INST|set~combout  & \SW[15]~input_o ))))
+// \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout  = (\SW[14]~input_o  & (\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & ((!\SW[15]~input_o )))) # (!\SW[14]~input_o  & (((\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout  & 
+// \SW[15]~input_o ))))
 
 	.dataa(\SW[14]~input_o ),
-	.datab(\ALU|GEN_ALU:3:ALU_INST|Bnegate~combout ),
-	.datac(\ALU|GEN_ALU:3:ALU_INST|set~combout ),
+	.datab(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datac(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ),
 	.datad(\SW[15]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:3:ALU_INST|res~0_combout ),
+	.combout(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:3:ALU_INST|res~0 .lut_mask = 16'h5088;
-defparam \ALU|GEN_ALU:3:ALU_INST|res~0 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 .lut_mask = 16'h5088;
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y17_N12
-cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_INST|res~2 (
+// Location: LCCOMB_X114_Y15_N4
+cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 (
 // Equation(s):
-// \ALU|GEN_ALU:3:ALU_INST|res~2_combout  = (\ALU|GEN_ALU:3:ALU_INST|res~0_combout ) # ((\ALU|GEN_ALU:3:ALU_INST|res~1_combout  & (\SW[10]~input_o  $ (\SW[17]~input_o ))))
+// \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout  = (!\SW[15]~input_o  & ((\SW[14]~input_o ) # (\SW[16]~input_o  $ (\SW[3]~input_o ))))
 
-	.dataa(\ALU|GEN_ALU:3:ALU_INST|res~1_combout ),
-	.datab(\ALU|GEN_ALU:3:ALU_INST|res~0_combout ),
-	.datac(\SW[10]~input_o ),
+	.dataa(\SW[16]~input_o ),
+	.datab(\SW[15]~input_o ),
+	.datac(\SW[3]~input_o ),
+	.datad(\SW[14]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 .lut_mask = 16'h3312;
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y15_N6
+cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 (
+// Equation(s):
+// \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  = (\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ) # ((\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout  & (\SW[10]~input_o  $ (\SW[17]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ),
+	.datab(\SW[10]~input_o ),
+	.datac(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ),
 	.datad(\SW[17]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:3:ALU_INST|res~2_combout ),
+	.combout(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:3:ALU_INST|res~2 .lut_mask = 16'hCEEC;
-defparam \ALU|GEN_ALU:3:ALU_INST|res~2 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 .lut_mask = 16'hBAEA;
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y15_N0
-cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_INST|res~1 (
+// Location: LCCOMB_X114_Y18_N6
+cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 (
 // Equation(s):
-// \ALU|GEN_ALU:1:ALU_INST|res~1_combout  = (\SW[1]~input_o  & ((\SW[17]~input_o  $ (\SW[8]~input_o )) # (!\SW[16]~input_o ))) # (!\SW[1]~input_o  & ((\SW[16]~input_o ) # (\SW[17]~input_o  $ (\SW[8]~input_o ))))
+// \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout  = (!\SW[15]~input_o  & ((\SW[14]~input_o ) # (\SW[16]~input_o  $ (\SW[1]~input_o ))))
 
-	.dataa(\SW[1]~input_o ),
-	.datab(\SW[16]~input_o ),
-	.datac(\SW[17]~input_o ),
-	.datad(\SW[8]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:1:ALU_INST|res~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:1:ALU_INST|res~1 .lut_mask = 16'h6FF6;
-defparam \ALU|GEN_ALU:1:ALU_INST|res~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y15_N12
-cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_INST|Ainvert (
-// Equation(s):
-// \ALU|GEN_ALU:1:ALU_INST|Ainvert~combout  = \SW[8]~input_o  $ (\SW[17]~input_o )
-
-	.dataa(gnd),
-	.datab(\SW[8]~input_o ),
-	.datac(\SW[17]~input_o ),
-	.datad(gnd),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:1:ALU_INST|Ainvert~combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:1:ALU_INST|Ainvert .lut_mask = 16'h3C3C;
-defparam \ALU|GEN_ALU:1:ALU_INST|Ainvert .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y15_N22
-cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_INST|res~0 (
-// Equation(s):
-// \ALU|GEN_ALU:1:ALU_INST|res~0_combout  = (\SW[15]~input_o  & (\ALU|GEN_ALU:1:ALU_INST|Ainvert~combout  $ (\ALU|GEN_ALU:0:ALU_INST|AandB~combout  $ (\ALU|GEN_ALU:1:ALU_INST|Bnegate~combout )))) # (!\SW[15]~input_o  & 
-// (\ALU|GEN_ALU:1:ALU_INST|Ainvert~combout  & ((\ALU|GEN_ALU:1:ALU_INST|Bnegate~combout ))))
-
-	.dataa(\ALU|GEN_ALU:1:ALU_INST|Ainvert~combout ),
-	.datab(\ALU|GEN_ALU:0:ALU_INST|AandB~combout ),
-	.datac(\ALU|GEN_ALU:1:ALU_INST|Bnegate~combout ),
+	.dataa(\SW[16]~input_o ),
+	.datab(\SW[14]~input_o ),
+	.datac(\SW[1]~input_o ),
 	.datad(\SW[15]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:1:ALU_INST|res~0_combout ),
+	.combout(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:1:ALU_INST|res~0 .lut_mask = 16'h96A0;
-defparam \ALU|GEN_ALU:1:ALU_INST|res~0 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 .lut_mask = 16'h00DE;
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y15_N26
+cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|set (
+// Equation(s):
+// \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout  = \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  $ (\SW[8]~input_o  $ (\ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0_combout  $ (\SW[17]~input_o )))
+
+	.dataa(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datab(\SW[8]~input_o ),
+	.datac(\ALU|GEN_ALU:0:ALU_LSB:ALU_LSB_INST|cout~0_combout ),
+	.datad(\SW[17]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|set .lut_mask = 16'h6996;
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|set .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y15_N20
+cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 (
+// Equation(s):
+// \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout  = (\SW[15]~input_o  & (((\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout  & !\SW[14]~input_o )))) # (!\SW[15]~input_o  & (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & 
+// ((\SW[14]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datab(\SW[15]~input_o ),
+	.datac(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ),
+	.datad(\SW[14]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 .lut_mask = 16'h22C0;
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y15_N14
+cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 (
+// Equation(s):
+// \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  = (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ) # ((\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout  & (\SW[8]~input_o  $ (\SW[17]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ),
+	.datab(\SW[8]~input_o ),
+	.datac(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ),
+	.datad(\SW[17]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 .lut_mask = 16'hF2F8;
+defparam \ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X114_Y15_N18
-cycloneive_lcell_comb \ALU|GEN_ALU:1:ALU_INST|res~2 (
+cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|set (
 // Equation(s):
-// \ALU|GEN_ALU:1:ALU_INST|res~2_combout  = (\SW[14]~input_o  & (!\SW[15]~input_o  & (\ALU|GEN_ALU:1:ALU_INST|res~1_combout ))) # (!\SW[14]~input_o  & (((\ALU|GEN_ALU:1:ALU_INST|res~0_combout ))))
+// \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout  = \SW[17]~input_o  $ (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  $ (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  $ (\SW[9]~input_o )))
 
-	.dataa(\SW[15]~input_o ),
-	.datab(\ALU|GEN_ALU:1:ALU_INST|res~1_combout ),
-	.datac(\ALU|GEN_ALU:1:ALU_INST|res~0_combout ),
+	.dataa(\SW[17]~input_o ),
+	.datab(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datad(\SW[9]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|set .lut_mask = 16'h6996;
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|set .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y15_N28
+cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 (
+// Equation(s):
+// \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout  = (\SW[15]~input_o  & (((\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout  & !\SW[14]~input_o )))) # (!\SW[15]~input_o  & (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & 
+// ((\SW[14]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datab(\SW[15]~input_o ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ),
 	.datad(\SW[14]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:1:ALU_INST|res~2_combout ),
+	.combout(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:1:ALU_INST|res~2 .lut_mask = 16'h44F0;
-defparam \ALU|GEN_ALU:1:ALU_INST|res~2 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 .lut_mask = 16'h22C0;
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y54_N16
-cycloneive_lcell_comb \a~0 (
+// Location: LCCOMB_X114_Y15_N22
+cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 (
 // Equation(s):
-// \a~0_combout  = (\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & (!\ALU|GEN_ALU:1:ALU_INST|res~2_combout  & ((\ALU|GEN_ALU:3:ALU_INST|res~2_combout ) # (!\ALU|GEN_ALU:0:ALU_INST|res~0_combout )))) # (!\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & 
-// (\ALU|GEN_ALU:0:ALU_INST|res~0_combout  & (\ALU|GEN_ALU:3:ALU_INST|res~2_combout  $ (!\ALU|GEN_ALU:1:ALU_INST|res~2_combout ))))
+// \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout  = (!\SW[15]~input_o  & ((\SW[14]~input_o ) # (\SW[16]~input_o  $ (\SW[2]~input_o ))))
 
-	.dataa(\ALU|GEN_ALU:2:ALU_INST|res~2_combout ),
-	.datab(\ALU|GEN_ALU:0:ALU_INST|res~0_combout ),
-	.datac(\ALU|GEN_ALU:3:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:1:ALU_INST|res~2_combout ),
+	.dataa(\SW[14]~input_o ),
+	.datab(\SW[15]~input_o ),
+	.datac(\SW[16]~input_o ),
+	.datad(\SW[2]~input_o ),
 	.cin(gnd),
-	.combout(\a~0_combout ),
+	.combout(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \a~0 .lut_mask = 16'h40A6;
-defparam \a~0 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 .lut_mask = 16'h2332;
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y54_N18
-cycloneive_lcell_comb \b~0 (
+// Location: LCCOMB_X114_Y15_N16
+cycloneive_lcell_comb \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 (
 // Equation(s):
-// \b~0_combout  = (\ALU|GEN_ALU:3:ALU_INST|res~2_combout  & ((\ALU|GEN_ALU:0:ALU_INST|res~0_combout  & ((\ALU|GEN_ALU:1:ALU_INST|res~2_combout ))) # (!\ALU|GEN_ALU:0:ALU_INST|res~0_combout  & (\ALU|GEN_ALU:2:ALU_INST|res~2_combout )))) # 
-// (!\ALU|GEN_ALU:3:ALU_INST|res~2_combout  & (\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & (\ALU|GEN_ALU:0:ALU_INST|res~0_combout  $ (\ALU|GEN_ALU:1:ALU_INST|res~2_combout ))))
+// \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  = (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ) # ((\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout  & (\SW[17]~input_o  $ (\SW[9]~input_o ))))
 
-	.dataa(\ALU|GEN_ALU:2:ALU_INST|res~2_combout ),
-	.datab(\ALU|GEN_ALU:0:ALU_INST|res~0_combout ),
-	.datac(\ALU|GEN_ALU:3:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:1:ALU_INST|res~2_combout ),
+	.dataa(\SW[17]~input_o ),
+	.datab(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ),
+	.datad(\SW[9]~input_o ),
 	.cin(gnd),
-	.combout(\b~0_combout ),
+	.combout(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \b~0 .lut_mask = 16'hE228;
-defparam \b~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y54_N12
-cycloneive_lcell_comb \c~0 (
-// Equation(s):
-// \c~0_combout  = (\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & (\ALU|GEN_ALU:3:ALU_INST|res~2_combout  & ((\ALU|GEN_ALU:1:ALU_INST|res~2_combout ) # (!\ALU|GEN_ALU:0:ALU_INST|res~0_combout )))) # (!\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & 
-// (!\ALU|GEN_ALU:0:ALU_INST|res~0_combout  & (!\ALU|GEN_ALU:3:ALU_INST|res~2_combout  & \ALU|GEN_ALU:1:ALU_INST|res~2_combout )))
-
-	.dataa(\ALU|GEN_ALU:2:ALU_INST|res~2_combout ),
-	.datab(\ALU|GEN_ALU:0:ALU_INST|res~0_combout ),
-	.datac(\ALU|GEN_ALU:3:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:1:ALU_INST|res~2_combout ),
-	.cin(gnd),
-	.combout(\c~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \c~0 .lut_mask = 16'hA120;
-defparam \c~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y54_N30
-cycloneive_lcell_comb \d~0 (
-// Equation(s):
-// \d~0_combout  = (\ALU|GEN_ALU:0:ALU_INST|res~0_combout  & (\ALU|GEN_ALU:2:ALU_INST|res~2_combout  $ (((!\ALU|GEN_ALU:1:ALU_INST|res~2_combout ))))) # (!\ALU|GEN_ALU:0:ALU_INST|res~0_combout  & ((\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & 
-// (!\ALU|GEN_ALU:3:ALU_INST|res~2_combout  & !\ALU|GEN_ALU:1:ALU_INST|res~2_combout )) # (!\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & (\ALU|GEN_ALU:3:ALU_INST|res~2_combout  & \ALU|GEN_ALU:1:ALU_INST|res~2_combout ))))
-
-	.dataa(\ALU|GEN_ALU:2:ALU_INST|res~2_combout ),
-	.datab(\ALU|GEN_ALU:0:ALU_INST|res~0_combout ),
-	.datac(\ALU|GEN_ALU:3:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:1:ALU_INST|res~2_combout ),
-	.cin(gnd),
-	.combout(\d~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \d~0 .lut_mask = 16'h9846;
-defparam \d~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y54_N8
-cycloneive_lcell_comb \e~0 (
-// Equation(s):
-// \e~0_combout  = (\ALU|GEN_ALU:1:ALU_INST|res~2_combout  & (((\ALU|GEN_ALU:0:ALU_INST|res~0_combout  & !\ALU|GEN_ALU:3:ALU_INST|res~2_combout )))) # (!\ALU|GEN_ALU:1:ALU_INST|res~2_combout  & ((\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & 
-// ((!\ALU|GEN_ALU:3:ALU_INST|res~2_combout ))) # (!\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & (\ALU|GEN_ALU:0:ALU_INST|res~0_combout ))))
-
-	.dataa(\ALU|GEN_ALU:2:ALU_INST|res~2_combout ),
-	.datab(\ALU|GEN_ALU:0:ALU_INST|res~0_combout ),
-	.datac(\ALU|GEN_ALU:3:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:1:ALU_INST|res~2_combout ),
-	.cin(gnd),
-	.combout(\e~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \e~0 .lut_mask = 16'h0C4E;
-defparam \e~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y54_N26
-cycloneive_lcell_comb \f~0 (
-// Equation(s):
-// \f~0_combout  = (\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & ((\ALU|GEN_ALU:3:ALU_INST|res~2_combout  & ((!\ALU|GEN_ALU:1:ALU_INST|res~2_combout ))) # (!\ALU|GEN_ALU:3:ALU_INST|res~2_combout  & (\ALU|GEN_ALU:0:ALU_INST|res~0_combout  & 
-// \ALU|GEN_ALU:1:ALU_INST|res~2_combout )))) # (!\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & (!\ALU|GEN_ALU:3:ALU_INST|res~2_combout  & ((\ALU|GEN_ALU:0:ALU_INST|res~0_combout ) # (\ALU|GEN_ALU:1:ALU_INST|res~2_combout ))))
-
-	.dataa(\ALU|GEN_ALU:2:ALU_INST|res~2_combout ),
-	.datab(\ALU|GEN_ALU:0:ALU_INST|res~0_combout ),
-	.datac(\ALU|GEN_ALU:3:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:1:ALU_INST|res~2_combout ),
-	.cin(gnd),
-	.combout(\f~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \f~0 .lut_mask = 16'h0DA4;
-defparam \f~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y54_N28
-cycloneive_lcell_comb \g~0 (
-// Equation(s):
-// \g~0_combout  = (!\ALU|GEN_ALU:3:ALU_INST|res~2_combout  & ((\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & (\ALU|GEN_ALU:0:ALU_INST|res~0_combout  & \ALU|GEN_ALU:1:ALU_INST|res~2_combout )) # (!\ALU|GEN_ALU:2:ALU_INST|res~2_combout  & 
-// ((!\ALU|GEN_ALU:1:ALU_INST|res~2_combout )))))
-
-	.dataa(\ALU|GEN_ALU:2:ALU_INST|res~2_combout ),
-	.datab(\ALU|GEN_ALU:0:ALU_INST|res~0_combout ),
-	.datac(\ALU|GEN_ALU:3:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:1:ALU_INST|res~2_combout ),
-	.cin(gnd),
-	.combout(\g~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \g~0 .lut_mask = 16'h0805;
-defparam \g~0 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 .lut_mask = 16'hDCEC;
+defparam \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: IOIBUF_X115_Y9_N22
@@ -972,87 +799,31 @@ defparam \SW[13]~input .bus_hold = "false";
 defparam \SW[13]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y17_N14
-cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_INST|cout~0 (
-// Equation(s):
-// \ALU|GEN_ALU:3:ALU_INST|cout~0_combout  = (\ALU|GEN_ALU:3:ALU_INST|Bnegate~combout  & ((\ALU|GEN_ALU:2:ALU_INST|cout~0_combout ) # (\SW[10]~input_o  $ (\SW[17]~input_o )))) # (!\ALU|GEN_ALU:3:ALU_INST|Bnegate~combout  & 
-// (\ALU|GEN_ALU:2:ALU_INST|cout~0_combout  & (\SW[10]~input_o  $ (\SW[17]~input_o ))))
-
-	.dataa(\SW[10]~input_o ),
-	.datab(\ALU|GEN_ALU:3:ALU_INST|Bnegate~combout ),
-	.datac(\ALU|GEN_ALU:2:ALU_INST|cout~0_combout ),
-	.datad(\SW[17]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:3:ALU_INST|cout~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:3:ALU_INST|cout~0 .lut_mask = 16'hD4E8;
-defparam \ALU|GEN_ALU:3:ALU_INST|cout~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: IOIBUF_X115_Y18_N8
-cycloneive_io_ibuf \SW[4]~input (
-	.i(SW[4]),
+// Location: IOIBUF_X115_Y10_N1
+cycloneive_io_ibuf \SW[6]~input (
+	.i(SW[6]),
 	.ibar(gnd),
-	.o(\SW[4]~input_o ));
+	.o(\SW[6]~input_o ));
 // synopsys translate_off
-defparam \SW[4]~input .bus_hold = "false";
-defparam \SW[4]~input .simulate_z_as = "z";
+defparam \SW[6]~input .bus_hold = "false";
+defparam \SW[6]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y14_N24
-cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_INST|Bnegate (
+// Location: LCCOMB_X114_Y14_N16
+cycloneive_lcell_comb \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|Bnegate (
 // Equation(s):
-// \ALU|GEN_ALU:4:ALU_INST|Bnegate~combout  = \SW[16]~input_o  $ (\SW[4]~input_o )
+// \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|Bnegate~combout  = \SW[16]~input_o  $ (\SW[6]~input_o )
 
 	.dataa(\SW[16]~input_o ),
 	.datab(gnd),
-	.datac(\SW[4]~input_o ),
+	.datac(\SW[6]~input_o ),
 	.datad(gnd),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:4:ALU_INST|Bnegate~combout ),
+	.combout(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|Bnegate~combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:4:ALU_INST|Bnegate .lut_mask = 16'h5A5A;
-defparam \ALU|GEN_ALU:4:ALU_INST|Bnegate .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: IOIBUF_X115_Y5_N15
-cycloneive_io_ibuf \SW[11]~input (
-	.i(SW[11]),
-	.ibar(gnd),
-	.o(\SW[11]~input_o ));
-// synopsys translate_off
-defparam \SW[11]~input .bus_hold = "false";
-defparam \SW[11]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y14_N26
-cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_INST|cout~0 (
-// Equation(s):
-// \ALU|GEN_ALU:4:ALU_INST|cout~0_combout  = (\ALU|GEN_ALU:3:ALU_INST|cout~0_combout  & ((\ALU|GEN_ALU:4:ALU_INST|Bnegate~combout ) # (\SW[11]~input_o  $ (\SW[17]~input_o )))) # (!\ALU|GEN_ALU:3:ALU_INST|cout~0_combout  & 
-// (\ALU|GEN_ALU:4:ALU_INST|Bnegate~combout  & (\SW[11]~input_o  $ (\SW[17]~input_o ))))
-
-	.dataa(\ALU|GEN_ALU:3:ALU_INST|cout~0_combout ),
-	.datab(\ALU|GEN_ALU:4:ALU_INST|Bnegate~combout ),
-	.datac(\SW[11]~input_o ),
-	.datad(\SW[17]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:4:ALU_INST|cout~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:4:ALU_INST|cout~0 .lut_mask = 16'h8EE8;
-defparam \ALU|GEN_ALU:4:ALU_INST|cout~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: IOIBUF_X115_Y7_N15
-cycloneive_io_ibuf \SW[12]~input (
-	.i(SW[12]),
-	.ibar(gnd),
-	.o(\SW[12]~input_o ));
-// synopsys translate_off
-defparam \SW[12]~input .bus_hold = "false";
-defparam \SW[12]~input .simulate_z_as = "z";
+defparam \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|Bnegate .lut_mask = 16'h5A5A;
+defparam \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|Bnegate .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: IOIBUF_X115_Y11_N8
@@ -1066,356 +837,646 @@ defparam \SW[5]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: LCCOMB_X114_Y14_N12
-cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_INST|Bnegate (
+cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate (
 // Equation(s):
-// \ALU|GEN_ALU:5:ALU_INST|Bnegate~combout  = \SW[5]~input_o  $ (\SW[16]~input_o )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\SW[5]~input_o ),
-	.datad(\SW[16]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:5:ALU_INST|Bnegate~combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:5:ALU_INST|Bnegate .lut_mask = 16'h0FF0;
-defparam \ALU|GEN_ALU:5:ALU_INST|Bnegate .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y14_N8
-cycloneive_lcell_comb \ALU|GEN_ALU:6:ALU_INST|res~1 (
-// Equation(s):
-// \ALU|GEN_ALU:6:ALU_INST|res~1_combout  = (\ALU|GEN_ALU:4:ALU_INST|cout~0_combout  & ((\ALU|GEN_ALU:5:ALU_INST|Bnegate~combout ) # (\SW[17]~input_o  $ (\SW[12]~input_o )))) # (!\ALU|GEN_ALU:4:ALU_INST|cout~0_combout  & 
-// (\ALU|GEN_ALU:5:ALU_INST|Bnegate~combout  & (\SW[17]~input_o  $ (\SW[12]~input_o ))))
-
-	.dataa(\ALU|GEN_ALU:4:ALU_INST|cout~0_combout ),
-	.datab(\SW[17]~input_o ),
-	.datac(\SW[12]~input_o ),
-	.datad(\ALU|GEN_ALU:5:ALU_INST|Bnegate~combout ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:6:ALU_INST|res~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:6:ALU_INST|res~1 .lut_mask = 16'hBE28;
-defparam \ALU|GEN_ALU:6:ALU_INST|res~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y14_N2
-cycloneive_lcell_comb \ALU|GEN_ALU:6:ALU_INST|res~2 (
-// Equation(s):
-// \ALU|GEN_ALU:6:ALU_INST|res~2_combout  = \SW[13]~input_o  $ (\SW[17]~input_o  $ (((\SW[15]~input_o  & \ALU|GEN_ALU:6:ALU_INST|res~1_combout ))))
-
-	.dataa(\SW[13]~input_o ),
-	.datab(\SW[15]~input_o ),
-	.datac(\ALU|GEN_ALU:6:ALU_INST|res~1_combout ),
-	.datad(\SW[17]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:6:ALU_INST|res~2_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:6:ALU_INST|res~2 .lut_mask = 16'h956A;
-defparam \ALU|GEN_ALU:6:ALU_INST|res~2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: IOIBUF_X115_Y10_N1
-cycloneive_io_ibuf \SW[6]~input (
-	.i(SW[6]),
-	.ibar(gnd),
-	.o(\SW[6]~input_o ));
-// synopsys translate_off
-defparam \SW[6]~input .bus_hold = "false";
-defparam \SW[6]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y14_N30
-cycloneive_lcell_comb \ALU|GEN_ALU:6:ALU_INST|res~0 (
-// Equation(s):
-// \ALU|GEN_ALU:6:ALU_INST|res~0_combout  = \SW[6]~input_o  $ (\SW[16]~input_o )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\SW[6]~input_o ),
-	.datad(\SW[16]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:6:ALU_INST|res~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:6:ALU_INST|res~0 .lut_mask = 16'h0FF0;
-defparam \ALU|GEN_ALU:6:ALU_INST|res~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y14_N20
-cycloneive_lcell_comb \ALU|GEN_ALU:6:ALU_INST|res~3 (
-// Equation(s):
-// \ALU|GEN_ALU:6:ALU_INST|res~3_combout  = (\ALU|GEN_ALU:6:ALU_INST|res~2_combout  & (\SW[15]~input_o  $ (((\ALU|GEN_ALU:6:ALU_INST|res~0_combout ) # (\SW[14]~input_o ))))) # (!\ALU|GEN_ALU:6:ALU_INST|res~2_combout  & (\ALU|GEN_ALU:6:ALU_INST|res~0_combout  
-// & (\SW[15]~input_o  $ (\SW[14]~input_o ))))
-
-	.dataa(\ALU|GEN_ALU:6:ALU_INST|res~2_combout ),
-	.datab(\SW[15]~input_o ),
-	.datac(\ALU|GEN_ALU:6:ALU_INST|res~0_combout ),
-	.datad(\SW[14]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:6:ALU_INST|res~3_combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:6:ALU_INST|res~3 .lut_mask = 16'h3268;
-defparam \ALU|GEN_ALU:6:ALU_INST|res~3 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y14_N10
-cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_INST|res~1 (
-// Equation(s):
-// \ALU|GEN_ALU:5:ALU_INST|res~1_combout  = (!\SW[15]~input_o  & ((\SW[14]~input_o ) # (\SW[16]~input_o  $ (\SW[5]~input_o ))))
+// \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  = \SW[16]~input_o  $ (\SW[5]~input_o )
 
 	.dataa(\SW[16]~input_o ),
-	.datab(\SW[14]~input_o ),
+	.datab(gnd),
 	.datac(\SW[5]~input_o ),
-	.datad(\SW[15]~input_o ),
+	.datad(gnd),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:5:ALU_INST|res~1_combout ),
+	.combout(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:5:ALU_INST|res~1 .lut_mask = 16'h00DE;
-defparam \ALU|GEN_ALU:5:ALU_INST|res~1 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate .lut_mask = 16'h5A5A;
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y14_N14
-cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_INST|set (
+// Location: LCCOMB_X114_Y15_N24
+cycloneive_lcell_comb \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 (
 // Equation(s):
-// \ALU|GEN_ALU:5:ALU_INST|set~combout  = \ALU|GEN_ALU:4:ALU_INST|cout~0_combout  $ (\SW[17]~input_o  $ (\SW[12]~input_o  $ (\ALU|GEN_ALU:5:ALU_INST|Bnegate~combout )))
+// \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  = (\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & ((\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ) # (\SW[17]~input_o  $ (\SW[10]~input_o )))) # 
+// (!\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  & (\SW[17]~input_o  $ (\SW[10]~input_o ))))
 
-	.dataa(\ALU|GEN_ALU:4:ALU_INST|cout~0_combout ),
-	.datab(\SW[17]~input_o ),
-	.datac(\SW[12]~input_o ),
-	.datad(\ALU|GEN_ALU:5:ALU_INST|Bnegate~combout ),
+	.dataa(\SW[17]~input_o ),
+	.datab(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
+	.datad(\SW[10]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:5:ALU_INST|set~combout ),
+	.combout(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:5:ALU_INST|set .lut_mask = 16'h6996;
-defparam \ALU|GEN_ALU:5:ALU_INST|set .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 .lut_mask = 16'hD4E8;
+defparam \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y14_N0
-cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_INST|res~0 (
-// Equation(s):
-// \ALU|GEN_ALU:5:ALU_INST|res~0_combout  = (\SW[15]~input_o  & (((\ALU|GEN_ALU:5:ALU_INST|set~combout  & !\SW[14]~input_o )))) # (!\SW[15]~input_o  & (\ALU|GEN_ALU:5:ALU_INST|Bnegate~combout  & ((\SW[14]~input_o ))))
+// Location: IOIBUF_X115_Y18_N8
+cycloneive_io_ibuf \SW[4]~input (
+	.i(SW[4]),
+	.ibar(gnd),
+	.o(\SW[4]~input_o ));
+// synopsys translate_off
+defparam \SW[4]~input .bus_hold = "false";
+defparam \SW[4]~input .simulate_z_as = "z";
+// synopsys translate_on
 
-	.dataa(\ALU|GEN_ALU:5:ALU_INST|Bnegate~combout ),
-	.datab(\SW[15]~input_o ),
-	.datac(\ALU|GEN_ALU:5:ALU_INST|set~combout ),
-	.datad(\SW[14]~input_o ),
+// Location: LCCOMB_X114_Y18_N18
+cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate (
+// Equation(s):
+// \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  = \SW[16]~input_o  $ (\SW[4]~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\SW[16]~input_o ),
+	.datad(\SW[4]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:5:ALU_INST|res~0_combout ),
+	.combout(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:5:ALU_INST|res~0 .lut_mask = 16'h22C0;
-defparam \ALU|GEN_ALU:5:ALU_INST|res~0 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate .lut_mask = 16'h0FF0;
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y14_N28
-cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_INST|res~2 (
-// Equation(s):
-// \ALU|GEN_ALU:5:ALU_INST|res~2_combout  = (\ALU|GEN_ALU:5:ALU_INST|res~0_combout ) # ((\ALU|GEN_ALU:5:ALU_INST|res~1_combout  & (\SW[12]~input_o  $ (\SW[17]~input_o ))))
+// Location: IOIBUF_X115_Y5_N15
+cycloneive_io_ibuf \SW[11]~input (
+	.i(SW[11]),
+	.ibar(gnd),
+	.o(\SW[11]~input_o ));
+// synopsys translate_off
+defparam \SW[11]~input .bus_hold = "false";
+defparam \SW[11]~input .simulate_z_as = "z";
+// synopsys translate_on
 
-	.dataa(\ALU|GEN_ALU:5:ALU_INST|res~1_combout ),
-	.datab(\ALU|GEN_ALU:5:ALU_INST|res~0_combout ),
+// Location: LCCOMB_X114_Y18_N20
+cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 (
+// Equation(s):
+// \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  = (\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  & ((\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ) # (\SW[11]~input_o  $ (\SW[17]~input_o )))) # 
+// (!\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  & (\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & (\SW[11]~input_o  $ (\SW[17]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
+	.datab(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datac(\SW[11]~input_o ),
+	.datad(\SW[17]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 .lut_mask = 16'h8EE8;
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X115_Y7_N15
+cycloneive_io_ibuf \SW[12]~input (
+	.i(SW[12]),
+	.ibar(gnd),
+	.o(\SW[12]~input_o ));
+// synopsys translate_off
+defparam \SW[12]~input .bus_hold = "false";
+defparam \SW[12]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y14_N6
+cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 (
+// Equation(s):
+// \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  = (\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & ((\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ) # (\SW[12]~input_o  $ (\SW[17]~input_o )))) # 
+// (!\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & (\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  & (\SW[12]~input_o  $ (\SW[17]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datab(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
 	.datac(\SW[12]~input_o ),
 	.datad(\SW[17]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:5:ALU_INST|res~2_combout ),
+	.combout(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:5:ALU_INST|res~2 .lut_mask = 16'hCEEC;
-defparam \ALU|GEN_ALU:5:ALU_INST|res~2 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 .lut_mask = 16'h8EE8;
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y14_N26
+cycloneive_lcell_comb \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|set (
+// Equation(s):
+// \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|set~combout  = \SW[13]~input_o  $ (\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|Bnegate~combout  $ (\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  $ (\SW[17]~input_o )))
+
+	.dataa(\SW[13]~input_o ),
+	.datab(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|Bnegate~combout ),
+	.datac(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
+	.datad(\SW[17]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|set~combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|set .lut_mask = 16'h6996;
+defparam \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|set .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X114_Y14_N18
-cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_INST|res~1 (
+cycloneive_lcell_comb \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~2 (
 // Equation(s):
-// \ALU|GEN_ALU:4:ALU_INST|res~1_combout  = (!\SW[15]~input_o  & ((\SW[14]~input_o ) # (\SW[16]~input_o  $ (\SW[4]~input_o ))))
+// \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~2_combout  = \SW[0]~input_o  $ (((!\SW[15]~input_o  & \SW[16]~input_o )))
 
-	.dataa(\SW[16]~input_o ),
-	.datab(\SW[14]~input_o ),
-	.datac(\SW[4]~input_o ),
+	.dataa(gnd),
+	.datab(\SW[15]~input_o ),
+	.datac(\SW[16]~input_o ),
+	.datad(\SW[0]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~2 .lut_mask = 16'hCF30;
+defparam \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y14_N28
+cycloneive_lcell_comb \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~3 (
+// Equation(s):
+// \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~3_combout  = (\SW[14]~input_o  & ((\SW[15]~input_o  & (\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|set~combout )) # (!\SW[15]~input_o  & ((\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~2_combout ))))) # (!\SW[14]~input_o  & 
+// (((\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~2_combout  & \SW[15]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|set~combout ),
+	.datab(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~2_combout ),
+	.datac(\SW[14]~input_o ),
 	.datad(\SW[15]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:4:ALU_INST|res~1_combout ),
+	.combout(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~3_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:4:ALU_INST|res~1 .lut_mask = 16'h00DE;
-defparam \ALU|GEN_ALU:4:ALU_INST|res~1 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~3 .lut_mask = 16'hACC0;
+defparam \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~3 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y14_N22
-cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_INST|set (
+// Location: LCCOMB_X114_Y14_N30
+cycloneive_lcell_comb \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~5 (
 // Equation(s):
-// \ALU|GEN_ALU:4:ALU_INST|set~combout  = \ALU|GEN_ALU:3:ALU_INST|cout~0_combout  $ (\ALU|GEN_ALU:4:ALU_INST|Bnegate~combout  $ (\SW[11]~input_o  $ (\SW[17]~input_o )))
+// \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~5_combout  = \SW[14]~input_o  $ (((\SW[15]~input_o ) # (\SW[16]~input_o  $ (\SW[0]~input_o ))))
 
-	.dataa(\ALU|GEN_ALU:3:ALU_INST|cout~0_combout ),
-	.datab(\ALU|GEN_ALU:4:ALU_INST|Bnegate~combout ),
-	.datac(\SW[11]~input_o ),
-	.datad(\SW[17]~input_o ),
-	.cin(gnd),
-	.combout(\ALU|GEN_ALU:4:ALU_INST|set~combout ),
-	.cout());
-// synopsys translate_off
-defparam \ALU|GEN_ALU:4:ALU_INST|set .lut_mask = 16'h6996;
-defparam \ALU|GEN_ALU:4:ALU_INST|set .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X114_Y14_N16
-cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_INST|res~0 (
-// Equation(s):
-// \ALU|GEN_ALU:4:ALU_INST|res~0_combout  = (\SW[15]~input_o  & (((\ALU|GEN_ALU:4:ALU_INST|set~combout  & !\SW[14]~input_o )))) # (!\SW[15]~input_o  & (\ALU|GEN_ALU:4:ALU_INST|Bnegate~combout  & ((\SW[14]~input_o ))))
-
-	.dataa(\ALU|GEN_ALU:4:ALU_INST|Bnegate~combout ),
+	.dataa(\SW[16]~input_o ),
 	.datab(\SW[15]~input_o ),
-	.datac(\ALU|GEN_ALU:4:ALU_INST|set~combout ),
-	.datad(\SW[14]~input_o ),
+	.datac(\SW[14]~input_o ),
+	.datad(\SW[0]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:4:ALU_INST|res~0_combout ),
+	.combout(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~5_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:4:ALU_INST|res~0 .lut_mask = 16'h22C0;
-defparam \ALU|GEN_ALU:4:ALU_INST|res~0 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~5 .lut_mask = 16'h2D1E;
+defparam \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~5 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y14_N14
+cycloneive_lcell_comb \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4 (
+// Equation(s):
+// \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout  = \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~3_combout  $ (((\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~5_combout  & (\SW[17]~input_o  $ (\SW[7]~input_o )))))
+
+	.dataa(\SW[17]~input_o ),
+	.datab(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~3_combout ),
+	.datac(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~5_combout ),
+	.datad(\SW[7]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4 .lut_mask = 16'h9C6C;
+defparam \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X109_Y69_N24
+cycloneive_lcell_comb \a~0 (
+// Equation(s):
+// \a~0_combout  = (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (!\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ))) # 
+// (!\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  $ (((!\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout )))))
+
+	.dataa(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ),
+	.cin(gnd),
+	.combout(\a~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \a~0 .lut_mask = 16'h2930;
+defparam \a~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X109_Y69_N2
+cycloneive_lcell_comb \b~0 (
+// Equation(s):
+// \b~0_combout  = (\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & ((\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout  & (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout )) # (!\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout  & 
+// ((\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))))) # (!\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  $ 
+// (\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ))))
+
+	.dataa(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ),
+	.cin(gnd),
+	.combout(\b~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \b~0 .lut_mask = 16'h98E0;
+defparam \b~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X109_Y69_N28
+cycloneive_lcell_comb \c~0 (
+// Equation(s):
+// \c~0_combout  = (\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & ((\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ) # (!\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout 
+// )))) # (!\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (!\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & !\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout )))
+
+	.dataa(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ),
+	.cin(gnd),
+	.combout(\c~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \c~0 .lut_mask = 16'h80A4;
+defparam \c~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X109_Y69_N14
+cycloneive_lcell_comb \d~0 (
+// Equation(s):
+// \d~0_combout  = (\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout  & ((\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  $ (!\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout )))) # (!\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout  & 
+// ((\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & !\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout )) # (!\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & 
+// (!\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & \ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))))
+
+	.dataa(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ),
+	.cin(gnd),
+	.combout(\d~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \d~0 .lut_mask = 16'hC318;
+defparam \d~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X109_Y69_N8
+cycloneive_lcell_comb \e~0 (
+// Equation(s):
+// \e~0_combout  = (\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (!\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & ((\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout )))) # (!\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout 
+//  & ((\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (!\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout )) # (!\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & ((\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout )))))
+
+	.dataa(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ),
+	.cin(gnd),
+	.combout(\e~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \e~0 .lut_mask = 16'h5710;
+defparam \e~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X109_Y69_N26
+cycloneive_lcell_comb \f~0 (
+// Equation(s):
+// \f~0_combout  = (\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (!\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))) # 
+// (!\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & ((\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & ((\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ) # (!\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))) # 
+// (!\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (!\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ))))
+
+	.dataa(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ),
+	.cin(gnd),
+	.combout(\f~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \f~0 .lut_mask = 16'h6524;
+defparam \f~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X109_Y69_N12
+cycloneive_lcell_comb \g~0 (
+// Equation(s):
+// \g~0_combout  = (!\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & ((\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & \ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout )) # 
+// (!\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & (!\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))))
+
+	.dataa(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(\ALU|GEN_ALU:7:ALU_LAST:ALU_LAST_INST|res~4_combout ),
+	.cin(gnd),
+	.combout(\g~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \g~0 .lut_mask = 16'h4101;
+defparam \g~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y14_N2
+cycloneive_lcell_comb \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~1 (
+// Equation(s):
+// \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~1_combout  = (!\SW[15]~input_o  & ((\SW[14]~input_o ) # (\SW[16]~input_o  $ (\SW[6]~input_o ))))
+
+	.dataa(\SW[16]~input_o ),
+	.datab(\SW[6]~input_o ),
+	.datac(\SW[14]~input_o ),
+	.datad(\SW[15]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~1 .lut_mask = 16'h00F6;
+defparam \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y14_N8
+cycloneive_lcell_comb \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~0 (
+// Equation(s):
+// \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~0_combout  = (\SW[14]~input_o  & (((\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|Bnegate~combout  & !\SW[15]~input_o )))) # (!\SW[14]~input_o  & (\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|set~combout  & ((\SW[15]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|set~combout ),
+	.datab(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|Bnegate~combout ),
+	.datac(\SW[14]~input_o ),
+	.datad(\SW[15]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~0 .lut_mask = 16'h0AC0;
+defparam \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X114_Y14_N4
-cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_INST|res~2 (
+cycloneive_lcell_comb \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2 (
 // Equation(s):
-// \ALU|GEN_ALU:4:ALU_INST|res~2_combout  = (\ALU|GEN_ALU:4:ALU_INST|res~0_combout ) # ((\ALU|GEN_ALU:4:ALU_INST|res~1_combout  & (\SW[17]~input_o  $ (\SW[11]~input_o ))))
+// \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout  = (\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~0_combout ) # ((\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~1_combout  & (\SW[13]~input_o  $ (\SW[17]~input_o ))))
 
-	.dataa(\SW[17]~input_o ),
-	.datab(\ALU|GEN_ALU:4:ALU_INST|res~1_combout ),
-	.datac(\SW[11]~input_o ),
-	.datad(\ALU|GEN_ALU:4:ALU_INST|res~0_combout ),
+	.dataa(\SW[13]~input_o ),
+	.datab(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~1_combout ),
+	.datac(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~0_combout ),
+	.datad(\SW[17]~input_o ),
 	.cin(gnd),
-	.combout(\ALU|GEN_ALU:4:ALU_INST|res~2_combout ),
+	.combout(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \ALU|GEN_ALU:4:ALU_INST|res~2 .lut_mask = 16'hFF48;
-defparam \ALU|GEN_ALU:4:ALU_INST|res~2 .sum_lutc_input = "datac";
+defparam \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2 .lut_mask = 16'hF4F8;
+defparam \ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y22_N0
+// Location: LCCOMB_X114_Y14_N24
+cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|set (
+// Equation(s):
+// \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout  = \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  $ (\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  $ (\SW[12]~input_o  $ (\SW[17]~input_o )))
+
+	.dataa(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datab(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
+	.datac(\SW[12]~input_o ),
+	.datad(\SW[17]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|set .lut_mask = 16'h6996;
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|set .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y14_N10
+cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 (
+// Equation(s):
+// \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout  = (\SW[14]~input_o  & (\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & ((!\SW[15]~input_o )))) # (!\SW[14]~input_o  & (((\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout  & 
+// \SW[15]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datab(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ),
+	.datac(\SW[14]~input_o ),
+	.datad(\SW[15]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 .lut_mask = 16'h0CA0;
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y14_N20
+cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 (
+// Equation(s):
+// \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout  = (!\SW[15]~input_o  & ((\SW[14]~input_o ) # (\SW[16]~input_o  $ (\SW[5]~input_o ))))
+
+	.dataa(\SW[16]~input_o ),
+	.datab(\SW[14]~input_o ),
+	.datac(\SW[5]~input_o ),
+	.datad(\SW[15]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 .lut_mask = 16'h00DE;
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y14_N22
+cycloneive_lcell_comb \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 (
+// Equation(s):
+// \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  = (\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ) # ((\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout  & (\SW[12]~input_o  $ (\SW[17]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ),
+	.datab(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ),
+	.datac(\SW[12]~input_o ),
+	.datad(\SW[17]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 .lut_mask = 16'hAEEA;
+defparam \ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y18_N16
+cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|set (
+// Equation(s):
+// \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout  = \ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout  $ (\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  $ (\SW[11]~input_o  $ (\SW[17]~input_o )))
+
+	.dataa(\ALU|GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST|cout~0_combout ),
+	.datab(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datac(\SW[11]~input_o ),
+	.datad(\SW[17]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|set .lut_mask = 16'h6996;
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|set .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y18_N10
+cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 (
+// Equation(s):
+// \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout  = (\SW[14]~input_o  & (((\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout  & !\SW[15]~input_o )))) # (!\SW[14]~input_o  & (\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout  & 
+// ((\SW[15]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|set~combout ),
+	.datab(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|Bnegate~combout ),
+	.datac(\SW[14]~input_o ),
+	.datad(\SW[15]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 .lut_mask = 16'h0AC0;
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y18_N12
+cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 (
+// Equation(s):
+// \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout  = (!\SW[15]~input_o  & ((\SW[14]~input_o ) # (\SW[16]~input_o  $ (\SW[4]~input_o ))))
+
+	.dataa(\SW[16]~input_o ),
+	.datab(\SW[15]~input_o ),
+	.datac(\SW[14]~input_o ),
+	.datad(\SW[4]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 .lut_mask = 16'h3132;
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y18_N30
+cycloneive_lcell_comb \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 (
+// Equation(s):
+// \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  = (\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ) # ((\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout  & (\SW[11]~input_o  $ (\SW[17]~input_o ))))
+
+	.dataa(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~0_combout ),
+	.datab(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~1_combout ),
+	.datac(\SW[11]~input_o ),
+	.datad(\SW[17]~input_o ),
+	.cin(gnd),
+	.combout(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 .lut_mask = 16'hAEEA;
+defparam \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y18_N24
 cycloneive_lcell_comb \d~1 (
 // Equation(s):
-// \d~1_combout  = (\ALU|GEN_ALU:5:ALU_INST|res~2_combout ) # (\ALU|GEN_ALU:6:ALU_INST|res~3_combout  $ (!\ALU|GEN_ALU:4:ALU_INST|res~2_combout ))
+// \d~1_combout  = (\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ) # (\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout  $ (!\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))
 
-	.dataa(gnd),
-	.datab(\ALU|GEN_ALU:6:ALU_INST|res~3_combout ),
-	.datac(\ALU|GEN_ALU:5:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:4:ALU_INST|res~2_combout ),
+	.dataa(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(gnd),
 	.cin(gnd),
 	.combout(\d~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \d~1 .lut_mask = 16'hFCF3;
+defparam \d~1 .lut_mask = 16'hEDED;
 defparam \d~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y22_N2
+// Location: LCCOMB_X114_Y18_N26
 cycloneive_lcell_comb \b~1 (
 // Equation(s):
-// \b~1_combout  = (\ALU|GEN_ALU:5:ALU_INST|res~2_combout  $ (!\ALU|GEN_ALU:4:ALU_INST|res~2_combout )) # (!\ALU|GEN_ALU:6:ALU_INST|res~3_combout )
+// \b~1_combout  = (\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  $ (!\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout )) # (!\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout )
 
-	.dataa(gnd),
-	.datab(\ALU|GEN_ALU:6:ALU_INST|res~3_combout ),
-	.datac(\ALU|GEN_ALU:5:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:4:ALU_INST|res~2_combout ),
+	.dataa(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(gnd),
 	.cin(gnd),
 	.combout(\b~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \b~1 .lut_mask = 16'hF33F;
+defparam \b~1 .lut_mask = 16'hD7D7;
 defparam \b~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y22_N28
+// Location: LCCOMB_X114_Y18_N28
 cycloneive_lcell_comb \c~1 (
 // Equation(s):
-// \c~1_combout  = (!\ALU|GEN_ALU:6:ALU_INST|res~3_combout  & (\ALU|GEN_ALU:5:ALU_INST|res~2_combout  & !\ALU|GEN_ALU:4:ALU_INST|res~2_combout ))
+// \c~1_combout  = (!\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout  & (\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & !\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))
 
-	.dataa(gnd),
-	.datab(\ALU|GEN_ALU:6:ALU_INST|res~3_combout ),
-	.datac(\ALU|GEN_ALU:5:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:4:ALU_INST|res~2_combout ),
+	.dataa(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(gnd),
 	.cin(gnd),
 	.combout(\c~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \c~1 .lut_mask = 16'h0030;
+defparam \c~1 .lut_mask = 16'h0404;
 defparam \c~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y22_N22
+// Location: LCCOMB_X114_Y18_N22
 cycloneive_lcell_comb \d~2 (
 // Equation(s):
-// \d~2_combout  = (\ALU|GEN_ALU:6:ALU_INST|res~3_combout  & (\ALU|GEN_ALU:5:ALU_INST|res~2_combout  $ (!\ALU|GEN_ALU:4:ALU_INST|res~2_combout ))) # (!\ALU|GEN_ALU:6:ALU_INST|res~3_combout  & (!\ALU|GEN_ALU:5:ALU_INST|res~2_combout  & 
-// \ALU|GEN_ALU:4:ALU_INST|res~2_combout ))
+// \d~2_combout  = (\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout  & (\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  $ (!\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))) # (!\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout  & 
+// (!\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))
 
-	.dataa(gnd),
-	.datab(\ALU|GEN_ALU:6:ALU_INST|res~3_combout ),
-	.datac(\ALU|GEN_ALU:5:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:4:ALU_INST|res~2_combout ),
+	.dataa(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(gnd),
 	.cin(gnd),
 	.combout(\d~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \d~2 .lut_mask = 16'hC30C;
+defparam \d~2 .lut_mask = 16'h9292;
 defparam \d~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y22_N8
+// Location: LCCOMB_X114_Y18_N0
 cycloneive_lcell_comb \e~1 (
 // Equation(s):
-// \e~1_combout  = (\ALU|GEN_ALU:4:ALU_INST|res~2_combout ) # ((\ALU|GEN_ALU:6:ALU_INST|res~3_combout  & !\ALU|GEN_ALU:5:ALU_INST|res~2_combout ))
+// \e~1_combout  = (\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ) # ((\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout  & !\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))
 
-	.dataa(gnd),
-	.datab(\ALU|GEN_ALU:6:ALU_INST|res~3_combout ),
-	.datac(\ALU|GEN_ALU:5:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:4:ALU_INST|res~2_combout ),
+	.dataa(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(gnd),
 	.cin(gnd),
 	.combout(\e~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \e~1 .lut_mask = 16'hFF0C;
+defparam \e~1 .lut_mask = 16'hF2F2;
 defparam \e~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y22_N18
+// Location: LCCOMB_X114_Y18_N2
 cycloneive_lcell_comb \f~1 (
 // Equation(s):
-// \f~1_combout  = (\ALU|GEN_ALU:6:ALU_INST|res~3_combout  & (\ALU|GEN_ALU:5:ALU_INST|res~2_combout  & \ALU|GEN_ALU:4:ALU_INST|res~2_combout )) # (!\ALU|GEN_ALU:6:ALU_INST|res~3_combout  & ((\ALU|GEN_ALU:5:ALU_INST|res~2_combout ) # 
-// (\ALU|GEN_ALU:4:ALU_INST|res~2_combout )))
+// \f~1_combout  = (\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout  & (\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout )) # (!\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout  & 
+// ((\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ) # (\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout )))
 
-	.dataa(gnd),
-	.datab(\ALU|GEN_ALU:6:ALU_INST|res~3_combout ),
-	.datac(\ALU|GEN_ALU:5:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:4:ALU_INST|res~2_combout ),
+	.dataa(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(gnd),
 	.cin(gnd),
 	.combout(\f~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \f~1 .lut_mask = 16'hF330;
+defparam \f~1 .lut_mask = 16'hD4D4;
 defparam \f~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X114_Y22_N12
+// Location: LCCOMB_X114_Y18_N4
 cycloneive_lcell_comb \g~1 (
 // Equation(s):
-// \g~1_combout  = (\ALU|GEN_ALU:6:ALU_INST|res~3_combout  & (\ALU|GEN_ALU:5:ALU_INST|res~2_combout  & \ALU|GEN_ALU:4:ALU_INST|res~2_combout )) # (!\ALU|GEN_ALU:6:ALU_INST|res~3_combout  & (!\ALU|GEN_ALU:5:ALU_INST|res~2_combout ))
+// \g~1_combout  = (\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout  & (\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout  & \ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout )) # (!\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout  & 
+// (!\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ))
 
-	.dataa(gnd),
-	.datab(\ALU|GEN_ALU:6:ALU_INST|res~3_combout ),
-	.datac(\ALU|GEN_ALU:5:ALU_INST|res~2_combout ),
-	.datad(\ALU|GEN_ALU:4:ALU_INST|res~2_combout ),
+	.dataa(\ALU|GEN_ALU:6:ALU_MSB:ALU_MSB_INST|res~2_combout ),
+	.datab(\ALU|GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datac(\ALU|GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST|res~2_combout ),
+	.datad(gnd),
 	.cin(gnd),
 	.combout(\g~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \g~1 .lut_mask = 16'hC303;
+defparam \g~1 .lut_mask = 16'h9191;
 defparam \g~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 

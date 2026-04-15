@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Apr 13 18:04:45 2026
+Fitter Status : Successful - Wed Apr 15 09:31:16 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 Revision Name : target2
 Top-level Entity Name : target2
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 51 / 114,480 ( < 1 % )
-    Total combinational functions : 51 / 114,480 ( < 1 % )
+Total logic elements : 54 / 114,480 ( < 1 % )
+    Total combinational functions : 54 / 114,480 ( < 1 % )
     Dedicated logic registers : 0 / 114,480 ( 0 % )
 Total registers : 0
 Total pins : 32 / 529 ( 6 % )

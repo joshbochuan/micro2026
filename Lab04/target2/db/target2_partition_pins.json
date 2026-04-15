@@ -84,11 +84,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[7]",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[0]",
+					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
@@ -124,11 +124,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[6]",
+					"name" : "SW[13]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[13]",
+					"name" : "SW[6]",
 					"strict" : false
 				}
 			]
