@@ -1,6 +1,5 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use work.all; -- uses all packages available in this directory
 use work.adder_pkg.all;
 use work.sevenseg_pkg.all;
 use work.alu_pkg.all;
@@ -26,5 +25,8 @@ architecture structural of packages is
    signal tmp: std_logic;
 begin
 	-- do something
-	HEX0 <= "0000000";
+	HEX_DISPLAY0: hex_to_7seg port map(SW(3 downto 0), HEX0);
+	HEX_DISPLAY1: hex_to_7seg port map(SW(7 downto 4), HEX1);
+	HEX_DISPLAY2: hex_to_7seg port map(SW(11 downto 8), HEX2);
+	HEX_DISPLAY3: hex_to_7seg port map(SW(15 downto 12), HEX3);
 end structural;

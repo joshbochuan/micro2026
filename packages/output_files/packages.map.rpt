@@ -1,5 +1,5 @@
 Analysis & Synthesis report for packages
-Mon Mar 30 21:12:57 2026
+Mon Apr 20 17:35:32 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -43,13 +43,13 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 30 21:12:57 2026           ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 20 17:35:32 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; packages                                        ;
 ; Top-level Entity Name              ; packages                                        ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
+; Total logic elements               ; 28                                              ;
+;     Total combinational functions  ; 28                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 105                                             ;
@@ -151,8 +151,8 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 28          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -162,55 +162,61 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                              ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                       ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
-; adder_pkg.vhd                    ; yes             ; User VHDL File  ; C:/Users/joshb/micro2026/packages/adder_pkg.vhd    ;         ;
-; sevenseg_pkg.vhd                 ; yes             ; User VHDL File  ; C:/Users/joshb/micro2026/packages/sevenseg_pkg.vhd ;         ;
-; packages.vhd                     ; yes             ; User VHDL File  ; C:/Users/joshb/micro2026/packages/packages.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                             ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+; alu_pkg.vhd                      ; yes             ; User VHDL File  ; C:/Users/User/micro2026/packages/alu_pkg.vhd      ;         ;
+; adder_pkg.vhd                    ; yes             ; User VHDL File  ; C:/Users/User/micro2026/packages/adder_pkg.vhd    ;         ;
+; sevenseg_pkg.vhd                 ; yes             ; User VHDL File  ; C:/Users/User/micro2026/packages/sevenseg_pkg.vhd ;         ;
+; packages.vhd                     ; yes             ; User VHDL File  ; C:/Users/User/micro2026/packages/packages.vhd     ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 105   ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; SW[0] ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 105   ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 28          ;
+;                                             ;             ;
+; Total combinational functions               ; 28          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 28          ;
+;     -- 3 input functions                    ; 0           ;
+;     -- <=2 input functions                  ; 0           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 28          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 105         ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; SW[3]~input ;
+; Maximum fan-out                             ; 7           ;
+; Total fan-out                               ; 245         ;
+; Average fan-out                             ; 1.03        ;
++---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |packages                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 105  ; 0            ; |packages           ; packages    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+-------------+--------------+
+; |packages                     ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 105  ; 0            ; |packages                          ; packages    ; work         ;
+;    |hex_to_7seg:HEX_DISPLAY0| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |packages|hex_to_7seg:HEX_DISPLAY0 ; hex_to_7seg ; work         ;
+;    |hex_to_7seg:HEX_DISPLAY1| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |packages|hex_to_7seg:HEX_DISPLAY1 ; hex_to_7seg ; work         ;
+;    |hex_to_7seg:HEX_DISPLAY2| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |packages|hex_to_7seg:HEX_DISPLAY2 ; hex_to_7seg ; work         ;
+;    |hex_to_7seg:HEX_DISPLAY3| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |packages|hex_to_7seg:HEX_DISPLAY3 ; hex_to_7seg ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,12 +241,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 105                         ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
+; cycloneiii_lcell_comb ; 29                          ;
+;     normal            ; 29                          ;
 ;         0 data inputs ; 1                           ;
+;         4 data inputs ; 28                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.98                        ;
 +-----------------------+-----------------------------+
 
 
@@ -259,153 +266,117 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Mon Mar 30 21:12:52 2026
+    Info: Processing started: Mon Apr 20 17:35:23 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off packages -c packages
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
+Info (12021): Found 5 design units, including 2 entities, in source file alu_pkg.vhd
+    Info (12022): Found design unit 1: alu_pkg File: C:/Users/User/micro2026/packages/alu_pkg.vhd Line: 4
+    Info (12022): Found design unit 2: alu1-structural File: C:/Users/User/micro2026/packages/alu_pkg.vhd Line: 49
+    Info (12022): Found design unit 3: alu7-structural File: C:/Users/User/micro2026/packages/alu_pkg.vhd Line: 87
+    Info (12023): Found entity 1: alu1 File: C:/Users/User/micro2026/packages/alu_pkg.vhd Line: 35
+    Info (12023): Found entity 2: alu7 File: C:/Users/User/micro2026/packages/alu_pkg.vhd Line: 76
 Info (12021): Found 10 design units, including 4 entities, in source file adder_pkg.vhd
-    Info (12022): Found design unit 1: adder_pkg File: C:/Users/joshb/micro2026/packages/adder_pkg.vhd Line: 4
-    Info (12022): Found design unit 2: adder_pkg-body File: C:/Users/joshb/micro2026/packages/adder_pkg.vhd Line: 45
-    Info (12022): Found design unit 3: adder1-func File: C:/Users/joshb/micro2026/packages/adder_pkg.vhd Line: 57
-    Info (12022): Found design unit 4: adder4-structural File: C:/Users/joshb/micro2026/packages/adder_pkg.vhd Line: 76
-    Info (12022): Found design unit 5: adder8-Structural File: C:/Users/joshb/micro2026/packages/adder_pkg.vhd Line: 100
-    Info (12022): Found design unit 6: bcd_adder4-structural File: C:/Users/joshb/micro2026/packages/adder_pkg.vhd Line: 128
-    Info (12023): Found entity 1: adder1 File: C:/Users/joshb/micro2026/packages/adder_pkg.vhd Line: 50
-    Info (12023): Found entity 2: adder4 File: C:/Users/joshb/micro2026/packages/adder_pkg.vhd Line: 66
-    Info (12023): Found entity 3: adder8 File: C:/Users/joshb/micro2026/packages/adder_pkg.vhd Line: 90
-    Info (12023): Found entity 4: bcd_adder4 File: C:/Users/joshb/micro2026/packages/adder_pkg.vhd Line: 118
-Info (12021): Found 2 design units, including 0 entities, in source file sevenseg_pkg.vhd
-    Info (12022): Found design unit 1: sevenseg_pkg File: C:/Users/joshb/micro2026/packages/sevenseg_pkg.vhd Line: 4
-    Info (12022): Found design unit 2: sevenseg_pkg-body File: C:/Users/joshb/micro2026/packages/sevenseg_pkg.vhd Line: 10
+    Info (12022): Found design unit 1: adder_pkg File: C:/Users/User/micro2026/packages/adder_pkg.vhd Line: 4
+    Info (12022): Found design unit 2: adder_pkg-body File: C:/Users/User/micro2026/packages/adder_pkg.vhd Line: 45
+    Info (12022): Found design unit 3: adder1-func File: C:/Users/User/micro2026/packages/adder_pkg.vhd Line: 57
+    Info (12022): Found design unit 4: adder4-structural File: C:/Users/User/micro2026/packages/adder_pkg.vhd Line: 76
+    Info (12022): Found design unit 5: adder8-Structural File: C:/Users/User/micro2026/packages/adder_pkg.vhd Line: 100
+    Info (12022): Found design unit 6: bcd_adder4-structural File: C:/Users/User/micro2026/packages/adder_pkg.vhd Line: 128
+    Info (12023): Found entity 1: adder1 File: C:/Users/User/micro2026/packages/adder_pkg.vhd Line: 50
+    Info (12023): Found entity 2: adder4 File: C:/Users/User/micro2026/packages/adder_pkg.vhd Line: 66
+    Info (12023): Found entity 3: adder8 File: C:/Users/User/micro2026/packages/adder_pkg.vhd Line: 90
+    Info (12023): Found entity 4: bcd_adder4 File: C:/Users/User/micro2026/packages/adder_pkg.vhd Line: 118
+Info (12021): Found 4 design units, including 1 entities, in source file sevenseg_pkg.vhd
+    Info (12022): Found design unit 1: sevenseg_pkg File: C:/Users/User/micro2026/packages/sevenseg_pkg.vhd Line: 4
+    Info (12022): Found design unit 2: sevenseg_pkg-body File: C:/Users/User/micro2026/packages/sevenseg_pkg.vhd Line: 13
+    Info (12022): Found design unit 3: hex_to_7seg-structural File: C:/Users/User/micro2026/packages/sevenseg_pkg.vhd Line: 27
+    Info (12023): Found entity 1: hex_to_7seg File: C:/Users/User/micro2026/packages/sevenseg_pkg.vhd Line: 20
 Info (12021): Found 2 design units, including 1 entities, in source file packages.vhd
-    Info (12022): Found design unit 1: packages-structural File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 24
-    Info (12023): Found entity 1: packages File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 7
+    Info (12022): Found design unit 1: packages-structural File: C:/Users/User/micro2026/packages/packages.vhd Line: 24
+    Info (12023): Found entity 1: packages File: C:/Users/User/micro2026/packages/packages.vhd Line: 7
 Info (12127): Elaborating entity "packages" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at packages.vhd(11): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at packages.vhd(12): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 12
-Warning (10541): VHDL Signal Declaration warning at packages.vhd(14): used implicit default value for signal "HEX1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 14
-Warning (10541): VHDL Signal Declaration warning at packages.vhd(15): used implicit default value for signal "HEX2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at packages.vhd(16): used implicit default value for signal "HEX3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at packages.vhd(17): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 17
-Warning (10541): VHDL Signal Declaration warning at packages.vhd(18): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 18
-Warning (10541): VHDL Signal Declaration warning at packages.vhd(19): used implicit default value for signal "HEX6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 19
-Warning (10541): VHDL Signal Declaration warning at packages.vhd(20): used implicit default value for signal "HEX7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 20
+Warning (10541): VHDL Signal Declaration warning at packages.vhd(11): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at packages.vhd(12): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/User/micro2026/packages/packages.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at packages.vhd(17): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/User/micro2026/packages/packages.vhd Line: 17
+Warning (10541): VHDL Signal Declaration warning at packages.vhd(18): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/User/micro2026/packages/packages.vhd Line: 18
+Warning (10541): VHDL Signal Declaration warning at packages.vhd(19): used implicit default value for signal "HEX6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/User/micro2026/packages/packages.vhd Line: 19
+Warning (10541): VHDL Signal Declaration warning at packages.vhd(20): used implicit default value for signal "HEX7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/User/micro2026/packages/packages.vhd Line: 20
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:HEX_DISPLAY0" File: C:/Users/User/micro2026/packages/packages.vhd Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 11
-    Warning (13410): Pin "LEDG[0]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 12
-    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 12
-    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 12
-    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 12
-    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 12
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 12
-    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 12
-    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 12
-    Warning (13410): Pin "LEDG[8]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 12
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 13
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 13
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 13
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 13
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 13
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 13
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 13
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 14
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 14
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 14
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 14
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 14
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 14
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 14
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 15
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 15
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 15
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 15
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 15
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 15
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 15
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 16
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 16
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 16
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 16
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 16
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 16
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 16
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 17
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 17
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 17
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 17
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 17
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 17
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 17
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 18
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 18
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 18
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 18
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 18
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 18
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 18
-    Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 19
-    Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 19
-    Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 19
-    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 19
-    Warning (13410): Pin "HEX6[4]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 19
-    Warning (13410): Pin "HEX6[5]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 19
-    Warning (13410): Pin "HEX6[6]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 19
-    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 20
-    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 20
-    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 20
-    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 20
-    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 20
-    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 20
-    Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 20
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 11
+    Warning (13410): Pin "LEDG[0]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 12
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 12
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 12
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 12
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 12
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 12
+    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 12
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 12
+    Warning (13410): Pin "LEDG[8]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 12
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 17
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 17
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 17
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 17
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 17
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 17
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 17
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 18
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 18
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 18
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 18
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 18
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 18
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 18
+    Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 19
+    Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 19
+    Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 19
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 19
+    Warning (13410): Pin "HEX6[4]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 19
+    Warning (13410): Pin "HEX6[5]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 19
+    Warning (13410): Pin "HEX6[6]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 19
+    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 20
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 20
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 20
+    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 20
+    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 20
+    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 20
+    Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/User/micro2026/packages/packages.vhd Line: 20
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 22 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[12]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[13]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[14]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[15]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "SW[17]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 9
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 10
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 10
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 10
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/joshb/micro2026/packages/packages.vhd Line: 10
-Info (21057): Implemented 105 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/User/micro2026/packages/packages.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[17]" File: C:/Users/User/micro2026/packages/packages.vhd Line: 9
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/User/micro2026/packages/packages.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/User/micro2026/packages/packages.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/User/micro2026/packages/packages.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/User/micro2026/packages/packages.vhd Line: 10
+Info (21057): Implemented 133 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 83 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 117 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Mon Mar 30 21:12:57 2026
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:11
+    Info (21061): Implemented 28 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
+    Info: Peak virtual memory: 4880 megabytes
+    Info: Processing ended: Mon Apr 20 17:35:32 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:25
 
 

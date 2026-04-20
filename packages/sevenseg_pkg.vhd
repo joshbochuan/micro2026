@@ -2,63 +2,64 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 package sevenseg_pkg is
-    subtype nibble_t is STD_LOGIC_VECTOR(3 downto 0);
-    subtype seg7_t   is STD_LOGIC_VECTOR(6 downto 0);
-    function hex_to_7seg(wxyz : nibble_t) return seg7_t;
+	component hex_to_7seg is
+		port (
+			hex: in std_logic_vector(3 downto 0);
+			res: out std_logic_vector(6 downto 0)
+		);
+	end component;
 end sevenseg_pkg;
 
 package body sevenseg_pkg is
-	function hex_to_7seg(wxyz : nibble_t) return seg7_t is
-		 variable w, x, y, z : STD_LOGIC;
-		 variable a, b, c, d, e, f, g : STD_LOGIC;
-		 variable seg : seg7_t;
-	begin
-		 w := wxyz(3);
-		 x := wxyz(2);
-		 y := wxyz(1);
-		 z := wxyz(0);
-
-		 a := (not w and not x and not y and z) or
-				(not w and x and not y and not z) or
-				(w and not x and y and z) or
-				(w and x and not y and not z) or
-				(w and x and not y and z);
-
-		 b := (not w and x and not y and z) or
-				(not w and x and y and not z) or
-				(w and not x and y and z) or
-				(w and x and not y and not z) or
-				(w and x and y and not z) or
-				(w and x and y and z);
-
-		 c := (not w and not x and y and not z) or
-				(w and x and not z) or
-				(w and x and y);
-
-		 d := (not x and not y and z) or
-				(not w and x and not y and not z) or
-				(x and y and z) or
-				(w and not x and y and not z);
-
-		 e := (not w and z) or
-				(not w and x and not y) or
-				(not x and not y and z);
-
-		 f := (not w and not x and z) or
-				(not w and not x and y) or
-				(not w and y and z) or
-				(w and x and not y);
-
-		 g := (not w and not x and not y) or
-				(not w and x and y and z);
-
-		 seg(0) := a;
-		 seg(1) := b;
-		 seg(2) := c;
-		 seg(3) := d;
-		 seg(4) := e;
-		 seg(5) := f;
-		 seg(6) := g;
-		 return seg;
-	end function;
 end sevenseg_pkg;
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use work.sevenseg_pkg.all;
+
+entity hex_to_7seg is
+port (
+		hex: in std_logic_vector(3 downto 0);
+		res: out std_logic_vector(6 downto 0)
+	);
+end hex_to_7seg;
+
+architecture structural of hex_to_7seg is
+begin
+	res(0) <= (not hex(3) and not hex(2) and not hex(1) and hex(0)) or
+			(not hex(3) and hex(2) and not hex(1) and not hex(0)) or
+			(hex(3) and not hex(2) and hex(1) and hex(0)) or
+			(hex(3) and hex(2) and not hex(1) and not hex(0)) or
+			(hex(3) and hex(2) and not hex(1) and hex(0));
+
+	res(1) <= (not hex(3) and hex(2) and not hex(1) and hex(0)) or
+			(not hex(3) and hex(2) and hex(1) and not hex(0)) or
+			(hex(3) and not hex(2) and hex(1) and hex(0)) or
+			(hex(3) and hex(2) and not hex(1) and not hex(0)) or
+			(hex(3) and hex(2) and hex(1) and not hex(0)) or
+			(hex(3) and hex(2) and hex(1) and hex(0));
+
+	res(2) <= (not hex(3) and not hex(2) and hex(1) and not hex(0)) or
+			(hex(3) and hex(2) and not hex(0)) or
+			(hex(3) and hex(2) and hex(1));
+
+	res(3) <= (not hex(2) and not hex(1) and hex(0)) or
+			(not hex(3) and hex(2) and not hex(1) and not hex(0)) or
+			(hex(2) and hex(1) and hex(0)) or
+			(hex(3) and not hex(2) and hex(1) and not hex(0));
+
+	res(4) <= (not hex(3) and hex(0)) or
+			(not hex(3) and hex(2) and not hex(1)) or
+			(not hex(2) and not hex(1) and hex(0));
+
+	res(5) <= (not hex(3) and not hex(2) and hex(0)) or
+			(not hex(3) and not hex(2) and hex(1)) or
+			(not hex(3) and hex(1) and hex(0)) or
+			(hex(3) and hex(2) and not hex(1));
+
+	res(6) <= (not hex(3) and not hex(2) and not hex(1)) or
+			(not hex(3) and hex(2) and hex(1) and hex(0));
+			
+end structural;
+
+
