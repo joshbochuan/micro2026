@@ -1,0 +1,10 @@
+Library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Lab04_bonus is
+begin
+end Lab04_bonus;
+
+architecture structural of Lab04_bonus is
+begin
+end structural;

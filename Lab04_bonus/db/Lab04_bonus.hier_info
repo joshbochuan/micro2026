@@ -1,0 +1,363 @@
+|Lab04_bonus
+SW[0] => res.IN0
+SW[0] => res.IN0
+SW[0] => res.IN0
+SW[0] => adder7:FA_ADD.Y[0]
+SW[0] => adder7:FA_SUB.Y[0]
+SW[1] => res.IN0
+SW[1] => res.IN0
+SW[1] => res.IN0
+SW[1] => adder7:FA_ADD.Y[1]
+SW[1] => adder7:FA_SUB.Y[1]
+SW[2] => res.IN0
+SW[2] => res.IN0
+SW[2] => res.IN0
+SW[2] => adder7:FA_ADD.Y[2]
+SW[2] => adder7:FA_SUB.Y[2]
+SW[3] => res.IN0
+SW[3] => res.IN0
+SW[3] => res.IN0
+SW[3] => adder7:FA_ADD.Y[3]
+SW[3] => adder7:FA_SUB.Y[3]
+SW[4] => res.IN0
+SW[4] => res.IN0
+SW[4] => res.IN0
+SW[4] => adder7:FA_ADD.Y[4]
+SW[4] => adder7:FA_SUB.Y[4]
+SW[5] => res.IN0
+SW[5] => res.IN0
+SW[5] => res.IN0
+SW[5] => adder7:FA_ADD.Y[5]
+SW[5] => adder7:FA_SUB.Y[5]
+SW[6] => res.IN0
+SW[6] => res.IN0
+SW[6] => res.IN0
+SW[6] => adder7:FA_ADD.Y[6]
+SW[6] => adder7:FA_SUB.Y[6]
+SW[7] => res.IN1
+SW[7] => res.IN1
+SW[7] => res.IN1
+SW[7] => adder7:FA_ADD.X[0]
+SW[7] => adder7:FA_SUB.X[0]
+SW[8] => res.IN1
+SW[8] => res.IN1
+SW[8] => res.IN1
+SW[8] => adder7:FA_ADD.X[1]
+SW[8] => adder7:FA_SUB.X[1]
+SW[9] => res.IN1
+SW[9] => res.IN1
+SW[9] => res.IN1
+SW[9] => adder7:FA_ADD.X[2]
+SW[9] => adder7:FA_SUB.X[2]
+SW[10] => res.IN1
+SW[10] => res.IN1
+SW[10] => res.IN1
+SW[10] => adder7:FA_ADD.X[3]
+SW[10] => adder7:FA_SUB.X[3]
+SW[11] => res.IN1
+SW[11] => res.IN1
+SW[11] => res.IN1
+SW[11] => adder7:FA_ADD.X[4]
+SW[11] => adder7:FA_SUB.X[4]
+SW[12] => res.IN1
+SW[12] => res.IN1
+SW[12] => res.IN1
+SW[12] => adder7:FA_ADD.X[5]
+SW[12] => adder7:FA_SUB.X[5]
+SW[13] => res.IN1
+SW[13] => res.IN1
+SW[13] => res.IN1
+SW[13] => adder7:FA_ADD.X[6]
+SW[13] => adder7:FA_SUB.X[6]
+SW[14] => Mux0.IN17
+SW[14] => Mux1.IN17
+SW[14] => Mux2.IN17
+SW[14] => Mux3.IN17
+SW[14] => Mux4.IN17
+SW[14] => Mux5.IN17
+SW[14] => Mux6.IN16
+SW[15] => Mux0.IN16
+SW[15] => Mux1.IN16
+SW[15] => Mux2.IN16
+SW[15] => Mux3.IN16
+SW[15] => Mux4.IN16
+SW[15] => Mux5.IN16
+SW[15] => Mux6.IN15
+SW[16] => Mux0.IN15
+SW[16] => Mux1.IN15
+SW[16] => Mux2.IN15
+SW[16] => Mux3.IN15
+SW[16] => Mux4.IN15
+SW[16] => Mux5.IN15
+SW[16] => Mux6.IN14
+SW[17] => Mux0.IN14
+SW[17] => Mux1.IN14
+SW[17] => Mux2.IN14
+SW[17] => Mux3.IN14
+SW[17] => Mux4.IN14
+SW[17] => Mux5.IN14
+SW[17] => Mux6.IN13
+HEX0[0] << a.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] << b.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] << c.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] << d.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] << e.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] << f.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] << g.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] << d.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] << b.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] << c.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] << d.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] << e.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] << f.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] << g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_ADD
+cin => adder1:FA0.cin
+X[0] => adder1:FA0.x
+X[1] => adder1:FA1.x
+X[2] => adder1:FA2.x
+X[3] => adder1:FA3.x
+X[4] => adder1:FA4.x
+X[5] => adder1:FA5.x
+X[6] => adder1:FA6.x
+Y[0] => adder1:FA0.y
+Y[1] => adder1:FA1.y
+Y[2] => adder1:FA2.y
+Y[3] => adder1:FA3.y
+Y[4] => adder1:FA4.y
+Y[5] => adder1:FA5.y
+Y[6] => adder1:FA6.y
+S[0] <= adder1:FA0.s
+S[1] <= adder1:FA1.s
+S[2] <= adder1:FA2.s
+S[3] <= adder1:FA3.s
+S[4] <= adder1:FA4.s
+S[5] <= adder1:FA5.s
+S[6] <= adder1:FA6.s
+cout <= adder1:FA6.cout
+
+
+|Lab04_bonus|adder7:FA_ADD|adder1:FA0
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_ADD|adder1:FA1
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_ADD|adder1:FA2
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_ADD|adder1:FA3
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_ADD|adder1:FA4
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_ADD|adder1:FA5
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_ADD|adder1:FA6
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_SUB
+cin => adder1:FA0.cin
+X[0] => adder1:FA0.x
+X[1] => adder1:FA1.x
+X[2] => adder1:FA2.x
+X[3] => adder1:FA3.x
+X[4] => adder1:FA4.x
+X[5] => adder1:FA5.x
+X[6] => adder1:FA6.x
+Y[0] => adder1:FA0.y
+Y[1] => adder1:FA1.y
+Y[2] => adder1:FA2.y
+Y[3] => adder1:FA3.y
+Y[4] => adder1:FA4.y
+Y[5] => adder1:FA5.y
+Y[6] => adder1:FA6.y
+S[0] <= adder1:FA0.s
+S[1] <= adder1:FA1.s
+S[2] <= adder1:FA2.s
+S[3] <= adder1:FA3.s
+S[4] <= adder1:FA4.s
+S[5] <= adder1:FA5.s
+S[6] <= adder1:FA6.s
+cout <= adder1:FA6.cout
+
+
+|Lab04_bonus|adder7:FA_SUB|adder1:FA0
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_SUB|adder1:FA1
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_SUB|adder1:FA2
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_SUB|adder1:FA3
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_SUB|adder1:FA4
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_SUB|adder1:FA5
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab04_bonus|adder7:FA_SUB|adder1:FA6
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
