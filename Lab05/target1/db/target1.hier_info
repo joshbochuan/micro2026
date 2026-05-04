@@ -1,0 +1,64 @@
+|target1
+SW[0] => shift_register:SFTREG.di[0]
+SW[1] => shift_register:SFTREG.di[1]
+SW[2] => shift_register:SFTREG.di[2]
+SW[3] => shift_register:SFTREG.di[3]
+SW[4] => shift_register:SFTREG.di[4]
+SW[5] => shift_register:SFTREG.di[5]
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => shift_register:SFTREG.load
+SW[9] => shift_register:SFTREG.lr_sel
+SW[10] => shift_register:SFTREG.clear
+SW[11] => shift_register:SFTREG.sdi
+KEY[0] => shift_register:SFTREG.clk
+KEY[1] => ~NO_FANOUT~
+LEDR[0] <= shift_register:SFTREG.qo[0]
+LEDR[1] <= shift_register:SFTREG.qo[1]
+LEDR[2] <= shift_register:SFTREG.qo[2]
+LEDR[3] <= shift_register:SFTREG.qo[3]
+LEDR[4] <= shift_register:SFTREG.qo[4]
+LEDR[5] <= shift_register:SFTREG.qo[5]
+
+
+|target1|shift_register:SFTREG
+clk => qo[0]~reg0.CLK
+clk => qo[1]~reg0.CLK
+clk => qo[2]~reg0.CLK
+clk => qo[3]~reg0.CLK
+clk => qo[4]~reg0.CLK
+clk => qo[5]~reg0.CLK
+clear => qo[0]~reg0.ACLR
+clear => qo[1]~reg0.ACLR
+clear => qo[2]~reg0.ACLR
+clear => qo[3]~reg0.ACLR
+clear => qo[4]~reg0.ACLR
+clear => qo[5]~reg0.ACLR
+load => qo.OUTPUTSELECT
+load => qo.OUTPUTSELECT
+load => qo.OUTPUTSELECT
+load => qo.OUTPUTSELECT
+load => qo.OUTPUTSELECT
+load => qo.OUTPUTSELECT
+lr_sel => qo.OUTPUTSELECT
+lr_sel => qo.OUTPUTSELECT
+lr_sel => qo.OUTPUTSELECT
+lr_sel => qo.OUTPUTSELECT
+lr_sel => qo.OUTPUTSELECT
+lr_sel => qo.OUTPUTSELECT
+di[0] => qo.DATAB
+di[1] => qo.DATAB
+di[2] => qo.DATAB
+di[3] => qo.DATAB
+di[4] => qo.DATAB
+di[5] => qo.DATAB
+sdi => qo.DATAA
+sdi => qo.DATAB
+qo[0] <= qo[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qo[1] <= qo[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qo[2] <= qo[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qo[3] <= qo[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qo[4] <= qo[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qo[5] <= qo[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
