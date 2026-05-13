@@ -1,0 +1,14 @@
+|target1
+SW[0] => Selector1.IN7
+SW[0] => Selector3.IN5
+SW[0] => Selector5.IN5
+SW[0] => Selector0.IN1
+SW[0] => Selector1.IN1
+SW[0] => Selector2.IN1
+SW[1] => state~3.DATAIN
+KEY[0] => state~1.DATAIN
+LEDR[1] << WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+
+
