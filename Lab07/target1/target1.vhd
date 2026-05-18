@@ -29,6 +29,7 @@ begin
 	reset <= SW(16);
 	
 	-- add logic
+	DIV: divider port map(clock, clear, divisor, dividend, remainder & quotient);
 	
 	LEDR(7 downto 0) <= quotient;
 	LEDR(15 downto 8) <= remainder;

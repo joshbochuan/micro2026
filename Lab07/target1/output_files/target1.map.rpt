@@ -1,5 +1,5 @@
 Analysis & Synthesis report for target1
-Mon May 18 17:18:14 2026
+Mon May 18 18:11:41 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -10,13 +10,7 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -43,20 +37,20 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 18 17:18:14 2026           ;
+; Analysis & Synthesis Status        ; Failed - Mon May 18 18:11:41 2026               ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; target1                                         ;
 ; Top-level Entity Name              ; target1                                         ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 62                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -162,107 +156,27 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; sevenseg_pkg.vhd                 ; yes             ; User VHDL File  ; C:/Users/User/micro2026/Lab07/target1/sevenseg_pkg.vhd ;         ;
-; target1.vhd                      ; yes             ; User VHDL File  ; C:/Users/User/micro2026/Lab07/target1/target1.vhd      ;         ;
-; divider_pkg.vhd                  ; yes             ; User VHDL File  ; C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd  ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 62    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; SW[0] ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 62    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |target1                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |target1            ; target1     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 62                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Mon May 18 17:18:06 2026
+    Info: Processing started: Mon May 18 18:11:34 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off target1 -c target1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
+Info (12021): Found 10 design units, including 4 entities, in source file adder_pkg.vhd
+    Info (12022): Found design unit 1: adder_pkg File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 4
+    Info (12022): Found design unit 2: adder_pkg-body File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 45
+    Info (12022): Found design unit 3: adder1-func File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 57
+    Info (12022): Found design unit 4: adder4-structural File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 76
+    Info (12022): Found design unit 5: adder8-Structural File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 100
+    Info (12022): Found design unit 6: bcd_adder4-structural File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 128
+    Info (12023): Found entity 1: adder1 File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 50
+    Info (12023): Found entity 2: adder4 File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 66
+    Info (12023): Found entity 3: adder8 File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 90
+    Info (12023): Found entity 4: bcd_adder4 File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 118
 Info (12021): Found 3 design units, including 1 entities, in source file shift_reg_pkg.vhd
     Info (12022): Found design unit 1: shift_reg_pkg File: C:/Users/User/micro2026/Lab07/target1/shift_reg_pkg.vhd Line: 5
     Info (12022): Found design unit 2: shift_register-structural File: C:/Users/User/micro2026/Lab07/target1/shift_reg_pkg.vhd Line: 38
@@ -275,91 +189,20 @@ Info (12021): Found 4 design units, including 1 entities, in source file sevense
 Info (12021): Found 2 design units, including 1 entities, in source file target1.vhd
     Info (12022): Found design unit 1: target1-structural File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 18
     Info (12023): Found entity 1: target1 File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 6
-Info (12021): Found 3 design units, including 1 entities, in source file divider_pkg.vhd
-    Info (12022): Found design unit 1: divider_pkg File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 5
-    Info (12022): Found design unit 2: divider-logicfunc File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 31
-    Info (12023): Found entity 1: divider File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 21
-Info (12127): Elaborating entity "target1" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at target1.vhd(19): object "divisor" assigned a value but never read File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 19
-Warning (10036): Verilog HDL or VHDL warning at target1.vhd(20): object "dividend" assigned a value but never read File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 20
-Warning (10036): Verilog HDL or VHDL warning at target1.vhd(21): object "clock" assigned a value but never read File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 21
-Warning (10036): Verilog HDL or VHDL warning at target1.vhd(22): object "reset" assigned a value but never read File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 22
-Warning (10541): VHDL Signal Declaration warning at target1.vhd(23): used implicit default value for signal "quotient" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 23
-Warning (10541): VHDL Signal Declaration warning at target1.vhd(24): used implicit default value for signal "remainder" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 24
-Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:H3" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 35
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 10
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 11
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 11
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 11
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 11
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 11
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 11
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 11
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 12
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 12
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 12
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 12
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 12
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 12
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 12
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 13
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 13
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 13
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 13
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 13
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 13
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 13
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 14
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 14
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 14
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 14
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 14
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 14
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 14
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 18 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[12]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[13]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[14]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[15]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 8
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 9
-Info (21057): Implemented 62 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 44 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
-    Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Mon May 18 17:18:14 2026
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:24
+Error (10500): VHDL syntax error at divider_pkg.vhd(47) near text "port";  expecting "(", or "'", or "." File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 47
+Error (10500): VHDL syntax error at divider_pkg.vhd(47) near text ";";  expecting ":=", or "<=" File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 47
+Error (10500): VHDL syntax error at divider_pkg.vhd(52) near text "port";  expecting "(", or "'", or "." File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 52
+Error (10500): VHDL syntax error at divider_pkg.vhd(52) near text ";";  expecting ":=", or "<=" File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 52
+Error (10500): VHDL syntax error at divider_pkg.vhd(56) near text "port";  expecting "(", or "'", or "." File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 56
+Error (10500): VHDL syntax error at divider_pkg.vhd(56) near text "open";  expecting "(", or an identifier ("open" is a reserved keyword), or  unary operator File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 56
+Error (10500): VHDL syntax error at divider_pkg.vhd(67) near text ";";  expecting ")", or "," File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 67
+Error (10500): VHDL syntax error at divider_pkg.vhd(69) near text ";";  expecting ")", or "," File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 69
+Error (10500): VHDL syntax error at divider_pkg.vhd(77) near text ";";  expecting ")", or "," File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 77
+Info (12021): Found 0 design units, including 0 entities, in source file divider_pkg.vhd
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 9 errors, 1 warning
+    Error: Peak virtual memory: 4809 megabytes
+    Error: Processing ended: Mon May 18 18:11:41 2026
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:23
 
 
