@@ -1,8 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
-use shift_reg_pkg.all;
-use adder_pkg.all;
+use work.shift_reg_pkg.all;
+use work.adder_pkg.all;
 
 package divider_pkg is
 	component divider is
@@ -39,28 +39,42 @@ architecture logicfunc of divider is
 	type state_type is (s0, s1, s2a, s2b, s3, s4);
 	signal state : state_type;
 	
+	signal shiftClear: std_logic_vector(15 downto 0);
+	signal shiftInit: std_logic_vector(15 downto 0);
+	signal shiftSub: std_logic_vector(15 downto 0);
+	signal shiftBack: std_logic_vector(15 downto 0);
+	
 begin
 	 -- add logic
+	 
+	shiftClear <= "0000000000000000";
+	
+	shiftInit <= "00000000" & dividend;
+	
+	-- SFTREG: shift_register port map(clk, clear, load, lr_sel, di, sdi, remainder);
+	shiftSub(15 downto 9) <= remainder(14 downto 8);
+	Q1_SUB: adder8 port map('1', remainder(7 downto 0), not divisor, shiftSub(8 downto 1));
+	shiftSub(0) <= '1';
+	
+	shiftBack(15 downto 1) <= remainder(14 downto 0);
+	shiftBack(0) <= '0';
+	
 	process(clk, clear)
 	begin
 		if clear = '1' then
-			SFT_INIT: shift_register port map(clk, clear, '1', '0', "0000000000000000", '0', remainder);
+			remainder <= shiftClear;
 			state <= s0;
-		elsif rising_edge(clock) then
+		elsif rising_edge(clk) then
 			case state is
 				when s0 =>
-					SFT_INIT: shift_register port map(clk, clear,'1', '0', "00000000" & dividend, '0', remainder);
-					-- SFTREG: shift_register port map(clk, clear, load, lr_sel, di, sdi, remainder);
+					remainder <= shiftInit;
 					state <= S1;
 				when s1 =>
-					SUB_DIVISOR: adder8 port map('1', remainder(7 downto 0), not divisor, remainder(7 downto 0), open);
-					if remainder(7) = '0' then
-						SHIFT_LEFT_1: shift_register port map(clk, clear, '0', "0000000000000000", '1', remainder(7 downto 0));
+					if shiftSub(7) = '0' then
+						remainder <= shiftSub;
 						state <= s2a;
 					else
-					-- add back, 2b
-						ADD_BACK: adder8 port map('0', remainder(7 downto 0), divisor, remainder(7 downto 0), open);
-						SHIFT_LEFT_0: shift_register port map(clk, clear, '0', "0000000000000000", '0', remainder(7 downto 0));
+						remainder <= shiftBack;
 						state <= s2b;
 					end if;
 				when s2a =>

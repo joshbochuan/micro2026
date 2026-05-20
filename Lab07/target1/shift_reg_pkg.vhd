@@ -27,10 +27,10 @@ entity shift_register is
 	port (
 		clk: in std_logic;
 		clear: in std_logic;
-		load: in std_logic;
-		lr_sel: in std_logic;
-		di: in std_logic_vector(n-1 downto 0);
-		sdi: in std_logic;
+		load: in std_logic; -- parallel loads when 1, serial when 0
+		lr_sel: in std_logic; -- left shifts when 1, right shifts when 0
+		di: in std_logic_vector(n-1 downto 0); -- the parallel input
+		sdi: in std_logic; -- the serial input
 		qo: buffer std_logic_vector(n-1 downto 0)
 	);
 end shift_register;

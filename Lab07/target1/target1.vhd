@@ -22,6 +22,8 @@ architecture structural of target1 is
 	signal reset: std_logic;
 	signal quotient: std_logic_vector(7 downto 0);
 	signal remainder: std_logic_vector(7 downto 0);
+	
+	signal buf: std_logic_vector(15 downto 0);
 begin
 	divisor <= SW(7 downto 0);
 	dividend <= SW(15 downto 8);
@@ -29,7 +31,10 @@ begin
 	reset <= SW(16);
 	
 	-- add logic
-	DIV: divider port map(clock, clear, divisor, dividend, remainder & quotient);
+	DIV: divider port map(clock, reset, divisor, dividend, buf);
+	
+	remainder <= buf(15 downto 8);
+	quotient <= buf(7 downto 0);
 	
 	LEDR(7 downto 0) <= quotient;
 	LEDR(15 downto 8) <= remainder;

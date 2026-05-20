@@ -1,66 +1,276 @@
 |target1
-SW[0] => ~NO_FANOUT~
-SW[1] => ~NO_FANOUT~
-SW[2] => ~NO_FANOUT~
-SW[3] => ~NO_FANOUT~
-SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
-SW[6] => ~NO_FANOUT~
-SW[7] => ~NO_FANOUT~
-SW[8] => ~NO_FANOUT~
-SW[9] => ~NO_FANOUT~
-SW[10] => ~NO_FANOUT~
-SW[11] => ~NO_FANOUT~
-SW[12] => ~NO_FANOUT~
-SW[13] => ~NO_FANOUT~
-SW[14] => ~NO_FANOUT~
-SW[15] => ~NO_FANOUT~
-SW[16] => ~NO_FANOUT~
-KEY[0] => ~NO_FANOUT~
-LEDR[0] <= LEDR[0].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[1] <= LEDR[1].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[2] <= LEDR[2].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[3] <= LEDR[3].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[4] <= LEDR[4].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[5] <= LEDR[5].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[6] <= LEDR[6].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[7] <= LEDR[7].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[8] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LEDR[9] <= LEDR[9].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[10] <= LEDR[10].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[11] <= LEDR[11].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[12] <= LEDR[12].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[13] <= LEDR[13].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[14] <= LEDR[14].DB_MAX_OUTPUT_PORT_TYPE
-LEDR[15] <= LEDR[15].DB_MAX_OUTPUT_PORT_TYPE
-HEX0[0] <= hex_to_7seg:H0.res[0]
-HEX0[1] <= hex_to_7seg:H0.res[1]
-HEX0[2] <= hex_to_7seg:H0.res[2]
-HEX0[3] <= hex_to_7seg:H0.res[3]
-HEX0[4] <= hex_to_7seg:H0.res[4]
-HEX0[5] <= hex_to_7seg:H0.res[5]
-HEX0[6] <= hex_to_7seg:H0.res[6]
-HEX1[0] <= hex_to_7seg:H1.res[0]
-HEX1[1] <= hex_to_7seg:H1.res[1]
-HEX1[2] <= hex_to_7seg:H1.res[2]
-HEX1[3] <= hex_to_7seg:H1.res[3]
-HEX1[4] <= hex_to_7seg:H1.res[4]
-HEX1[5] <= hex_to_7seg:H1.res[5]
-HEX1[6] <= hex_to_7seg:H1.res[6]
-HEX2[0] <= hex_to_7seg:H2.res[0]
-HEX2[1] <= hex_to_7seg:H2.res[1]
-HEX2[2] <= hex_to_7seg:H2.res[2]
-HEX2[3] <= hex_to_7seg:H2.res[3]
-HEX2[4] <= hex_to_7seg:H2.res[4]
-HEX2[5] <= hex_to_7seg:H2.res[5]
-HEX2[6] <= hex_to_7seg:H2.res[6]
-HEX3[0] <= hex_to_7seg:H3.res[0]
-HEX3[1] <= hex_to_7seg:H3.res[1]
-HEX3[2] <= hex_to_7seg:H3.res[2]
-HEX3[3] <= hex_to_7seg:H3.res[3]
-HEX3[4] <= hex_to_7seg:H3.res[4]
-HEX3[5] <= hex_to_7seg:H3.res[5]
-HEX3[6] <= hex_to_7seg:H3.res[6]
+SW[0] => divider:DIV.divisor[0]
+SW[1] => divider:DIV.divisor[1]
+SW[2] => divider:DIV.divisor[2]
+SW[3] => divider:DIV.divisor[3]
+SW[4] => divider:DIV.divisor[4]
+SW[5] => divider:DIV.divisor[5]
+SW[6] => divider:DIV.divisor[6]
+SW[7] => divider:DIV.divisor[7]
+SW[8] => divider:DIV.dividend[0]
+SW[9] => divider:DIV.dividend[1]
+SW[10] => divider:DIV.dividend[2]
+SW[11] => divider:DIV.dividend[3]
+SW[12] => divider:DIV.dividend[4]
+SW[13] => divider:DIV.dividend[5]
+SW[14] => divider:DIV.dividend[6]
+SW[15] => divider:DIV.dividend[7]
+SW[16] => divider:DIV.clear
+KEY[0] => divider:DIV.clk
+LEDR[0] << divider:DIV.remainder[0]
+LEDR[1] << divider:DIV.remainder[1]
+LEDR[2] << divider:DIV.remainder[2]
+LEDR[3] << divider:DIV.remainder[3]
+LEDR[4] << divider:DIV.remainder[4]
+LEDR[5] << divider:DIV.remainder[5]
+LEDR[6] << divider:DIV.remainder[6]
+LEDR[7] << divider:DIV.remainder[7]
+LEDR[8] << divider:DIV.remainder[8]
+LEDR[9] << divider:DIV.remainder[9]
+LEDR[10] << divider:DIV.remainder[10]
+LEDR[11] << divider:DIV.remainder[11]
+LEDR[12] << divider:DIV.remainder[12]
+LEDR[13] << divider:DIV.remainder[13]
+LEDR[14] << divider:DIV.remainder[14]
+LEDR[15] << divider:DIV.remainder[15]
+HEX0[0] << hex_to_7seg:H0.res[0]
+HEX0[1] << hex_to_7seg:H0.res[1]
+HEX0[2] << hex_to_7seg:H0.res[2]
+HEX0[3] << hex_to_7seg:H0.res[3]
+HEX0[4] << hex_to_7seg:H0.res[4]
+HEX0[5] << hex_to_7seg:H0.res[5]
+HEX0[6] << hex_to_7seg:H0.res[6]
+HEX1[0] << hex_to_7seg:H1.res[0]
+HEX1[1] << hex_to_7seg:H1.res[1]
+HEX1[2] << hex_to_7seg:H1.res[2]
+HEX1[3] << hex_to_7seg:H1.res[3]
+HEX1[4] << hex_to_7seg:H1.res[4]
+HEX1[5] << hex_to_7seg:H1.res[5]
+HEX1[6] << hex_to_7seg:H1.res[6]
+HEX2[0] << hex_to_7seg:H2.res[0]
+HEX2[1] << hex_to_7seg:H2.res[1]
+HEX2[2] << hex_to_7seg:H2.res[2]
+HEX2[3] << hex_to_7seg:H2.res[3]
+HEX2[4] << hex_to_7seg:H2.res[4]
+HEX2[5] << hex_to_7seg:H2.res[5]
+HEX2[6] << hex_to_7seg:H2.res[6]
+HEX3[0] << hex_to_7seg:H3.res[0]
+HEX3[1] << hex_to_7seg:H3.res[1]
+HEX3[2] << hex_to_7seg:H3.res[2]
+HEX3[3] << hex_to_7seg:H3.res[3]
+HEX3[4] << hex_to_7seg:H3.res[4]
+HEX3[5] << hex_to_7seg:H3.res[5]
+HEX3[6] << hex_to_7seg:H3.res[6]
+
+
+|target1|divider:DIV
+clk => remainder[0]~reg0.CLK
+clk => remainder[1]~reg0.CLK
+clk => remainder[2]~reg0.CLK
+clk => remainder[3]~reg0.CLK
+clk => remainder[4]~reg0.CLK
+clk => remainder[5]~reg0.CLK
+clk => remainder[6]~reg0.CLK
+clk => remainder[7]~reg0.CLK
+clk => remainder[8]~reg0.CLK
+clk => remainder[9]~reg0.CLK
+clk => remainder[10]~reg0.CLK
+clk => remainder[11]~reg0.CLK
+clk => remainder[12]~reg0.CLK
+clk => remainder[13]~reg0.CLK
+clk => remainder[14]~reg0.CLK
+clk => remainder[15]~reg0.CLK
+clk => state~1.DATAIN
+clear => remainder[0]~reg0.ALOAD
+clear => remainder[1]~reg0.ALOAD
+clear => remainder[2]~reg0.ALOAD
+clear => remainder[3]~reg0.ALOAD
+clear => remainder[4]~reg0.ALOAD
+clear => remainder[5]~reg0.ALOAD
+clear => remainder[6]~reg0.ALOAD
+clear => remainder[7]~reg0.ALOAD
+clear => remainder[8]~reg0.ALOAD
+clear => remainder[9]~reg0.ALOAD
+clear => remainder[10]~reg0.ALOAD
+clear => remainder[11]~reg0.ALOAD
+clear => remainder[12]~reg0.ALOAD
+clear => remainder[13]~reg0.ALOAD
+clear => remainder[14]~reg0.ALOAD
+clear => remainder[15]~reg0.ALOAD
+clear => state~3.DATAIN
+divisor[0] => adder8:Q1_SUB.Y[0]
+divisor[1] => adder8:Q1_SUB.Y[1]
+divisor[2] => adder8:Q1_SUB.Y[2]
+divisor[3] => adder8:Q1_SUB.Y[3]
+divisor[4] => adder8:Q1_SUB.Y[4]
+divisor[5] => adder8:Q1_SUB.Y[5]
+divisor[6] => adder8:Q1_SUB.Y[6]
+divisor[7] => adder8:Q1_SUB.Y[7]
+dividend[0] => Selector15.IN5
+dividend[1] => Selector14.IN5
+dividend[2] => Selector13.IN5
+dividend[3] => Selector12.IN5
+dividend[4] => Selector11.IN5
+dividend[5] => Selector10.IN5
+dividend[6] => Selector9.IN5
+dividend[7] => Selector8.IN5
+remainder[0] <= remainder[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[1] <= remainder[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[2] <= remainder[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[3] <= remainder[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[4] <= remainder[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[5] <= remainder[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[6] <= remainder[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[7] <= remainder[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[8] <= remainder[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[9] <= remainder[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[10] <= remainder[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[11] <= remainder[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[12] <= remainder[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[13] <= remainder[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[14] <= remainder[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[15] <= remainder[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target1|divider:DIV|adder8:Q1_SUB
+cin => adder1:FA0.cin
+X[0] => adder1:FA0.x
+X[1] => adder1:FA1.x
+X[2] => adder1:FA2.x
+X[3] => adder1:FA3.x
+X[4] => adder1:FA4.x
+X[5] => adder1:FA5.x
+X[6] => adder1:FA6.x
+X[7] => adder1:FA7.x
+Y[0] => adder1:FA0.y
+Y[1] => adder1:FA1.y
+Y[2] => adder1:FA2.y
+Y[3] => adder1:FA3.y
+Y[4] => adder1:FA4.y
+Y[5] => adder1:FA5.y
+Y[6] => adder1:FA6.y
+Y[7] => adder1:FA7.y
+S[0] <= adder1:FA0.s
+S[1] <= adder1:FA1.s
+S[2] <= adder1:FA2.s
+S[3] <= adder1:FA3.s
+S[4] <= adder1:FA4.s
+S[5] <= adder1:FA5.s
+S[6] <= adder1:FA6.s
+S[7] <= adder1:FA7.s
+cout <= adder1:FA7.cout
+
+
+|target1|divider:DIV|adder8:Q1_SUB|adder1:FA0
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target1|divider:DIV|adder8:Q1_SUB|adder1:FA1
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target1|divider:DIV|adder8:Q1_SUB|adder1:FA2
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target1|divider:DIV|adder8:Q1_SUB|adder1:FA3
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target1|divider:DIV|adder8:Q1_SUB|adder1:FA4
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target1|divider:DIV|adder8:Q1_SUB|adder1:FA5
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target1|divider:DIV|adder8:Q1_SUB|adder1:FA6
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|target1|divider:DIV|adder8:Q1_SUB|adder1:FA7
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |target1|hex_to_7seg:H3

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for target1
-Mon May 18 18:11:41 2026
+Wed May 20 10:00:01 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -10,7 +10,17 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |target1|divider:DIV|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "divider:DIV|adder8:Q1_SUB"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +47,20 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon May 18 18:11:41 2026               ;
+; Analysis & Synthesis Status        ; Successful - Wed May 20 10:00:01 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; target1                                         ;
 ; Top-level Entity Name              ; target1                                         ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 61                                              ;
+;     Total combinational functions  ; 60                                              ;
+;     Dedicated logic registers      ; 18                                              ;
+; Total registers                    ; 18                                              ;
+; Total pins                         ; 62                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -149,11 +159,173 @@ on the Quartus Prime software download page.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; adder_pkg.vhd                    ; yes             ; User VHDL File  ; C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd     ;         ;
+; shift_reg_pkg.vhd                ; yes             ; User VHDL File  ; C:/Users/User/micro2026/Lab07/target1/shift_reg_pkg.vhd ;         ;
+; sevenseg_pkg.vhd                 ; yes             ; User VHDL File  ; C:/Users/User/micro2026/Lab07/target1/sevenseg_pkg.vhd  ;         ;
+; target1.vhd                      ; yes             ; User VHDL File  ; C:/Users/User/micro2026/Lab07/target1/target1.vhd       ;         ;
+; divider_pkg.vhd                  ; yes             ; User VHDL File  ; C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd   ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 61           ;
+;                                             ;              ;
+; Total combinational functions               ; 60           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 40           ;
+;     -- 3 input functions                    ; 8            ;
+;     -- <=2 input functions                  ; 12           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 60           ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 18           ;
+;     -- Dedicated logic registers            ; 18           ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 62           ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[0]~input ;
+; Maximum fan-out                             ; 18           ;
+; Total fan-out                               ; 393          ;
+; Average fan-out                             ; 1.95         ;
++---------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
+; |target1                   ; 60 (0)              ; 18 (0)                    ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |target1                                      ; target1     ; work         ;
+;    |divider:DIV|           ; 32 (20)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|divider:DIV                          ; divider     ; work         ;
+;       |adder8:Q1_SUB|      ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|divider:DIV|adder8:Q1_SUB            ; adder8      ; work         ;
+;          |adder1:FA1|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|divider:DIV|adder8:Q1_SUB|adder1:FA1 ; adder1      ; work         ;
+;          |adder1:FA2|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|divider:DIV|adder8:Q1_SUB|adder1:FA2 ; adder1      ; work         ;
+;          |adder1:FA3|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|divider:DIV|adder8:Q1_SUB|adder1:FA3 ; adder1      ; work         ;
+;          |adder1:FA4|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|divider:DIV|adder8:Q1_SUB|adder1:FA4 ; adder1      ; work         ;
+;          |adder1:FA5|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|divider:DIV|adder8:Q1_SUB|adder1:FA5 ; adder1      ; work         ;
+;          |adder1:FA6|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|divider:DIV|adder8:Q1_SUB|adder1:FA6 ; adder1      ; work         ;
+;    |hex_to_7seg:H0|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|hex_to_7seg:H0                       ; hex_to_7seg ; work         ;
+;    |hex_to_7seg:H1|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|hex_to_7seg:H1                       ; hex_to_7seg ; work         ;
+;    |hex_to_7seg:H2|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|hex_to_7seg:H2                       ; hex_to_7seg ; work         ;
+;    |hex_to_7seg:H3|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |target1|hex_to_7seg:H3                       ; hex_to_7seg ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |target1|divider:DIV|state                                    ;
++-----------+----------+----------+-----------+-----------+----------+----------+
+; Name      ; state.s4 ; state.s3 ; state.s2b ; state.s2a ; state.s1 ; state.s0 ;
++-----------+----------+----------+-----------+-----------+----------+----------+
+; state.s0  ; 0        ; 0        ; 0         ; 0         ; 0        ; 0        ;
+; state.s1  ; 0        ; 0        ; 0         ; 0         ; 1        ; 1        ;
+; state.s2a ; 0        ; 0        ; 0         ; 1         ; 0        ; 1        ;
+; state.s2b ; 0        ; 0        ; 1         ; 0         ; 0        ; 1        ;
+; state.s3  ; 0        ; 1        ; 0         ; 0         ; 0        ; 1        ;
+; state.s4  ; 1        ; 0        ; 0         ; 0         ; 0        ; 1        ;
++-----------+----------+----------+-----------+-----------+----------+----------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; divider:DIV|state.s2a                 ; Lost fanout        ;
+; divider:DIV|state.s2b                 ; Lost fanout        ;
+; divider:DIV|state.s3                  ; Lost fanout        ;
+; divider:DIV|state.s4                  ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 18    ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 18    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 14    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |target1|divider:DIV|remainder[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider:DIV|adder8:Q1_SUB"                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 62                          ;
+; cycloneiii_ff         ; 18                          ;
+;     CLR               ; 4                           ;
+;     ENA CLR           ; 7                           ;
+;     ENA CLR SCLR      ; 1                           ;
+;     ENA CLR SLD       ; 6                           ;
+; cycloneiii_lcell_comb ; 60                          ;
+;     normal            ; 60                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 40                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.51                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,7 +334,7 @@ on the Quartus Prime software download page.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Mon May 18 18:11:34 2026
+    Info: Processing started: Wed May 20 09:59:52 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off target1 -c target1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
@@ -189,20 +361,54 @@ Info (12021): Found 4 design units, including 1 entities, in source file sevense
 Info (12021): Found 2 design units, including 1 entities, in source file target1.vhd
     Info (12022): Found design unit 1: target1-structural File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 18
     Info (12023): Found entity 1: target1 File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 6
-Error (10500): VHDL syntax error at divider_pkg.vhd(47) near text "port";  expecting "(", or "'", or "." File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 47
-Error (10500): VHDL syntax error at divider_pkg.vhd(47) near text ";";  expecting ":=", or "<=" File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 47
-Error (10500): VHDL syntax error at divider_pkg.vhd(52) near text "port";  expecting "(", or "'", or "." File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 52
-Error (10500): VHDL syntax error at divider_pkg.vhd(52) near text ";";  expecting ":=", or "<=" File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 52
-Error (10500): VHDL syntax error at divider_pkg.vhd(56) near text "port";  expecting "(", or "'", or "." File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 56
-Error (10500): VHDL syntax error at divider_pkg.vhd(56) near text "open";  expecting "(", or an identifier ("open" is a reserved keyword), or  unary operator File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 56
-Error (10500): VHDL syntax error at divider_pkg.vhd(67) near text ";";  expecting ")", or "," File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 67
-Error (10500): VHDL syntax error at divider_pkg.vhd(69) near text ";";  expecting ")", or "," File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 69
-Error (10500): VHDL syntax error at divider_pkg.vhd(77) near text ";";  expecting ")", or "," File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 77
-Info (12021): Found 0 design units, including 0 entities, in source file divider_pkg.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 9 errors, 1 warning
-    Error: Peak virtual memory: 4809 megabytes
-    Error: Processing ended: Mon May 18 18:11:41 2026
-    Error: Elapsed time: 00:00:07
-    Error: Total CPU time (on all processors): 00:00:23
+Info (12021): Found 3 design units, including 1 entities, in source file divider_pkg.vhd
+    Info (12022): Found design unit 1: divider_pkg File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 7
+    Info (12022): Found design unit 2: divider-logicfunc File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 35
+    Info (12023): Found entity 1: divider File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 25
+Info (12127): Elaborating entity "target1" for the top level hierarchy
+Info (12128): Elaborating entity "divider" for hierarchy "divider:DIV" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 34
+Warning (10541): VHDL Signal Declaration warning at divider_pkg.vhd(38): used implicit default value for signal "w" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at divider_pkg.vhd(65): signal "shiftClear" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 65
+Info (12128): Elaborating entity "adder8" for hierarchy "divider:DIV|adder8:Q1_SUB" File: C:/Users/User/micro2026/Lab07/target1/divider_pkg.vhd Line: 56
+Info (12128): Elaborating entity "adder1" for hierarchy "divider:DIV|adder8:Q1_SUB|adder1:FA0" File: C:/Users/User/micro2026/Lab07/target1/adder_pkg.vhd Line: 104
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:H3" File: C:/Users/User/micro2026/Lab07/target1/target1.vhd Line: 41
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 24 assignments for entity "packages" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity packages -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity packages -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 44 output pins
+    Info (21061): Implemented 61 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4941 megabytes
+    Info: Processing ended: Wed May 20 10:00:01 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:24
 
 
