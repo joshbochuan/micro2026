@@ -1,5 +1,5 @@
 Timing Analyzer report for target1
-Wed May 20 10:00:29 2026
+Sun May 24 21:36:52 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -96,17 +96,18 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 28          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.08        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.1%      ;
-;     Processor 3            ;   0.6%      ;
-;     Processors 4-16        ;   0.4%      ;
+;     Processor 2            ;   1.8%      ;
+;     Processor 3            ;   1.5%      ;
+;     Processor 4            ;   1.3%      ;
+;     Processors 5-12        ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -124,7 +125,7 @@ on the Quartus Prime software download page.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 288.77 MHz ; 250.0 MHz       ; KEY[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 267.88 MHz ; 250.0 MHz       ; KEY[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -140,7 +141,7 @@ HTML report is unavailable in plain text report export.
 +--------+--------+-------------------+
 ; Clock  ; Slack  ; End Point TNS     ;
 +--------+--------+-------------------+
-; KEY[0] ; -2.463 ; -29.521           ;
+; KEY[0] ; -2.733 ; -52.886           ;
 +--------+--------+-------------------+
 
 
@@ -149,7 +150,7 @@ HTML report is unavailable in plain text report export.
 +--------+-------+-------------------+
 ; Clock  ; Slack ; End Point TNS     ;
 +--------+-------+-------------------+
-; KEY[0] ; 0.614 ; 0.000             ;
+; KEY[0] ; 0.440 ; 0.000             ;
 +--------+-------+-------------------+
 
 
@@ -170,7 +171,7 @@ No paths to report.
 +--------+--------+---------------------------------+
 ; Clock  ; Slack  ; End Point TNS                   ;
 +--------+--------+---------------------------------+
-; KEY[0] ; -3.000 ; -26.130                         ;
+; KEY[0] ; -3.000 ; -41.550                         ;
 +--------+--------+---------------------------------+
 
 
@@ -179,106 +180,106 @@ No paths to report.
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
-; -2.463 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.027      ; 3.508      ;
-; -2.427 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 3.397      ;
-; -2.387 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 3.357      ;
-; -2.372 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 3.211      ;
-; -2.363 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.059     ; 3.322      ;
-; -2.332 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 3.171      ;
-; -2.320 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 3.355      ;
-; -2.306 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.027      ; 3.351      ;
-; -2.270 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 3.240      ;
-; -2.268 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 3.307      ;
-; -2.230 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 3.200      ;
-; -2.202 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.027      ; 3.247      ;
-; -2.201 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 3.169      ;
-; -2.168 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.065     ; 3.121      ;
-; -2.166 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 3.136      ;
-; -2.163 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 3.198      ;
-; -2.155 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 3.125      ;
-; -2.154 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 3.124      ;
-; -2.151 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 3.121      ;
-; -2.126 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 3.096      ;
-; -2.111 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 3.150      ;
-; -2.100 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 2.939      ;
-; -2.099 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 2.938      ;
-; -2.096 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 2.935      ;
-; -2.059 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 3.094      ;
-; -2.007 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 3.046      ;
-; -1.998 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.968      ;
-; -1.997 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.967      ;
-; -1.994 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.964      ;
-; -1.899 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.027      ; 2.944      ;
-; -1.894 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.864      ;
-; -1.893 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.027      ; 2.938      ;
-; -1.893 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.863      ;
-; -1.890 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.860      ;
-; -1.863 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.833      ;
-; -1.857 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.827      ;
-; -1.838 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.808      ;
-; -1.823 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.793      ;
-; -1.820 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.790      ;
-; -1.783 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 2.622      ;
-; -1.756 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 2.791      ;
-; -1.755 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 2.790      ;
-; -1.704 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 2.743      ;
-; -1.685 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 2.524      ;
-; -1.685 ; divider:DIV|state.s1      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 2.524      ;
-; -1.685 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 2.524      ;
-; -1.685 ; divider:DIV|state.s1      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 2.524      ;
-; -1.685 ; divider:DIV|state.s1      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 2.524      ;
-; -1.685 ; divider:DIV|state.s1      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.179     ; 2.524      ;
-; -1.681 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.651      ;
-; -1.635 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 2.674      ;
-; -1.591 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.561      ;
-; -1.590 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.560      ;
-; -1.587 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.557      ;
-; -1.585 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.555      ;
-; -1.584 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.554      ;
-; -1.581 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.551      ;
-; -1.577 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.547      ;
-; -1.471 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.027      ; 2.516      ;
-; -1.461 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.431      ;
-; -1.427 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.397      ;
-; -1.419 ; divider:DIV|state.s0      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.186     ; 2.251      ;
-; -1.419 ; divider:DIV|state.s0      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.186     ; 2.251      ;
-; -1.419 ; divider:DIV|state.s0      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.186     ; 2.251      ;
-; -1.419 ; divider:DIV|state.s0      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.186     ; 2.251      ;
-; -1.419 ; divider:DIV|state.s0      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.186     ; 2.251      ;
-; -1.419 ; divider:DIV|state.s0      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.186     ; 2.251      ;
-; -1.362 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 2.397      ;
-; -1.274 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.244      ;
-; -1.229 ; divider:DIV|state.s1      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.065     ; 2.182      ;
-; -1.229 ; divider:DIV|state.s1      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.065     ; 2.182      ;
-; -1.229 ; divider:DIV|state.s1      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.065     ; 2.182      ;
-; -1.229 ; divider:DIV|state.s1      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.065     ; 2.182      ;
-; -1.229 ; divider:DIV|state.s1      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.065     ; 2.182      ;
-; -1.229 ; divider:DIV|state.s1      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.065     ; 2.182      ;
-; -1.229 ; divider:DIV|state.s1      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.065     ; 2.182      ;
-; -1.229 ; divider:DIV|state.s1      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.065     ; 2.182      ;
-; -1.228 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.198      ;
-; -1.213 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 2.252      ;
-; -1.163 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.133      ;
-; -1.162 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.132      ;
-; -1.159 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.129      ;
-; -1.057 ; divider:DIV|state.s0      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.076     ; 1.999      ;
-; -0.950 ; divider:DIV|state.s1      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.059     ; 1.909      ;
-; -0.918 ; divider:DIV|state.s0      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.072     ; 1.864      ;
-; -0.918 ; divider:DIV|state.s0      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.072     ; 1.864      ;
-; -0.918 ; divider:DIV|state.s0      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.072     ; 1.864      ;
-; -0.918 ; divider:DIV|state.s0      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.072     ; 1.864      ;
-; -0.918 ; divider:DIV|state.s0      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.072     ; 1.864      ;
-; -0.918 ; divider:DIV|state.s0      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.072     ; 1.864      ;
-; -0.918 ; divider:DIV|state.s0      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.072     ; 1.864      ;
-; -0.918 ; divider:DIV|state.s0      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.072     ; 1.864      ;
-; -0.755 ; divider:DIV|state.s0      ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.076     ; 1.697      ;
-; -0.690 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 1.660      ;
-; -0.576 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.075     ; 1.519      ;
-; -0.546 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.069     ; 1.495      ;
-; -0.376 ; divider:DIV|state.s1      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 1.344      ;
-; -0.174 ; divider:DIV|state.s0      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.066     ; 1.126      ;
-; -0.169 ; divider:DIV|remainder[9]  ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.049     ; 1.138      ;
-; -0.155 ; divider:DIV|remainder[10] ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.049     ; 1.124      ;
+; -2.733 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.021     ; 3.730      ;
+; -2.673 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.063     ; 3.628      ;
+; -2.517 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.034     ; 3.501      ;
+; -2.457 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.108     ; 3.367      ;
+; -2.442 ; divider:DIV|remainder[1]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.062     ; 3.398      ;
+; -2.440 ; divider:DIV|remainder[1]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.062     ; 3.396      ;
+; -2.439 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.076     ; 3.381      ;
+; -2.395 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.021     ; 3.392      ;
+; -2.386 ; divider:DIV|remainder[0]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.104     ; 3.300      ;
+; -2.379 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.150     ; 3.247      ;
+; -2.377 ; divider:DIV|remainder[0]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.104     ; 3.291      ;
+; -2.205 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.007     ; 3.216      ;
+; -2.174 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.034     ; 3.158      ;
+; -2.151 ; divider:DIV|state.s2b     ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 3.055      ;
+; -2.118 ; divider:DIV|state.s1      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 3.022      ;
+; -2.114 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.108     ; 3.024      ;
+; -2.109 ; divider:DIV|state.s2b     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 3.013      ;
+; -2.104 ; divider:DIV|remainder[2]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.062     ; 3.060      ;
+; -2.102 ; divider:DIV|remainder[2]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.062     ; 3.058      ;
+; -2.036 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.108     ; 2.946      ;
+; -2.013 ; divider:DIV|repetition[3] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.983      ;
+; -2.013 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.108     ; 2.923      ;
+; -1.967 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.007     ; 2.978      ;
+; -1.958 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.150     ; 2.826      ;
+; -1.935 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.150     ; 2.803      ;
+; -1.935 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.020     ; 2.933      ;
+; -1.914 ; divider:DIV|remainder[4]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.884      ;
+; -1.912 ; divider:DIV|remainder[4]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.882      ;
+; -1.897 ; divider:DIV|state.s2b     ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.073     ; 2.842      ;
+; -1.896 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.800      ;
+; -1.876 ; divider:DIV|repetition[2] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.846      ;
+; -1.870 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 2.838      ;
+; -1.862 ; divider:DIV|state.s2b     ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.073     ; 2.807      ;
+; -1.836 ; divider:DIV|state.s2a     ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.740      ;
+; -1.831 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 2.799      ;
+; -1.829 ; divider:DIV|state.s1      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.073     ; 2.774      ;
+; -1.775 ; divider:DIV|repetition[0] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.745      ;
+; -1.765 ; divider:DIV|repetition[0] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.735      ;
+; -1.765 ; divider:DIV|state.s2a     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.669      ;
+; -1.763 ; divider:DIV|repetition[0] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.733      ;
+; -1.762 ; divider:DIV|repetition[0] ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.732      ;
+; -1.762 ; divider:DIV|state.s2b     ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.666      ;
+; -1.760 ; divider:DIV|repetition[7] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.730      ;
+; -1.755 ; divider:DIV|repetition[0] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.725      ;
+; -1.748 ; divider:DIV|repetition[3] ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.718      ;
+; -1.746 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 2.714      ;
+; -1.734 ; divider:DIV|state.s4      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.712      ;
+; -1.732 ; divider:DIV|state.s3      ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.702      ;
+; -1.730 ; divider:DIV|state.s3      ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.700      ;
+; -1.729 ; divider:DIV|state.s3      ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.699      ;
+; -1.728 ; divider:DIV|repetition[0] ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.698      ;
+; -1.725 ; divider:DIV|state.s2b     ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.629      ;
+; -1.722 ; divider:DIV|state.s3      ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.692      ;
+; -1.695 ; divider:DIV|state.s4      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.599      ;
+; -1.695 ; divider:DIV|state.s4      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.599      ;
+; -1.695 ; divider:DIV|state.s4      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.599      ;
+; -1.695 ; divider:DIV|state.s4      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.599      ;
+; -1.695 ; divider:DIV|state.s3      ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.665      ;
+; -1.693 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.108     ; 2.603      ;
+; -1.690 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.058     ; 2.650      ;
+; -1.688 ; divider:DIV|state.s1      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.592      ;
+; -1.684 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.020     ; 2.682      ;
+; -1.681 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.073     ; 2.626      ;
+; -1.680 ; divider:DIV|repetition[4] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.650      ;
+; -1.679 ; divider:DIV|state.s4      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.675      ;
+; -1.679 ; divider:DIV|state.s4      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.675      ;
+; -1.679 ; divider:DIV|state.s4      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.675      ;
+; -1.679 ; divider:DIV|state.s4      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.675      ;
+; -1.679 ; divider:DIV|state.s4      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.675      ;
+; -1.679 ; divider:DIV|state.s4      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.675      ;
+; -1.679 ; divider:DIV|state.s4      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.675      ;
+; -1.678 ; divider:DIV|state.s4      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.073     ; 2.623      ;
+; -1.678 ; divider:DIV|state.s4      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.073     ; 2.623      ;
+; -1.678 ; divider:DIV|repetition[2] ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.648      ;
+; -1.676 ; divider:DIV|remainder[3]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.646      ;
+; -1.675 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.108     ; 2.585      ;
+; -1.674 ; divider:DIV|remainder[3]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.644      ;
+; -1.661 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 2.629      ;
+; -1.661 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 2.629      ;
+; -1.629 ; divider:DIV|state.s3      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.607      ;
+; -1.625 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.007     ; 2.636      ;
+; -1.600 ; divider:DIV|repetition[1] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.570      ;
+; -1.598 ; divider:DIV|repetition[1] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.568      ;
+; -1.597 ; divider:DIV|repetition[1] ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.567      ;
+; -1.590 ; divider:DIV|repetition[1] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.560      ;
+; -1.590 ; divider:DIV|state.s3      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.494      ;
+; -1.590 ; divider:DIV|state.s3      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.494      ;
+; -1.590 ; divider:DIV|state.s3      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.494      ;
+; -1.590 ; divider:DIV|state.s3      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.114     ; 2.494      ;
+; -1.586 ; divider:DIV|state.s0      ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.059     ; 2.545      ;
+; -1.578 ; divider:DIV|repetition[0] ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.048     ; 2.548      ;
+; -1.574 ; divider:DIV|state.s3      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.570      ;
+; -1.574 ; divider:DIV|state.s3      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.570      ;
+; -1.574 ; divider:DIV|state.s3      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.570      ;
+; -1.574 ; divider:DIV|state.s3      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.570      ;
+; -1.574 ; divider:DIV|state.s3      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.570      ;
+; -1.574 ; divider:DIV|state.s3      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.570      ;
+; -1.574 ; divider:DIV|state.s3      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 2.570      ;
+; -1.573 ; divider:DIV|state.s3      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.073     ; 2.518      ;
+; -1.573 ; divider:DIV|state.s3      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.073     ; 2.518      ;
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -287,106 +288,106 @@ No paths to report.
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
-; 0.614 ; divider:DIV|remainder[13] ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.049      ; 0.849      ;
-; 0.632 ; divider:DIV|remainder[11] ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.049      ; 0.867      ;
-; 0.697 ; divider:DIV|remainder[14] ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.049      ; 0.932      ;
-; 0.707 ; divider:DIV|state.s1      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 0.966      ;
-; 0.707 ; divider:DIV|state.s1      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 0.966      ;
-; 0.709 ; divider:DIV|state.s1      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 0.968      ;
-; 0.709 ; divider:DIV|state.s1      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 0.968      ;
-; 0.709 ; divider:DIV|state.s1      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 0.968      ;
-; 0.710 ; divider:DIV|state.s1      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 0.969      ;
-; 0.710 ; divider:DIV|state.s1      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 0.969      ;
-; 0.715 ; divider:DIV|remainder[10] ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.049      ; 0.950      ;
-; 0.716 ; divider:DIV|remainder[9]  ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.049      ; 0.951      ;
-; 0.716 ; divider:DIV|remainder[8]  ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.049      ; 0.951      ;
-; 0.722 ; divider:DIV|remainder[12] ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.049      ; 0.957      ;
-; 0.736 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 0.970      ;
-; 0.739 ; divider:DIV|state.s0      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.072      ; 0.997      ;
-; 0.817 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.051      ;
-; 0.938 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.107      ;
-; 0.950 ; divider:DIV|state.s1      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.186      ;
-; 0.959 ; divider:DIV|state.s0      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.062      ; 1.207      ;
-; 0.993 ; divider:DIV|state.s1      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 1.252      ;
-; 1.073 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.063      ; 1.322      ;
-; 1.116 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.069      ; 1.371      ;
-; 1.120 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.354      ;
-; 1.308 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.542      ;
-; 1.326 ; divider:DIV|state.s0      ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.062      ; 1.574      ;
-; 1.350 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.519      ;
-; 1.350 ; divider:DIV|state.s1      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.519      ;
-; 1.350 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.519      ;
-; 1.350 ; divider:DIV|state.s1      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.519      ;
-; 1.350 ; divider:DIV|state.s1      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.519      ;
-; 1.350 ; divider:DIV|state.s1      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.519      ;
-; 1.381 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.615      ;
-; 1.381 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.183      ; 1.750      ;
-; 1.435 ; divider:DIV|state.s1      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.079      ; 1.700      ;
-; 1.469 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.189      ; 1.844      ;
-; 1.588 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.183      ; 1.957      ;
-; 1.603 ; divider:DIV|state.s0      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 1.855      ;
-; 1.603 ; divider:DIV|state.s0      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 1.855      ;
-; 1.603 ; divider:DIV|state.s0      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 1.855      ;
-; 1.603 ; divider:DIV|state.s0      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 1.855      ;
-; 1.603 ; divider:DIV|state.s0      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 1.855      ;
-; 1.603 ; divider:DIV|state.s0      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 1.855      ;
-; 1.603 ; divider:DIV|state.s0      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 1.855      ;
-; 1.603 ; divider:DIV|state.s0      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 1.855      ;
-; 1.637 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.873      ;
-; 1.690 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.924      ;
-; 1.693 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.927      ;
-; 1.693 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.927      ;
-; 1.739 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.973      ;
-; 1.746 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.980      ;
-; 1.761 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.930      ;
-; 1.775 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.009      ;
-; 1.794 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.179      ; 2.159      ;
-; 1.816 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.985      ;
-; 1.890 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.124      ;
-; 1.920 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.189      ; 2.295      ;
-; 1.920 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.183      ; 2.289      ;
-; 1.929 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.163      ;
-; 1.948 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.182      ;
-; 1.984 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.218      ;
-; 2.006 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.240      ;
-; 2.018 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.252      ;
-; 2.021 ; divider:DIV|state.s0      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 2.183      ;
-; 2.021 ; divider:DIV|state.s0      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 2.183      ;
-; 2.021 ; divider:DIV|state.s0      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 2.183      ;
-; 2.021 ; divider:DIV|state.s0      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 2.183      ;
-; 2.021 ; divider:DIV|state.s0      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 2.183      ;
-; 2.021 ; divider:DIV|state.s0      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 2.183      ;
-; 2.022 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.256      ;
-; 2.061 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.295      ;
-; 2.080 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.314      ;
-; 2.082 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 2.251      ;
-; 2.097 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.331      ;
-; 2.101 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.335      ;
-; 2.101 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.335      ;
-; 2.135 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 2.304      ;
-; 2.149 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.383      ;
-; 2.166 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.179      ; 2.531      ;
-; 2.173 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.407      ;
-; 2.187 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.183      ; 2.556      ;
-; 2.212 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 2.381      ;
-; 2.218 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.179      ; 2.583      ;
-; 2.226 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.460      ;
-; 2.242 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.183      ; 2.611      ;
-; 2.266 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.500      ;
-; 2.276 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.189      ; 2.651      ;
-; 2.285 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.519      ;
-; 2.289 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.523      ;
-; 2.309 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.543      ;
-; 2.314 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.548      ;
-; 2.340 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.574      ;
-; 2.344 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.578      ;
-; 2.372 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.606      ;
-; 2.407 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.183      ; 2.776      ;
-; 2.433 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.179      ; 2.798      ;
-; 2.438 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 2.697      ;
-; 2.488 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.179      ; 2.853      ;
-; 2.505 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.739      ;
-; 2.533 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.767      ;
+; 0.440 ; divider:DIV|repetition[6] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; divider:DIV|repetition[7] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; divider:DIV|repetition[0] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; divider:DIV|repetition[2] ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
+; 0.483 ; divider:DIV|remainder[14] ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 0.719      ;
+; 0.483 ; divider:DIV|remainder[9]  ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 0.719      ;
+; 0.484 ; divider:DIV|remainder[12] ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 0.720      ;
+; 0.484 ; divider:DIV|remainder[11] ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 0.720      ;
+; 0.484 ; divider:DIV|remainder[10] ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 0.720      ;
+; 0.533 ; divider:DIV|remainder[13] ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 0.769      ;
+; 0.628 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.861      ;
+; 0.634 ; divider:DIV|state.s0      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.151      ; 0.971      ;
+; 0.634 ; divider:DIV|state.s0      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.151      ; 0.971      ;
+; 0.634 ; divider:DIV|state.s0      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.151      ; 0.971      ;
+; 0.635 ; divider:DIV|state.s0      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.151      ; 0.972      ;
+; 0.636 ; divider:DIV|state.s0      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.151      ; 0.973      ;
+; 0.636 ; divider:DIV|state.s0      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.151      ; 0.973      ;
+; 0.636 ; divider:DIV|state.s0      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.151      ; 0.973      ;
+; 0.680 ; divider:DIV|repetition[6] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 0.914      ;
+; 0.706 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 0.942      ;
+; 0.782 ; divider:DIV|state.s1      ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.016      ;
+; 0.785 ; divider:DIV|state.s1      ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.019      ;
+; 0.840 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.076      ;
+; 0.841 ; divider:DIV|state.s2b     ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.097      ; 1.124      ;
+; 0.892 ; divider:DIV|state.s3      ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.126      ;
+; 0.918 ; divider:DIV|remainder[8]  ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.116      ; 1.220      ;
+; 0.945 ; divider:DIV|repetition[5] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.179      ;
+; 0.949 ; divider:DIV|repetition[6] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.183      ;
+; 1.029 ; divider:DIV|state.s2a     ; divider:DIV|state.s3      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.263      ;
+; 1.048 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.284      ;
+; 1.051 ; divider:DIV|repetition[1] ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.285      ;
+; 1.051 ; divider:DIV|state.s2a     ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.104      ; 1.341      ;
+; 1.089 ; divider:DIV|state.s2a     ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.097      ; 1.372      ;
+; 1.116 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.352      ;
+; 1.124 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.016      ; 1.326      ;
+; 1.154 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.016      ; 1.356      ;
+; 1.158 ; divider:DIV|remainder[8]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.069      ; 1.413      ;
+; 1.223 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.459      ;
+; 1.255 ; divider:DIV|repetition[7] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.489      ;
+; 1.283 ; divider:DIV|state.s2b     ; divider:DIV|state.s3      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.517      ;
+; 1.319 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.156      ; 1.661      ;
+; 1.327 ; divider:DIV|state.s2a     ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.062      ; 1.575      ;
+; 1.354 ; divider:DIV|state.s2a     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.588      ;
+; 1.370 ; divider:DIV|remainder[6]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.114      ; 1.670      ;
+; 1.373 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.056      ; 1.615      ;
+; 1.379 ; divider:DIV|remainder[6]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.114      ; 1.679      ;
+; 1.389 ; divider:DIV|state.s2a     ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.099      ; 1.674      ;
+; 1.467 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 1.700      ;
+; 1.478 ; divider:DIV|state.s2a     ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.712      ;
+; 1.481 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.053      ; 1.720      ;
+; 1.517 ; divider:DIV|state.s2a     ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.751      ;
+; 1.522 ; divider:DIV|state.s3      ; divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.756      ;
+; 1.525 ; divider:DIV|repetition[4] ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.754      ;
+; 1.539 ; divider:DIV|state.s2a     ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.062      ; 1.787      ;
+; 1.540 ; divider:DIV|state.s1      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.104      ; 1.830      ;
+; 1.543 ; divider:DIV|repetition[4] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.777      ;
+; 1.543 ; divider:DIV|repetition[4] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.777      ;
+; 1.545 ; divider:DIV|repetition[4] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.779      ;
+; 1.572 ; divider:DIV|state.s2b     ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.062      ; 1.820      ;
+; 1.597 ; divider:DIV|state.s2b     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.831      ;
+; 1.608 ; divider:DIV|state.s4      ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.837      ;
+; 1.616 ; divider:DIV|repetition[1] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.850      ;
+; 1.635 ; divider:DIV|repetition[1] ; divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.864      ;
+; 1.642 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.143      ; 1.971      ;
+; 1.643 ; divider:DIV|state.s2b     ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.099      ; 1.928      ;
+; 1.644 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 1.877      ;
+; 1.653 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.062      ; 1.901      ;
+; 1.678 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.912      ;
+; 1.679 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.013      ; 1.878      ;
+; 1.679 ; divider:DIV|state.s0      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.139      ; 2.004      ;
+; 1.680 ; divider:DIV|repetition[0] ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.914      ;
+; 1.681 ; divider:DIV|state.s1      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.097      ; 1.964      ;
+; 1.692 ; divider:DIV|state.s3      ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.926      ;
+; 1.697 ; divider:DIV|state.s2b     ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.931      ;
+; 1.697 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.933      ;
+; 1.725 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.053      ; 1.964      ;
+; 1.747 ; divider:DIV|state.s1      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.099      ; 2.032      ;
+; 1.765 ; divider:DIV|repetition[0] ; divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 1.999      ;
+; 1.771 ; divider:DIV|state.s2b     ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.005      ;
+; 1.771 ; divider:DIV|remainder[5]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.114      ; 2.071      ;
+; 1.772 ; divider:DIV|remainder[5]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.114      ; 2.072      ;
+; 1.774 ; divider:DIV|repetition[3] ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.008      ;
+; 1.776 ; divider:DIV|repetition[4] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.010      ;
+; 1.778 ; divider:DIV|state.s1      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.012      ;
+; 1.780 ; divider:DIV|state.s1      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 2.110      ;
+; 1.780 ; divider:DIV|state.s1      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 2.110      ;
+; 1.780 ; divider:DIV|state.s1      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 2.110      ;
+; 1.780 ; divider:DIV|state.s1      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 2.110      ;
+; 1.780 ; divider:DIV|state.s1      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 2.110      ;
+; 1.780 ; divider:DIV|state.s1      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 2.110      ;
+; 1.780 ; divider:DIV|state.s1      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 2.110      ;
+; 1.784 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.020      ;
+; 1.786 ; divider:DIV|repetition[5] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.020      ;
+; 1.788 ; divider:DIV|repetition[5] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 2.017      ;
+; 1.788 ; divider:DIV|repetition[5] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.022      ;
+; 1.789 ; divider:DIV|state.s3      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.099      ; 2.074      ;
+; 1.793 ; divider:DIV|repetition[3] ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 2.022      ;
+; 1.793 ; divider:DIV|state.s2b     ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.062      ; 2.041      ;
+; 1.801 ; divider:DIV|state.s3      ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 2.035      ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -396,13 +397,13 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                         ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 318.17 MHz ; 250.0 MHz       ; KEY[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                        ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; 290.7 MHz ; 250.0 MHz       ; KEY[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
++-----------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -411,7 +412,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+------------------+
 ; Clock  ; Slack  ; End Point TNS    ;
 +--------+--------+------------------+
-; KEY[0] ; -2.143 ; -25.214          ;
+; KEY[0] ; -2.440 ; -45.536          ;
 +--------+--------+------------------+
 
 
@@ -420,7 +421,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+-------+------------------+
 ; Clock  ; Slack ; End Point TNS    ;
 +--------+-------+------------------+
-; KEY[0] ; 0.560 ; 0.000            ;
+; KEY[0] ; 0.387 ; 0.000            ;
 +--------+-------+------------------+
 
 
@@ -441,7 +442,7 @@ No paths to report.
 +--------+--------+--------------------------------+
 ; Clock  ; Slack  ; End Point TNS                  ;
 +--------+--------+--------------------------------+
-; KEY[0] ; -3.000 ; -26.130                        ;
+; KEY[0] ; -3.000 ; -41.550                        ;
 +--------+--------+--------------------------------+
 
 
@@ -450,106 +451,106 @@ No paths to report.
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
-; -2.143 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.026      ; 3.188      ;
-; -2.118 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 3.093      ;
-; -2.083 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.935      ;
-; -2.077 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 3.052      ;
-; -2.066 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.055     ; 3.030      ;
-; -2.042 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.894      ;
-; -2.016 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 3.052      ;
-; -2.014 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.026      ; 3.059      ;
-; -1.989 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.964      ;
-; -1.970 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 3.010      ;
-; -1.948 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.923      ;
-; -1.921 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 2.894      ;
-; -1.906 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.026      ; 2.951      ;
-; -1.887 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 2.923      ;
-; -1.881 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.856      ;
-; -1.873 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.848      ;
-; -1.873 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.848      ;
-; -1.870 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.845      ;
-; -1.850 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.060     ; 2.809      ;
-; -1.848 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 2.888      ;
-; -1.840 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.815      ;
-; -1.838 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.690      ;
-; -1.838 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.690      ;
-; -1.835 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.687      ;
-; -1.779 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 2.815      ;
-; -1.744 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.719      ;
-; -1.744 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.719      ;
-; -1.741 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.716      ;
-; -1.740 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 2.780      ;
-; -1.653 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.026      ; 2.698      ;
-; -1.636 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.611      ;
-; -1.636 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.611      ;
-; -1.633 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.608      ;
-; -1.632 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.026      ; 2.677      ;
-; -1.628 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.603      ;
-; -1.607 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.582      ;
-; -1.587 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.562      ;
-; -1.575 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.550      ;
-; -1.566 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.541      ;
-; -1.540 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.392      ;
-; -1.526 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 2.562      ;
-; -1.505 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 2.541      ;
-; -1.474 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.326      ;
-; -1.474 ; divider:DIV|state.s1      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.326      ;
-; -1.474 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.326      ;
-; -1.474 ; divider:DIV|state.s1      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.326      ;
-; -1.474 ; divider:DIV|state.s1      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.326      ;
-; -1.474 ; divider:DIV|state.s1      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.167     ; 2.326      ;
-; -1.449 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 2.489      ;
-; -1.447 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.422      ;
-; -1.407 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 2.447      ;
-; -1.383 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.358      ;
-; -1.383 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.358      ;
-; -1.380 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.355      ;
-; -1.362 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.337      ;
-; -1.362 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.337      ;
-; -1.359 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.334      ;
-; -1.339 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.314      ;
-; -1.252 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.026      ; 2.297      ;
-; -1.228 ; divider:DIV|state.s0      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.174     ; 2.073      ;
-; -1.228 ; divider:DIV|state.s0      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.174     ; 2.073      ;
-; -1.228 ; divider:DIV|state.s0      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.174     ; 2.073      ;
-; -1.228 ; divider:DIV|state.s0      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.174     ; 2.073      ;
-; -1.228 ; divider:DIV|state.s0      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.174     ; 2.073      ;
-; -1.228 ; divider:DIV|state.s0      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.174     ; 2.073      ;
-; -1.227 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.202      ;
-; -1.194 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.169      ;
-; -1.125 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 2.161      ;
-; -1.064 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.039      ;
-; -1.035 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 2.010      ;
-; -1.014 ; divider:DIV|state.s1      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.060     ; 1.973      ;
-; -1.014 ; divider:DIV|state.s1      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.060     ; 1.973      ;
-; -1.014 ; divider:DIV|state.s1      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.060     ; 1.973      ;
-; -1.014 ; divider:DIV|state.s1      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.060     ; 1.973      ;
-; -1.014 ; divider:DIV|state.s1      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.060     ; 1.973      ;
-; -1.014 ; divider:DIV|state.s1      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.060     ; 1.973      ;
-; -1.014 ; divider:DIV|state.s1      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.060     ; 1.973      ;
-; -1.014 ; divider:DIV|state.s1      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.060     ; 1.973      ;
-; -1.006 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.021      ; 2.046      ;
-; -0.982 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 1.957      ;
-; -0.982 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 1.957      ;
-; -0.979 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 1.954      ;
-; -0.860 ; divider:DIV|state.s0      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.071     ; 1.808      ;
-; -0.744 ; divider:DIV|state.s0      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 1.696      ;
-; -0.744 ; divider:DIV|state.s0      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 1.696      ;
-; -0.744 ; divider:DIV|state.s0      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 1.696      ;
-; -0.744 ; divider:DIV|state.s0      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 1.696      ;
-; -0.744 ; divider:DIV|state.s0      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 1.696      ;
-; -0.744 ; divider:DIV|state.s0      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 1.696      ;
-; -0.744 ; divider:DIV|state.s0      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 1.696      ;
-; -0.744 ; divider:DIV|state.s0      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 1.696      ;
-; -0.741 ; divider:DIV|state.s1      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.055     ; 1.705      ;
-; -0.601 ; divider:DIV|state.s0      ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.071     ; 1.549      ;
-; -0.531 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 1.506      ;
-; -0.429 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.070     ; 1.378      ;
-; -0.391 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.065     ; 1.345      ;
-; -0.266 ; divider:DIV|state.s1      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 1.239      ;
-; -0.053 ; divider:DIV|state.s0      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.062     ; 1.010      ;
-; -0.050 ; divider:DIV|remainder[9]  ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 1.023      ;
-; -0.033 ; divider:DIV|remainder[10] ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 1.006      ;
+; -2.440 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.016     ; 3.443      ;
+; -2.398 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.058     ; 3.359      ;
+; -2.187 ; divider:DIV|remainder[1]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.056     ; 3.150      ;
+; -2.184 ; divider:DIV|remainder[1]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.056     ; 3.147      ;
+; -2.172 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.027     ; 3.164      ;
+; -2.145 ; divider:DIV|remainder[0]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.098     ; 3.066      ;
+; -2.143 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.094     ; 3.068      ;
+; -2.142 ; divider:DIV|remainder[0]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.098     ; 3.063      ;
+; -2.129 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.069     ; 3.079      ;
+; -2.115 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.016     ; 3.118      ;
+; -2.100 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.136     ; 2.983      ;
+; -1.919 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.010     ; 2.928      ;
+; -1.862 ; divider:DIV|remainder[2]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.056     ; 2.825      ;
+; -1.859 ; divider:DIV|remainder[2]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.056     ; 2.822      ;
+; -1.856 ; divider:DIV|state.s2b     ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.775      ;
+; -1.847 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.027     ; 2.839      ;
+; -1.836 ; divider:DIV|state.s1      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.755      ;
+; -1.832 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.094     ; 2.757      ;
+; -1.777 ; divider:DIV|state.s2b     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.696      ;
+; -1.764 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.094     ; 2.689      ;
+; -1.747 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.010     ; 2.756      ;
+; -1.724 ; divider:DIV|repetition[3] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.700      ;
+; -1.716 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.094     ; 2.641      ;
+; -1.696 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.136     ; 2.579      ;
+; -1.683 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.021     ; 2.681      ;
+; -1.674 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.136     ; 2.557      ;
+; -1.666 ; divider:DIV|remainder[4]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 2.635      ;
+; -1.663 ; divider:DIV|remainder[4]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 2.632      ;
+; -1.661 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 2.634      ;
+; -1.656 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.575      ;
+; -1.619 ; divider:DIV|repetition[2] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.595      ;
+; -1.612 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 2.585      ;
+; -1.604 ; divider:DIV|state.s2a     ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.523      ;
+; -1.592 ; divider:DIV|state.s2b     ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.068     ; 2.543      ;
+; -1.584 ; divider:DIV|state.s1      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.068     ; 2.535      ;
+; -1.568 ; divider:DIV|state.s2b     ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.068     ; 2.519      ;
+; -1.545 ; divider:DIV|repetition[3] ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.521      ;
+; -1.529 ; divider:DIV|state.s2b     ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.448      ;
+; -1.529 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 2.502      ;
+; -1.520 ; divider:DIV|repetition[0] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.496      ;
+; -1.510 ; divider:DIV|state.s2a     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.429      ;
+; -1.505 ; divider:DIV|repetition[7] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.481      ;
+; -1.493 ; divider:DIV|repetition[0] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.469      ;
+; -1.491 ; divider:DIV|repetition[0] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.467      ;
+; -1.484 ; divider:DIV|repetition[0] ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.460      ;
+; -1.478 ; divider:DIV|state.s4      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.033     ; 2.464      ;
+; -1.477 ; divider:DIV|repetition[0] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.453      ;
+; -1.471 ; divider:DIV|state.s3      ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.447      ;
+; -1.469 ; divider:DIV|state.s3      ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.445      ;
+; -1.468 ; divider:DIV|repetition[2] ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.444      ;
+; -1.464 ; divider:DIV|remainder[3]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 2.433      ;
+; -1.461 ; divider:DIV|remainder[3]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.050     ; 2.430      ;
+; -1.457 ; divider:DIV|state.s4      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.376      ;
+; -1.457 ; divider:DIV|state.s4      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.376      ;
+; -1.457 ; divider:DIV|state.s4      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.376      ;
+; -1.457 ; divider:DIV|state.s4      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.376      ;
+; -1.456 ; divider:DIV|repetition[0] ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.432      ;
+; -1.456 ; divider:DIV|state.s1      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.375      ;
+; -1.455 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.094     ; 2.380      ;
+; -1.452 ; divider:DIV|state.s3      ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.428      ;
+; -1.451 ; divider:DIV|state.s4      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.068     ; 2.402      ;
+; -1.451 ; divider:DIV|state.s4      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.068     ; 2.402      ;
+; -1.447 ; divider:DIV|state.s4      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.449      ;
+; -1.447 ; divider:DIV|state.s4      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.449      ;
+; -1.447 ; divider:DIV|state.s4      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.449      ;
+; -1.447 ; divider:DIV|state.s4      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.449      ;
+; -1.447 ; divider:DIV|state.s4      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.449      ;
+; -1.447 ; divider:DIV|state.s4      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.449      ;
+; -1.447 ; divider:DIV|state.s4      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.449      ;
+; -1.445 ; divider:DIV|state.s3      ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.421      ;
+; -1.442 ; divider:DIV|repetition[4] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.418      ;
+; -1.441 ; divider:DIV|state.s2b     ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.360      ;
+; -1.433 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.068     ; 2.384      ;
+; -1.426 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 2.399      ;
+; -1.424 ; divider:DIV|state.s3      ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.400      ;
+; -1.418 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.053     ; 2.384      ;
+; -1.410 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.021     ; 2.408      ;
+; -1.402 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.094     ; 2.327      ;
+; -1.398 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 2.371      ;
+; -1.382 ; divider:DIV|state.s3      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.033     ; 2.368      ;
+; -1.379 ; divider:DIV|repetition[1] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.355      ;
+; -1.377 ; divider:DIV|repetition[1] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.353      ;
+; -1.373 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.010     ; 2.382      ;
+; -1.370 ; divider:DIV|repetition[0] ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.346      ;
+; -1.361 ; divider:DIV|state.s3      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.280      ;
+; -1.361 ; divider:DIV|state.s3      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.280      ;
+; -1.361 ; divider:DIV|state.s3      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.280      ;
+; -1.361 ; divider:DIV|state.s3      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.100     ; 2.280      ;
+; -1.355 ; divider:DIV|repetition[7] ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.331      ;
+; -1.355 ; divider:DIV|state.s3      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.068     ; 2.306      ;
+; -1.355 ; divider:DIV|state.s3      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.068     ; 2.306      ;
+; -1.352 ; divider:DIV|state.s2a     ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.068     ; 2.303      ;
+; -1.351 ; divider:DIV|repetition[1] ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 2.327      ;
+; -1.351 ; divider:DIV|state.s0      ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.053     ; 2.317      ;
+; -1.351 ; divider:DIV|state.s3      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.353      ;
+; -1.351 ; divider:DIV|state.s3      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.353      ;
+; -1.351 ; divider:DIV|state.s3      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.353      ;
+; -1.351 ; divider:DIV|state.s3      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.353      ;
+; -1.351 ; divider:DIV|state.s3      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.353      ;
+; -1.351 ; divider:DIV|state.s3      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 2.353      ;
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -558,106 +559,106 @@ No paths to report.
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
-; 0.560 ; divider:DIV|remainder[13] ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.777      ;
-; 0.576 ; divider:DIV|remainder[11] ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.793      ;
-; 0.635 ; divider:DIV|remainder[14] ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.852      ;
-; 0.650 ; divider:DIV|remainder[10] ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.867      ;
-; 0.652 ; divider:DIV|remainder[8]  ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.869      ;
-; 0.654 ; divider:DIV|remainder[9]  ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.871      ;
-; 0.654 ; divider:DIV|state.s1      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.068      ; 0.893      ;
-; 0.655 ; divider:DIV|state.s1      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.068      ; 0.894      ;
-; 0.656 ; divider:DIV|remainder[12] ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.873      ;
-; 0.656 ; divider:DIV|state.s1      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.068      ; 0.895      ;
-; 0.657 ; divider:DIV|state.s1      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.068      ; 0.896      ;
-; 0.657 ; divider:DIV|state.s1      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.068      ; 0.896      ;
-; 0.658 ; divider:DIV|state.s1      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.068      ; 0.897      ;
-; 0.658 ; divider:DIV|state.s1      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.068      ; 0.897      ;
-; 0.671 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 0.886      ;
-; 0.680 ; divider:DIV|state.s0      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.067      ; 0.918      ;
-; 0.741 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 0.956      ;
-; 0.849 ; divider:DIV|state.s1      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 1.066      ;
-; 0.871 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.025      ;
-; 0.878 ; divider:DIV|state.s0      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.057      ; 1.106      ;
-; 0.928 ; divider:DIV|state.s1      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.068      ; 1.167      ;
-; 0.984 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.059      ; 1.214      ;
-; 1.023 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.238      ;
-; 1.033 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.065      ; 1.269      ;
-; 1.195 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.410      ;
-; 1.215 ; divider:DIV|state.s0      ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.057      ; 1.443      ;
-; 1.252 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.467      ;
-; 1.254 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.408      ;
-; 1.254 ; divider:DIV|state.s1      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.408      ;
-; 1.254 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.408      ;
-; 1.254 ; divider:DIV|state.s1      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.408      ;
-; 1.254 ; divider:DIV|state.s1      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.408      ;
-; 1.254 ; divider:DIV|state.s1      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.408      ;
-; 1.259 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.171      ; 1.601      ;
-; 1.323 ; divider:DIV|state.s1      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.074      ; 1.568      ;
-; 1.346 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.177      ; 1.694      ;
-; 1.434 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.171      ; 1.776      ;
-; 1.473 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 1.690      ;
-; 1.480 ; divider:DIV|state.s0      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.061      ; 1.712      ;
-; 1.480 ; divider:DIV|state.s0      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.061      ; 1.712      ;
-; 1.480 ; divider:DIV|state.s0      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.061      ; 1.712      ;
-; 1.480 ; divider:DIV|state.s0      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.061      ; 1.712      ;
-; 1.480 ; divider:DIV|state.s0      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.061      ; 1.712      ;
-; 1.480 ; divider:DIV|state.s0      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.061      ; 1.712      ;
-; 1.480 ; divider:DIV|state.s0      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.061      ; 1.712      ;
-; 1.480 ; divider:DIV|state.s0      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.061      ; 1.712      ;
-; 1.530 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.745      ;
-; 1.534 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.749      ;
-; 1.534 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.749      ;
-; 1.584 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.799      ;
-; 1.589 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.804      ;
-; 1.590 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.805      ;
-; 1.599 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.753      ;
-; 1.660 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.167      ; 1.998      ;
-; 1.662 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.816      ;
-; 1.721 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.936      ;
-; 1.739 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.171      ; 2.081      ;
-; 1.755 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.970      ;
-; 1.771 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.177      ; 2.119      ;
-; 1.792 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.007      ;
-; 1.802 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.017      ;
-; 1.834 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.049      ;
-; 1.835 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.050      ;
-; 1.839 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.054      ;
-; 1.852 ; divider:DIV|state.s0      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 1.999      ;
-; 1.852 ; divider:DIV|state.s0      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 1.999      ;
-; 1.852 ; divider:DIV|state.s0      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 1.999      ;
-; 1.852 ; divider:DIV|state.s0      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 1.999      ;
-; 1.852 ; divider:DIV|state.s0      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 1.999      ;
-; 1.852 ; divider:DIV|state.s0      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.024     ; 1.999      ;
-; 1.853 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.068      ;
-; 1.883 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.098      ;
-; 1.893 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.108      ;
-; 1.897 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.112      ;
-; 1.897 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.112      ;
-; 1.898 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 2.052      ;
-; 1.937 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.152      ;
-; 1.939 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 2.093      ;
-; 1.949 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.164      ;
-; 1.965 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.167      ; 2.303      ;
-; 1.984 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.171      ; 2.326      ;
-; 2.020 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 2.174      ;
-; 2.021 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.236      ;
-; 2.023 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.167      ; 2.361      ;
-; 2.033 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.171      ; 2.375      ;
-; 2.071 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.286      ;
-; 2.076 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.177      ; 2.424      ;
-; 2.080 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.295      ;
-; 2.084 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.299      ;
-; 2.097 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.312      ;
-; 2.117 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.332      ;
-; 2.129 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.344      ;
-; 2.133 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.348      ;
-; 2.168 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.383      ;
-; 2.170 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.171      ; 2.512      ;
-; 2.210 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.167      ; 2.548      ;
-; 2.212 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.068      ; 2.451      ;
-; 2.259 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.167      ; 2.597      ;
-; 2.266 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.481      ;
-; 2.316 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 2.531      ;
+; 0.387 ; divider:DIV|repetition[6] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; divider:DIV|repetition[0] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; divider:DIV|repetition[7] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; divider:DIV|repetition[2] ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.444 ; divider:DIV|remainder[9]  ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.660      ;
+; 0.445 ; divider:DIV|remainder[14] ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.661      ;
+; 0.445 ; divider:DIV|remainder[12] ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.661      ;
+; 0.445 ; divider:DIV|remainder[10] ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.661      ;
+; 0.446 ; divider:DIV|remainder[11] ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.662      ;
+; 0.489 ; divider:DIV|remainder[13] ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.705      ;
+; 0.573 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 0.788      ;
+; 0.576 ; divider:DIV|state.s0      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 0.891      ;
+; 0.577 ; divider:DIV|state.s0      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 0.892      ;
+; 0.577 ; divider:DIV|state.s0      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 0.892      ;
+; 0.578 ; divider:DIV|state.s0      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 0.893      ;
+; 0.579 ; divider:DIV|state.s0      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 0.894      ;
+; 0.579 ; divider:DIV|state.s0      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 0.894      ;
+; 0.579 ; divider:DIV|state.s0      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.144      ; 0.894      ;
+; 0.622 ; divider:DIV|repetition[6] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.836      ;
+; 0.643 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.860      ;
+; 0.727 ; divider:DIV|state.s1      ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.941      ;
+; 0.729 ; divider:DIV|state.s1      ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.943      ;
+; 0.766 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.983      ;
+; 0.778 ; divider:DIV|state.s2b     ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.092      ; 1.041      ;
+; 0.805 ; divider:DIV|state.s3      ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.019      ;
+; 0.841 ; divider:DIV|remainder[8]  ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.107      ; 1.119      ;
+; 0.847 ; divider:DIV|repetition[5] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.061      ;
+; 0.850 ; divider:DIV|repetition[6] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.064      ;
+; 0.944 ; divider:DIV|state.s2a     ; divider:DIV|state.s3      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.158      ;
+; 0.951 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 1.168      ;
+; 0.970 ; divider:DIV|state.s2a     ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.098      ; 1.239      ;
+; 0.977 ; divider:DIV|repetition[1] ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.191      ;
+; 1.007 ; divider:DIV|state.s2a     ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.092      ; 1.270      ;
+; 1.032 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.012      ; 1.215      ;
+; 1.041 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 1.258      ;
+; 1.044 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.012      ; 1.227      ;
+; 1.062 ; divider:DIV|remainder[8]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.063      ; 1.296      ;
+; 1.111 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 1.328      ;
+; 1.134 ; divider:DIV|repetition[7] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.348      ;
+; 1.171 ; divider:DIV|state.s2b     ; divider:DIV|state.s3      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.385      ;
+; 1.198 ; divider:DIV|state.s2a     ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.056      ; 1.425      ;
+; 1.213 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.142      ; 1.526      ;
+; 1.215 ; divider:DIV|state.s2a     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.436      ;
+; 1.259 ; divider:DIV|state.s2a     ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.093      ; 1.523      ;
+; 1.272 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.052      ; 1.495      ;
+; 1.273 ; divider:DIV|remainder[6]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.100      ; 1.544      ;
+; 1.283 ; divider:DIV|remainder[6]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.100      ; 1.554      ;
+; 1.320 ; divider:DIV|state.s2a     ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.541      ;
+; 1.349 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.056      ; 1.576      ;
+; 1.350 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.565      ;
+; 1.360 ; divider:DIV|state.s1      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.098      ; 1.629      ;
+; 1.365 ; divider:DIV|state.s2a     ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.586      ;
+; 1.369 ; divider:DIV|repetition[4] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.583      ;
+; 1.371 ; divider:DIV|repetition[4] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.585      ;
+; 1.387 ; divider:DIV|state.s2a     ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.056      ; 1.614      ;
+; 1.388 ; divider:DIV|state.s3      ; divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.602      ;
+; 1.389 ; divider:DIV|repetition[4] ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 1.599      ;
+; 1.403 ; divider:DIV|repetition[4] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.617      ;
+; 1.431 ; divider:DIV|repetition[1] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.645      ;
+; 1.448 ; divider:DIV|state.s2b     ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.056      ; 1.675      ;
+; 1.458 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.130      ; 1.759      ;
+; 1.462 ; divider:DIV|state.s4      ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 1.672      ;
+; 1.463 ; divider:DIV|state.s2b     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.684      ;
+; 1.493 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 1.708      ;
+; 1.495 ; divider:DIV|state.s2b     ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.093      ; 1.759      ;
+; 1.503 ; divider:DIV|state.s3      ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.717      ;
+; 1.505 ; divider:DIV|repetition[1] ; divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 1.715      ;
+; 1.507 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.016      ; 1.694      ;
+; 1.509 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.056      ; 1.736      ;
+; 1.514 ; divider:DIV|state.s1      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.092      ; 1.777      ;
+; 1.523 ; divider:DIV|state.s0      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.133      ; 1.827      ;
+; 1.526 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.747      ;
+; 1.530 ; divider:DIV|repetition[0] ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.744      ;
+; 1.545 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.056      ; 1.772      ;
+; 1.560 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 1.777      ;
+; 1.561 ; divider:DIV|state.s2b     ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.782      ;
+; 1.570 ; divider:DIV|state.s1      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.093      ; 1.834      ;
+; 1.594 ; divider:DIV|repetition[5] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.808      ;
+; 1.596 ; divider:DIV|repetition[5] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.810      ;
+; 1.598 ; divider:DIV|repetition[4] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.812      ;
+; 1.608 ; divider:DIV|state.s1      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.136      ; 1.915      ;
+; 1.608 ; divider:DIV|state.s1      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.136      ; 1.915      ;
+; 1.608 ; divider:DIV|state.s1      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.136      ; 1.915      ;
+; 1.608 ; divider:DIV|state.s1      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.136      ; 1.915      ;
+; 1.608 ; divider:DIV|state.s1      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.136      ; 1.915      ;
+; 1.608 ; divider:DIV|state.s1      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.136      ; 1.915      ;
+; 1.608 ; divider:DIV|state.s1      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.136      ; 1.915      ;
+; 1.613 ; divider:DIV|state.s2b     ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.834      ;
+; 1.615 ; divider:DIV|repetition[5] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 1.825      ;
+; 1.619 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 1.836      ;
+; 1.622 ; divider:DIV|repetition[0] ; divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.836      ;
+; 1.623 ; divider:DIV|state.s3      ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.837      ;
+; 1.624 ; divider:DIV|repetition[3] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.838      ;
+; 1.626 ; divider:DIV|repetition[3] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.840      ;
+; 1.631 ; divider:DIV|state.s1      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.852      ;
+; 1.634 ; divider:DIV|repetition[3] ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 1.844      ;
+; 1.635 ; divider:DIV|repetition[3] ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 1.849      ;
+; 1.635 ; divider:DIV|state.s2b     ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.056      ; 1.862      ;
+; 1.635 ; divider:DIV|remainder[5]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.100      ; 1.906      ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -672,7 +673,7 @@ No synchronizer chains to report.
 +--------+--------+------------------+
 ; Clock  ; Slack  ; End Point TNS    ;
 +--------+--------+------------------+
-; KEY[0] ; -0.672 ; -5.727           ;
+; KEY[0] ; -0.831 ; -11.105          ;
 +--------+--------+------------------+
 
 
@@ -681,7 +682,7 @@ No synchronizer chains to report.
 +--------+-------+------------------+
 ; Clock  ; Slack ; End Point TNS    ;
 +--------+-------+------------------+
-; KEY[0] ; 0.279 ; 0.000            ;
+; KEY[0] ; 0.201 ; 0.000            ;
 +--------+-------+------------------+
 
 
@@ -702,7 +703,7 @@ No paths to report.
 +--------+--------+--------------------------------+
 ; Clock  ; Slack  ; End Point TNS                  ;
 +--------+--------+--------------------------------+
-; KEY[0] ; -3.000 ; -23.705                        ;
+; KEY[0] ; -3.000 ; -37.453                        ;
 +--------+--------+--------------------------------+
 
 
@@ -711,106 +712,106 @@ No paths to report.
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
-; -0.672 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.654      ;
-; -0.660 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 1.684      ;
-; -0.653 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.635      ;
-; -0.635 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.555      ;
-; -0.620 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.007      ; 1.634      ;
-; -0.616 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.536      ;
-; -0.603 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.585      ;
-; -0.601 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.023     ; 1.585      ;
-; -0.593 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.012      ; 1.612      ;
-; -0.591 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 1.615      ;
-; -0.584 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.566      ;
-; -0.553 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.535      ;
-; -0.551 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.007      ; 1.565      ;
-; -0.549 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.531      ;
-; -0.537 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 1.561      ;
-; -0.534 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.028     ; 1.513      ;
-; -0.530 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.512      ;
-; -0.526 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.508      ;
-; -0.526 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.508      ;
-; -0.524 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.012      ; 1.543      ;
-; -0.522 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.504      ;
-; -0.497 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.007      ; 1.511      ;
-; -0.489 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.409      ;
-; -0.489 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.409      ;
-; -0.485 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.405      ;
-; -0.470 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.012      ; 1.489      ;
-; -0.457 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.439      ;
-; -0.457 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.439      ;
-; -0.453 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.435      ;
-; -0.403 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.385      ;
-; -0.403 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.385      ;
-; -0.403 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.385      ;
-; -0.400 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.382      ;
-; -0.399 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.381      ;
-; -0.391 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 1.415      ;
-; -0.388 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 1.412      ;
-; -0.384 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.366      ;
-; -0.381 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.363      ;
-; -0.374 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.356      ;
-; -0.351 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.007      ; 1.365      ;
-; -0.348 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.007      ; 1.362      ;
-; -0.337 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.257      ;
-; -0.325 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.245      ;
-; -0.325 ; divider:DIV|state.s1      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.245      ;
-; -0.325 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.245      ;
-; -0.325 ; divider:DIV|state.s1      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.245      ;
-; -0.325 ; divider:DIV|state.s1      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.245      ;
-; -0.325 ; divider:DIV|state.s1      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.087     ; 1.245      ;
-; -0.321 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.012      ; 1.340      ;
-; -0.305 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.287      ;
-; -0.277 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.012      ; 1.296      ;
-; -0.257 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.239      ;
-; -0.257 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.239      ;
-; -0.254 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.236      ;
-; -0.254 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.236      ;
-; -0.253 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.235      ;
-; -0.251 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.233      ;
-; -0.250 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.232      ;
-; -0.210 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.192      ;
-; -0.198 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.017      ; 1.222      ;
-; -0.191 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.173      ;
-; -0.158 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.007      ; 1.172      ;
-; -0.144 ; divider:DIV|state.s0      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.096     ; 1.055      ;
-; -0.144 ; divider:DIV|state.s0      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.096     ; 1.055      ;
-; -0.144 ; divider:DIV|state.s0      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.096     ; 1.055      ;
-; -0.144 ; divider:DIV|state.s0      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.096     ; 1.055      ;
-; -0.144 ; divider:DIV|state.s0      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.096     ; 1.055      ;
-; -0.144 ; divider:DIV|state.s0      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.096     ; 1.055      ;
-; -0.102 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.084      ;
-; -0.088 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.070      ;
-; -0.084 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.012      ; 1.103      ;
-; -0.083 ; divider:DIV|state.s1      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.028     ; 1.062      ;
-; -0.083 ; divider:DIV|state.s1      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.028     ; 1.062      ;
-; -0.083 ; divider:DIV|state.s1      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.028     ; 1.062      ;
-; -0.083 ; divider:DIV|state.s1      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.028     ; 1.062      ;
-; -0.083 ; divider:DIV|state.s1      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.028     ; 1.062      ;
-; -0.083 ; divider:DIV|state.s1      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.028     ; 1.062      ;
-; -0.083 ; divider:DIV|state.s1      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.028     ; 1.062      ;
-; -0.083 ; divider:DIV|state.s1      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.028     ; 1.062      ;
-; -0.064 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.046      ;
-; -0.064 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.046      ;
-; -0.060 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.042      ;
-; -0.022 ; divider:DIV|state.s0      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.042     ; 0.987      ;
-; 0.042  ; divider:DIV|state.s1      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.023     ; 0.942      ;
-; 0.083  ; divider:DIV|state.s0      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.037     ; 0.887      ;
-; 0.083  ; divider:DIV|state.s0      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.037     ; 0.887      ;
-; 0.083  ; divider:DIV|state.s0      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.037     ; 0.887      ;
-; 0.083  ; divider:DIV|state.s0      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.037     ; 0.887      ;
-; 0.083  ; divider:DIV|state.s0      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.037     ; 0.887      ;
-; 0.083  ; divider:DIV|state.s0      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.037     ; 0.887      ;
-; 0.083  ; divider:DIV|state.s0      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.037     ; 0.887      ;
-; 0.083  ; divider:DIV|state.s0      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.037     ; 0.887      ;
-; 0.166  ; divider:DIV|remainder[5]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 0.816      ;
-; 0.184  ; divider:DIV|state.s0      ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.042     ; 0.781      ;
-; 0.218  ; divider:DIV|remainder[7]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.038     ; 0.751      ;
-; 0.253  ; divider:DIV|remainder[7]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.033     ; 0.721      ;
-; 0.348  ; divider:DIV|state.s1      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 0.634      ;
-; 0.432  ; divider:DIV|remainder[9]  ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 0.550      ;
-; 0.437  ; divider:DIV|state.s0      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.032     ; 0.538      ;
-; 0.439  ; divider:DIV|remainder[10] ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 0.543      ;
+; -0.831 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.009     ; 1.829      ;
+; -0.795 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.027     ; 1.775      ;
+; -0.701 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.018     ; 1.690      ;
+; -0.686 ; divider:DIV|remainder[1]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.027     ; 1.666      ;
+; -0.682 ; divider:DIV|remainder[1]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.027     ; 1.662      ;
+; -0.667 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.009     ; 1.665      ;
+; -0.666 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.036     ; 1.637      ;
+; -0.661 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.057     ; 1.611      ;
+; -0.650 ; divider:DIV|remainder[0]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.045     ; 1.612      ;
+; -0.646 ; divider:DIV|remainder[0]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.045     ; 1.608      ;
+; -0.626 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.075     ; 1.558      ;
+; -0.561 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.001      ; 1.569      ;
+; -0.543 ; divider:DIV|state.s2b     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.486      ;
+; -0.536 ; divider:DIV|state.s2b     ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.479      ;
+; -0.531 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.018     ; 1.520      ;
+; -0.522 ; divider:DIV|state.s1      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.465      ;
+; -0.522 ; divider:DIV|remainder[2]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.027     ; 1.502      ;
+; -0.518 ; divider:DIV|remainder[2]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.027     ; 1.498      ;
+; -0.491 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.057     ; 1.441      ;
+; -0.463 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.057     ; 1.413      ;
+; -0.460 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.057     ; 1.410      ;
+; -0.449 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.001      ; 1.457      ;
+; -0.448 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.391      ;
+; -0.430 ; divider:DIV|state.s2b     ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.041     ; 1.396      ;
+; -0.427 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.075     ; 1.359      ;
+; -0.425 ; divider:DIV|repetition[3] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.407      ;
+; -0.425 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.075     ; 1.357      ;
+; -0.424 ; divider:DIV|state.s2b     ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.041     ; 1.390      ;
+; -0.424 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.008     ; 1.423      ;
+; -0.416 ; divider:DIV|remainder[4]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.406      ;
+; -0.412 ; divider:DIV|remainder[4]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.402      ;
+; -0.410 ; divider:DIV|state.s1      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.041     ; 1.376      ;
+; -0.397 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.026     ; 1.378      ;
+; -0.377 ; divider:DIV|state.s2b     ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.320      ;
+; -0.374 ; divider:DIV|repetition[0] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.356      ;
+; -0.374 ; divider:DIV|state.s2a     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.317      ;
+; -0.372 ; divider:DIV|repetition[0] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.354      ;
+; -0.365 ; divider:DIV|repetition[2] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.347      ;
+; -0.363 ; divider:DIV|state.s3      ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.345      ;
+; -0.363 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.026     ; 1.344      ;
+; -0.361 ; divider:DIV|state.s3      ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.343      ;
+; -0.353 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.026     ; 1.334      ;
+; -0.351 ; divider:DIV|state.s2a     ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.294      ;
+; -0.345 ; divider:DIV|state.s2b     ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.288      ;
+; -0.344 ; divider:DIV|repetition[0] ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.326      ;
+; -0.342 ; divider:DIV|repetition[3] ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.324      ;
+; -0.339 ; divider:DIV|repetition[0] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.321      ;
+; -0.335 ; divider:DIV|state.s1      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.278      ;
+; -0.334 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.026     ; 1.315      ;
+; -0.333 ; divider:DIV|state.s3      ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.315      ;
+; -0.332 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.041     ; 1.298      ;
+; -0.330 ; divider:DIV|repetition[0] ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.312      ;
+; -0.328 ; divider:DIV|state.s3      ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.310      ;
+; -0.319 ; divider:DIV|state.s3      ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.301      ;
+; -0.319 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.029     ; 1.297      ;
+; -0.318 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.008     ; 1.317      ;
+; -0.313 ; divider:DIV|repetition[0] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.295      ;
+; -0.308 ; divider:DIV|repetition[7] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.290      ;
+; -0.304 ; divider:DIV|state.s4      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.286      ;
+; -0.304 ; divider:DIV|remainder[3]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.294      ;
+; -0.301 ; divider:DIV|state.s4      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.283      ;
+; -0.301 ; divider:DIV|state.s4      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.283      ;
+; -0.301 ; divider:DIV|state.s4      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.283      ;
+; -0.301 ; divider:DIV|state.s4      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.283      ;
+; -0.301 ; divider:DIV|state.s4      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.283      ;
+; -0.301 ; divider:DIV|state.s4      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.283      ;
+; -0.301 ; divider:DIV|state.s4      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.283      ;
+; -0.300 ; divider:DIV|remainder[3]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.290      ;
+; -0.299 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.057     ; 1.249      ;
+; -0.293 ; divider:DIV|state.s4      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.236      ;
+; -0.293 ; divider:DIV|state.s4      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.236      ;
+; -0.293 ; divider:DIV|state.s4      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.236      ;
+; -0.293 ; divider:DIV|state.s4      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.236      ;
+; -0.290 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.057     ; 1.240      ;
+; -0.285 ; divider:DIV|repetition[1] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.267      ;
+; -0.284 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.001      ; 1.292      ;
+; -0.283 ; divider:DIV|repetition[1] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.265      ;
+; -0.281 ; divider:DIV|state.s4      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.041     ; 1.247      ;
+; -0.281 ; divider:DIV|state.s4      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.041     ; 1.247      ;
+; -0.279 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.026     ; 1.260      ;
+; -0.269 ; divider:DIV|repetition[4] ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.251      ;
+; -0.261 ; divider:DIV|state.s2a     ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.041     ; 1.227      ;
+; -0.259 ; divider:DIV|repetition[3] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.241      ;
+; -0.257 ; divider:DIV|state.s1      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.200      ;
+; -0.255 ; divider:DIV|repetition[1] ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.237      ;
+; -0.254 ; divider:DIV|state.s3      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.236      ;
+; -0.251 ; divider:DIV|state.s3      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.233      ;
+; -0.251 ; divider:DIV|state.s3      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.233      ;
+; -0.251 ; divider:DIV|state.s3      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.233      ;
+; -0.251 ; divider:DIV|state.s3      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.233      ;
+; -0.251 ; divider:DIV|state.s3      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.233      ;
+; -0.251 ; divider:DIV|state.s3      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.233      ;
+; -0.251 ; divider:DIV|state.s3      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.233      ;
+; -0.250 ; divider:DIV|repetition[1] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.232      ;
+; -0.244 ; divider:DIV|state.s3      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.187      ;
+; -0.244 ; divider:DIV|state.s3      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.187      ;
+; -0.244 ; divider:DIV|state.s3      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.187      ;
+; -0.244 ; divider:DIV|state.s3      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.064     ; 1.187      ;
+; -0.241 ; divider:DIV|repetition[1] ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.025     ; 1.223      ;
+; -0.232 ; divider:DIV|state.s3      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.041     ; 1.198      ;
 +--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -819,106 +820,106 @@ No paths to report.
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
-; 0.279 ; divider:DIV|remainder[13] ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.388      ;
-; 0.291 ; divider:DIV|remainder[11] ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.400      ;
-; 0.314 ; divider:DIV|state.s1      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.038      ; 0.436      ;
-; 0.315 ; divider:DIV|state.s1      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.038      ; 0.437      ;
-; 0.316 ; divider:DIV|state.s1      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.038      ; 0.438      ;
-; 0.317 ; divider:DIV|state.s1      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.038      ; 0.439      ;
-; 0.317 ; divider:DIV|state.s1      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.038      ; 0.439      ;
-; 0.318 ; divider:DIV|state.s1      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.038      ; 0.440      ;
-; 0.318 ; divider:DIV|state.s1      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.038      ; 0.440      ;
-; 0.321 ; divider:DIV|remainder[14] ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.430      ;
-; 0.331 ; divider:DIV|remainder[8]  ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.440      ;
-; 0.332 ; divider:DIV|remainder[10] ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.441      ;
-; 0.334 ; divider:DIV|state.s0      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.034      ; 0.452      ;
-; 0.334 ; divider:DIV|remainder[12] ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.443      ;
-; 0.335 ; divider:DIV|remainder[9]  ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.444      ;
-; 0.340 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.449      ;
-; 0.383 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.492      ;
-; 0.426 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 0.503      ;
-; 0.436 ; divider:DIV|state.s1      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.545      ;
-; 0.438 ; divider:DIV|state.s1      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.038      ; 0.560      ;
-; 0.441 ; divider:DIV|state.s0      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.024      ; 0.549      ;
-; 0.491 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.028      ; 0.603      ;
-; 0.500 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.033      ; 0.617      ;
-; 0.519 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.628      ;
-; 0.578 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.687      ;
-; 0.614 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.092      ; 0.790      ;
-; 0.617 ; divider:DIV|state.s0      ; divider:DIV|state.s1      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.024      ; 0.725      ;
-; 0.617 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.726      ;
-; 0.618 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 0.695      ;
-; 0.618 ; divider:DIV|state.s1      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 0.695      ;
-; 0.618 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 0.695      ;
-; 0.618 ; divider:DIV|state.s1      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 0.695      ;
-; 0.618 ; divider:DIV|state.s1      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 0.695      ;
-; 0.618 ; divider:DIV|state.s1      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 0.695      ;
-; 0.659 ; divider:DIV|state.s1      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.786      ;
-; 0.660 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.097      ; 0.841      ;
-; 0.707 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.092      ; 0.883      ;
-; 0.735 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.844      ;
-; 0.752 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.861      ;
-; 0.753 ; divider:DIV|state.s0      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.029      ; 0.866      ;
-; 0.753 ; divider:DIV|state.s0      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.029      ; 0.866      ;
-; 0.753 ; divider:DIV|state.s0      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.029      ; 0.866      ;
-; 0.753 ; divider:DIV|state.s0      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.029      ; 0.866      ;
-; 0.753 ; divider:DIV|state.s0      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.029      ; 0.866      ;
-; 0.753 ; divider:DIV|state.s0      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.029      ; 0.866      ;
-; 0.753 ; divider:DIV|state.s0      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.029      ; 0.866      ;
-; 0.753 ; divider:DIV|state.s0      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.029      ; 0.866      ;
-; 0.755 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.864      ;
-; 0.755 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.864      ;
-; 0.778 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.887      ;
-; 0.791 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.900      ;
-; 0.792 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.901      ;
-; 0.795 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 0.872      ;
-; 0.806 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.087      ; 0.977      ;
-; 0.827 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 0.904      ;
-; 0.866 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.975      ;
-; 0.871 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.097      ; 1.052      ;
-; 0.874 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.092      ; 1.050      ;
-; 0.875 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.984      ;
-; 0.882 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.991      ;
-; 0.904 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.013      ;
-; 0.904 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.013      ;
-; 0.919 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.028      ;
-; 0.922 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.031      ;
-; 0.926 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.035      ;
-; 0.929 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 1.006      ;
-; 0.936 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.045      ;
-; 0.946 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.055      ;
-; 0.949 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.058      ;
-; 0.949 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.058      ;
-; 0.963 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.072      ;
-; 0.970 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.079      ;
-; 0.973 ; divider:DIV|state.s0      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.016     ; 1.041      ;
-; 0.973 ; divider:DIV|state.s0      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.016     ; 1.041      ;
-; 0.973 ; divider:DIV|state.s0      ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.016     ; 1.041      ;
-; 0.973 ; divider:DIV|state.s0      ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.016     ; 1.041      ;
-; 0.973 ; divider:DIV|state.s0      ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.016     ; 1.041      ;
-; 0.973 ; divider:DIV|state.s0      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.016     ; 1.041      ;
-; 0.973 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.087      ; 1.144      ;
-; 0.973 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 1.050      ;
-; 0.987 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.092      ; 1.163      ;
-; 1.000 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.087      ; 1.171      ;
-; 1.002 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.111      ;
-; 1.005 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.007     ; 1.082      ;
-; 1.019 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.092      ; 1.195      ;
-; 1.032 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.141      ;
-; 1.033 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.142      ;
-; 1.035 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.144      ;
-; 1.038 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.097      ; 1.219      ;
-; 1.049 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.158      ;
-; 1.060 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.169      ;
-; 1.064 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.173      ;
-; 1.067 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.176      ;
-; 1.076 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.185      ;
-; 1.085 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.092      ; 1.261      ;
-; 1.086 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.087      ; 1.257      ;
-; 1.110 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.038      ; 1.232      ;
-; 1.118 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.087      ; 1.289      ;
-; 1.130 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.239      ;
-; 1.146 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 1.255      ;
+; 0.201 ; divider:DIV|repetition[6] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
+; 0.201 ; divider:DIV|repetition[0] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
+; 0.201 ; divider:DIV|repetition[7] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
+; 0.201 ; divider:DIV|repetition[2] ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
+; 0.201 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
+; 0.217 ; divider:DIV|remainder[9]  ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.326      ;
+; 0.218 ; divider:DIV|remainder[14] ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.327      ;
+; 0.218 ; divider:DIV|remainder[12] ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.327      ;
+; 0.218 ; divider:DIV|remainder[10] ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.327      ;
+; 0.219 ; divider:DIV|remainder[11] ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.328      ;
+; 0.247 ; divider:DIV|remainder[13] ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.356      ;
+; 0.287 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.396      ;
+; 0.306 ; divider:DIV|state.s0      ; divider:DIV|remainder[10] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 0.456      ;
+; 0.307 ; divider:DIV|state.s0      ; divider:DIV|remainder[15] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 0.457      ;
+; 0.307 ; divider:DIV|state.s0      ; divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 0.457      ;
+; 0.307 ; divider:DIV|state.s0      ; divider:DIV|remainder[12] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 0.457      ;
+; 0.307 ; divider:DIV|state.s0      ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 0.457      ;
+; 0.308 ; divider:DIV|state.s0      ; divider:DIV|remainder[13] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 0.458      ;
+; 0.309 ; divider:DIV|state.s0      ; divider:DIV|remainder[11] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.066      ; 0.459      ;
+; 0.311 ; divider:DIV|repetition[6] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.420      ;
+; 0.326 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.026      ; 0.436      ;
+; 0.351 ; divider:DIV|state.s1      ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.460      ;
+; 0.352 ; divider:DIV|state.s1      ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.461      ;
+; 0.379 ; divider:DIV|state.s2b     ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.506      ;
+; 0.386 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.026      ; 0.496      ;
+; 0.395 ; divider:DIV|state.s3      ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.504      ;
+; 0.428 ; divider:DIV|remainder[8]  ; divider:DIV|remainder[9]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.048      ; 0.560      ;
+; 0.431 ; divider:DIV|repetition[5] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.540      ;
+; 0.458 ; divider:DIV|state.s2a     ; divider:DIV|state.s3      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.567      ;
+; 0.462 ; divider:DIV|repetition[6] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.571      ;
+; 0.471 ; divider:DIV|repetition[1] ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.580      ;
+; 0.481 ; divider:DIV|state.s2a     ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.610      ;
+; 0.485 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.026      ; 0.595      ;
+; 0.487 ; divider:DIV|state.s2a     ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.614      ;
+; 0.504 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.026      ; 0.614      ;
+; 0.513 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.011      ; 0.608      ;
+; 0.527 ; divider:DIV|remainder[8]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.034      ; 0.645      ;
+; 0.529 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.011      ; 0.624      ;
+; 0.566 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.026      ; 0.676      ;
+; 0.581 ; divider:DIV|state.s2b     ; divider:DIV|state.s3      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.690      ;
+; 0.586 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.082      ; 0.752      ;
+; 0.599 ; divider:DIV|repetition[7] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.708      ;
+; 0.615 ; divider:DIV|remainder[6]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.064      ; 0.763      ;
+; 0.619 ; divider:DIV|remainder[6]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.064      ; 0.767      ;
+; 0.632 ; divider:DIV|state.s2a     ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.763      ;
+; 0.634 ; divider:DIV|remainder[7]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.743      ;
+; 0.652 ; divider:DIV|state.s2a     ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.027      ; 0.763      ;
+; 0.670 ; divider:DIV|state.s2a     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.017      ; 0.771      ;
+; 0.671 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.780      ;
+; 0.676 ; divider:DIV|state.s3      ; divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.785      ;
+; 0.678 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.024      ; 0.786      ;
+; 0.679 ; divider:DIV|repetition[4] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.788      ;
+; 0.679 ; divider:DIV|repetition[4] ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.785      ;
+; 0.693 ; divider:DIV|state.s1      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.822      ;
+; 0.696 ; divider:DIV|state.s2a     ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.027      ; 0.807      ;
+; 0.697 ; divider:DIV|repetition[4] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.806      ;
+; 0.697 ; divider:DIV|state.s2a     ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.017      ; 0.798      ;
+; 0.698 ; divider:DIV|repetition[4] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.807      ;
+; 0.706 ; divider:DIV|state.s4      ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.812      ;
+; 0.721 ; divider:DIV|state.s2b     ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.027      ; 0.832      ;
+; 0.725 ; divider:DIV|repetition[1] ; divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.831      ;
+; 0.731 ; divider:DIV|state.s2a     ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.017      ; 0.832      ;
+; 0.734 ; divider:DIV|repetition[1] ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.843      ;
+; 0.738 ; divider:DIV|state.s2b     ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.017      ; 0.839      ;
+; 0.739 ; divider:DIV|remainder[6]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 0.896      ;
+; 0.746 ; divider:DIV|state.s1      ; divider:DIV|remainder[1]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.027      ; 0.857      ;
+; 0.755 ; divider:DIV|state.s2b     ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.886      ;
+; 0.757 ; divider:DIV|remainder[0]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.006      ; 0.847      ;
+; 0.763 ; divider:DIV|state.s1      ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.017      ; 0.864      ;
+; 0.770 ; divider:DIV|remainder[2]  ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.879      ;
+; 0.772 ; divider:DIV|repetition[0] ; divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.881      ;
+; 0.775 ; divider:DIV|state.s3      ; divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.884      ;
+; 0.775 ; divider:DIV|remainder[3]  ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.026      ; 0.885      ;
+; 0.780 ; divider:DIV|remainder[1]  ; divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.024      ; 0.888      ;
+; 0.783 ; divider:DIV|repetition[0] ; divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.892      ;
+; 0.784 ; divider:DIV|state.s1      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.915      ;
+; 0.788 ; divider:DIV|repetition[5] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.894      ;
+; 0.792 ; divider:DIV|state.s2b     ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.017      ; 0.893      ;
+; 0.792 ; divider:DIV|remainder[5]  ; divider:DIV|state.s2a     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.064      ; 0.940      ;
+; 0.794 ; divider:DIV|repetition[3] ; divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.900      ;
+; 0.796 ; divider:DIV|state.s1      ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.923      ;
+; 0.796 ; divider:DIV|remainder[5]  ; divider:DIV|state.s2b     ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.064      ; 0.944      ;
+; 0.799 ; divider:DIV|repetition[3] ; divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.908      ;
+; 0.799 ; divider:DIV|state.s3      ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.908      ;
+; 0.801 ; divider:DIV|repetition[5] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.910      ;
+; 0.802 ; divider:DIV|repetition[5] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.911      ;
+; 0.807 ; divider:DIV|repetition[3] ; divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.916      ;
+; 0.811 ; divider:DIV|repetition[3] ; divider:DIV|repetition[7] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.920      ;
+; 0.812 ; divider:DIV|repetition[3] ; divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.921      ;
+; 0.812 ; divider:DIV|repetition[5] ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.921      ;
+; 0.817 ; divider:DIV|state.s1      ; divider:DIV|remainder[5]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.017      ; 0.918      ;
+; 0.819 ; divider:DIV|state.s2b     ; divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.027      ; 0.930      ;
+; 0.819 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.026      ; 0.929      ;
+; 0.820 ; divider:DIV|state.s0      ; divider:DIV|remainder[0]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.068      ; 0.972      ;
+; 0.820 ; divider:DIV|state.s2b     ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.017      ; 0.921      ;
+; 0.821 ; divider:DIV|remainder[4]  ; divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.026      ; 0.931      ;
+; 0.823 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[8]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.073      ; 0.980      ;
+; 0.828 ; divider:DIV|state.s3      ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.959      ;
+; 0.834 ; divider:DIV|remainder[5]  ; divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.082      ; 1.000      ;
+; 0.835 ; divider:DIV|repetition[1] ; divider:DIV|state.s4      ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.025      ; 0.944      ;
 +-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -933,10 +934,10 @@ No synchronizer chains to report.
 +------------------+---------+-------+----------+---------+---------------------+
 ; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -2.463  ; 0.279 ; N/A      ; N/A     ; -3.000              ;
-;  KEY[0]          ; -2.463  ; 0.279 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -29.521 ; 0.0   ; 0.0      ; 0.0     ; -26.13              ;
-;  KEY[0]          ; -29.521 ; 0.000 ; N/A      ; N/A     ; -26.130             ;
+; Worst-case Slack ; -2.733  ; 0.201 ; N/A      ; N/A     ; -3.000              ;
+;  KEY[0]          ; -2.733  ; 0.201 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -52.886 ; 0.0   ; 0.0      ; 0.0     ; -41.55              ;
+;  KEY[0]          ; -52.886 ; 0.000 ; N/A      ; N/A     ; -41.550             ;
 +------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -999,24 +1000,24 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
-; SW[5]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[3]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[2]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[4]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[6]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[8]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[0]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[16]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[9]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[2]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[10]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[3]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[11]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[4]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[12]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[5]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[13]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[14]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[15]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[6]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[7]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[15]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -1190,7 +1191,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; KEY[0]     ; KEY[0]   ; 157      ; 0        ; 0        ; 0        ;
+; KEY[0]     ; KEY[0]   ; 294      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1200,7 +1201,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; KEY[0]     ; KEY[0]   ; 157      ; 0        ; 0        ; 0        ;
+; KEY[0]     ; KEY[0]   ; 294      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1225,7 +1226,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 17    ; 17   ;
-; Unconstrained Input Port Paths  ; 90    ; 90   ;
+; Unconstrained Input Port Paths  ; 98    ; 98   ;
 ; Unconstrained Output Ports      ; 44    ; 44   ;
 ; Unconstrained Output Port Paths ; 128   ; 128  ;
 +---------------------------------+-------+------+
@@ -1400,7 +1401,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Wed May 20 10:00:27 2026
+    Info: Processing started: Sun May 24 21:36:51 2026
 Info: Command: quartus_sta target1 -c target1
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "packages" -- entity does not exist in design
@@ -1429,7 +1430,7 @@ Warning (20013): Ignored 24 assignments for entity "packages" -- entity does not
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity packages -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity packages -section_id Top was ignored
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'target1.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1442,64 +1443,64 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.463
+Info (332146): Worst-case setup slack is -2.733
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.463             -29.521 KEY[0] 
-Info (332146): Worst-case hold slack is 0.614
+    Info (332119):    -2.733             -52.886 KEY[0] 
+Info (332146): Worst-case hold slack is 0.440
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.614               0.000 KEY[0] 
+    Info (332119):     0.440               0.000 KEY[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -26.130 KEY[0] 
+    Info (332119):    -3.000             -41.550 KEY[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.143
+Info (332146): Worst-case setup slack is -2.440
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.143             -25.214 KEY[0] 
-Info (332146): Worst-case hold slack is 0.560
+    Info (332119):    -2.440             -45.536 KEY[0] 
+Info (332146): Worst-case hold slack is 0.387
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.560               0.000 KEY[0] 
+    Info (332119):     0.387               0.000 KEY[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -26.130 KEY[0] 
+    Info (332119):    -3.000             -41.550 KEY[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.672
+Info (332146): Worst-case setup slack is -0.831
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.672              -5.727 KEY[0] 
-Info (332146): Worst-case hold slack is 0.279
+    Info (332119):    -0.831             -11.105 KEY[0] 
+Info (332146): Worst-case hold slack is 0.201
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.279               0.000 KEY[0] 
+    Info (332119):     0.201               0.000 KEY[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -23.705 KEY[0] 
+    Info (332119):    -3.000             -37.453 KEY[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4993 megabytes
-    Info: Processing ended: Wed May 20 10:00:29 2026
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4969 megabytes
+    Info: Processing ended: Sun May 24 21:36:52 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
