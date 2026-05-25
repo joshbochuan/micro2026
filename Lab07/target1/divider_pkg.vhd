@@ -42,22 +42,29 @@ architecture logicfunc of divider is
 	signal initValue: std_logic_vector(15 downto 0);
 	signal subValue: std_logic_vector(15 downto 0);
 	signal successValue: std_logic_vector(15 downto 0);
+	signal failSum: std_logic_vector(7 downto 0);
 	signal failValue: std_logic_vector(15 downto 0);
+	signal finalValue: std_logic_vector(15 downto 0);
 	
 begin
 	clearValue <= "0000000000000000";
-	initValue <= "00000000" & dividend;
+	initValue <= "0000000" & dividend & "0";
 	
 	-- SFTREG: shift_register port map(clk, clear, load, lr_sel, di, sdi, remainder);
-	subValue(15 downto 8) <= remainder(15 downto 8);
-	SUB: adder8 port map('1', remainder(7 downto 0), not divisor, subValue(7 downto 0), open);
+	SUB: adder8 port map('1', remainder(15 downto 8), not divisor, subValue(15 downto 8), open);
+	subValue(7 downto 0) <= remainder(7 downto 0);
 	
 	successValue(15 downto 1) <= remainder(14 downto 0);
 	successValue(0) <= '1';
 	
-	failValue(15 downto 9) <= remainder(14 downto 8);
-	ADD: adder8 port map('0', remainder(7 downto 0), divisor, failValue(8 downto 1), open);
+	ADD: adder8 port map('0', remainder(15 downto 8), divisor, failSum, open);
+	failValue(15 downto 9) <= failSum(6 downto 0);
+	failValue(8 downto 1) <= remainder(7 downto 0);
 	failValue(0) <= '0';
+	
+	finalValue(15) <= '0';
+	finalValue(14 downto 8) <= remainder(15 downto 9);
+	finalValue(7 downto 0) <= remainder(7 downto 0);
 	
 	REP_SUB: adder8 port map('0', repetition, "00000001", nextRep, open);
 	
@@ -74,7 +81,7 @@ begin
 					state <= S1;
 				when s1 =>
 					remainder <= subValue;
-					if subValue(7) = '0' then
+					if subValue(15) = '0' then
 						-- success, go to s2a
 						state <= s2a;
 					else
@@ -88,7 +95,8 @@ begin
 					remainder <= failValue;
 					state <= s3;
 				when s3 =>
-					if repetition = "00001000" then -- 9th time when repetition is 8
+					if repetition = "00000111" then -- 9th time when repetition is 8
+						remainder <= finalValue;
 						state <= s4;
 					else
 						repetition <= nextRep;
