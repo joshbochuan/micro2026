@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Jun  8 17:47:40 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : target1
+Top-level Entity Name : target1
+Family : Cyclone IV E
+Total logic elements : 306
+    Total combinational functions : 279
+    Dedicated logic registers : 77
+Total registers : 77
+Total pins : 76
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

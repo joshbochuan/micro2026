@@ -1,0 +1,16 @@
+
+State Machine - |target1|state
+Name state.S_DIV_WRITE state.S_DIV_WAIT state.S_DIV_START state.S_WAIT 
+state.S_WAIT 0 0 0 0 
+state.S_DIV_START 0 0 1 1 
+state.S_DIV_WAIT 0 1 0 1 
+state.S_DIV_WRITE 1 0 0 1 
+
+State Machine - |target1|divider:DIV|state
+Name state.s4 state.s3 state.s2b state.s2a state.s1 state.s0 
+state.s0 0 0 0 0 0 0 
+state.s1 0 0 0 0 1 1 
+state.s2a 0 0 0 1 0 1 
+state.s2b 0 0 1 0 0 1 
+state.s3 0 1 0 0 0 1 
+state.s4 1 0 0 0 0 1 
