@@ -1,0 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+package divider_pkg is
+	component divider8 is
+		generic (n=8)
+		port(
+			dividend: in std_logic_vector(7 downto 0)
+		)
