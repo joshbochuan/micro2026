@@ -1,5 +1,6 @@
 Library IEEE;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 use work.alu_pkg.all;
 use work.divider_pkg.all;
 use work.sevenseg_pkg.all;
@@ -20,15 +21,6 @@ entity target1 is
 end target1;
 
 architecture structural of target1 is
-
-    type state_type is (
-		 S_WAIT,
-		 S_DIV_START,
-		 S_DIV_WAIT,
-		 S_DIV_WRITE
-	 );
-    signal state : state_type := S_WAIT;
-
     signal data   : std_logic_vector(7 downto 0);
     signal opcode : std_logic_vector(3 downto 0);
     signal rs     : std_logic_vector(1 downto 0);
@@ -47,11 +39,7 @@ architecture structural of target1 is
 	 signal subAB_value: std_logic_vector(7 downto 0);
 	 signal subBA_value: std_logic_vector(7 downto 0);
 	 signal slt_value: std_logic_vector(7 downto 0);
-	 
-	 signal div_buffer: std_logic_vector(15 downto 0);
-	 signal div_reset : std_logic := '0';
-	 signal div_done  : std_logic;
-	 signal div_dest : std_logic_vector(1 downto 0);
+	 signal div_value: std_logic_vector(7 downto 0);
 begin
 
     -- switch input
@@ -93,14 +81,9 @@ begin
 	 ALU_SUBBA: alu8 port map(rt_value, rs_value, "0110", subBA_value);
 	 ALU_SLT: alu8 port map(rs_value, rt_value, "0111", slt_value);
 	 
-	 DIV: divider port map(
-			 clk       => clock,
-			 clear     => div_reset,
-			 divisor   => rt_value,
-			 dividend  => rs_value,
-			 remainder => div_buffer,
-			 done      => div_done
-		);
+	 with rt_value select
+		div_value <= "00000000" when "00000000",
+						 std_logic_vector(unsigned(rs_value) / unsigned(rt_value)) when others;
 						  
     process(clock, reset)
 		variable res : std_logic_vector(7 downto 0);
@@ -110,54 +93,27 @@ begin
             R1 <= (others => '0');
             R2 <= (others => '0');
             R3 <= (others => '0');
-            state <= S_WAIT;
 
-        elsif falling_edge(clock) then
-            case state is
-                when S_WAIT =>
-                    case opcode is
-                        when "0000" => res := data;
-                        when "0001" => res := rt_value;
-								when "0010" => res := add_value;
-								when "0011" => res := and_value;
-								when "0101" => res := subAB_value;
-								when "1001" => res := subBA_value;
-								when "0100" => res := slt_value;
-								when "1000" =>
-									 div_dest <= rs;
-									 div_reset <= '1';
-									 state <= S_DIV_START;
-                        when others => res := rs_value;
-                    end case;
-						  
-						  case rs is
-								when "00" => R0 <= res;
-								when "01" => R1 <= res;
-								when "10" => R2 <= res;
-								when "11" => R3 <= res;
-								when others => null;
-						  end case;
-					when S_DIV_START =>
-						 div_reset <= '0';
-						 state <= S_DIV_WAIT;
-
-					when S_DIV_WAIT =>
-						 if div_done = '1' then
-							  state <= S_DIV_WRITE;
-						 end if;
-
-					when S_DIV_WRITE =>
-						 case div_dest is
-							  when "00" => R0 <= div_buffer(7 downto 0);
-							  when "01" => R1 <= div_buffer(7 downto 0);
-							  when "10" => R2 <= div_buffer(7 downto 0);
-							  when "11" => R3 <= div_buffer(7 downto 0);
-							  when others => null;
-						 end case;
-
-						 state <= S_WAIT;
+        elsif rising_edge(clock) then
+			  case opcode is
+					when "0000" => res := data;
+					when "0001" => res := rt_value;
+					when "0010" => res := add_value;
+					when "0011" => res := and_value;
+					when "0101" => res := subAB_value;
+					when "1001" => res := subBA_value;
+					when "0100" => res := slt_value;
+					when "1000" => res := div_value;
+					when others => res := rs_value;
+			  end case;
+			  
+			  case rs is
+					when "00" => R0 <= res;
+					when "01" => R1 <= res;
+					when "10" => R2 <= res;
+					when "11" => R3 <= res;
 					when others => null;
-            end case;
+			  end case;
         end if;
     end process;
 

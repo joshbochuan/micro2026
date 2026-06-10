@@ -1,91 +1,63 @@
 |target1
-SW[0] => Mux23.IN0
+SW[0] => Mux31.IN0
 SW[0] => hex_to_7seg:H0.hex[0]
 SW[0] => LEDR[0].DATAIN
-SW[1] => Mux22.IN0
+SW[1] => Mux30.IN0
 SW[1] => hex_to_7seg:H0.hex[1]
 SW[1] => LEDR[1].DATAIN
-SW[2] => Mux21.IN0
+SW[2] => Mux29.IN0
 SW[2] => hex_to_7seg:H0.hex[2]
 SW[2] => LEDR[2].DATAIN
-SW[3] => Mux20.IN0
+SW[3] => Mux28.IN0
 SW[3] => hex_to_7seg:H0.hex[3]
 SW[3] => LEDR[3].DATAIN
-SW[4] => Mux19.IN0
+SW[4] => Mux27.IN0
 SW[4] => hex_to_7seg:H1.hex[0]
 SW[4] => LEDR[4].DATAIN
-SW[5] => Mux18.IN0
+SW[5] => Mux26.IN0
 SW[5] => hex_to_7seg:H1.hex[1]
 SW[5] => LEDR[5].DATAIN
-SW[6] => Mux17.IN0
+SW[6] => Mux25.IN0
 SW[6] => hex_to_7seg:H1.hex[2]
 SW[6] => LEDR[6].DATAIN
-SW[7] => Mux16.IN0
+SW[7] => Mux24.IN0
 SW[7] => hex_to_7seg:H1.hex[3]
 SW[7] => LEDR[7].DATAIN
-SW[8] => Mux16.IN4
-SW[8] => Mux17.IN4
-SW[8] => Mux18.IN4
-SW[8] => Mux19.IN4
-SW[8] => Mux20.IN4
-SW[8] => Mux21.IN4
-SW[8] => Mux22.IN4
-SW[8] => Mux23.IN4
-SW[8] => Mux24.IN3
-SW[8] => Mux25.IN3
+SW[8] => Mux24.IN4
+SW[8] => Mux25.IN4
 SW[8] => Mux26.IN4
-SW[8] => Mux27.IN19
-SW[8] => Mux28.IN19
-SW[8] => Mux29.IN19
-SW[8] => Mux30.IN19
+SW[8] => Mux27.IN4
+SW[8] => Mux28.IN4
+SW[8] => Mux29.IN4
+SW[8] => Mux30.IN4
+SW[8] => Mux31.IN4
 SW[8] => LEDR[8].DATAIN
-SW[9] => Mux16.IN3
-SW[9] => Mux17.IN3
-SW[9] => Mux18.IN3
-SW[9] => Mux19.IN3
-SW[9] => Mux20.IN3
-SW[9] => Mux21.IN3
-SW[9] => Mux22.IN3
-SW[9] => Mux23.IN3
-SW[9] => Mux24.IN2
-SW[9] => Mux25.IN2
+SW[9] => Mux24.IN3
+SW[9] => Mux25.IN3
 SW[9] => Mux26.IN3
-SW[9] => Mux27.IN18
-SW[9] => Mux28.IN18
-SW[9] => Mux29.IN18
-SW[9] => Mux30.IN18
+SW[9] => Mux27.IN3
+SW[9] => Mux28.IN3
+SW[9] => Mux29.IN3
+SW[9] => Mux30.IN3
+SW[9] => Mux31.IN3
 SW[9] => LEDR[9].DATAIN
-SW[10] => Mux16.IN2
-SW[10] => Mux17.IN2
-SW[10] => Mux18.IN2
-SW[10] => Mux19.IN2
-SW[10] => Mux20.IN2
-SW[10] => Mux21.IN2
-SW[10] => Mux22.IN2
-SW[10] => Mux23.IN2
-SW[10] => Mux24.IN1
-SW[10] => Mux25.IN1
+SW[10] => Mux24.IN2
+SW[10] => Mux25.IN2
 SW[10] => Mux26.IN2
-SW[10] => Mux27.IN17
-SW[10] => Mux28.IN17
-SW[10] => Mux29.IN17
-SW[10] => Mux30.IN17
+SW[10] => Mux27.IN2
+SW[10] => Mux28.IN2
+SW[10] => Mux29.IN2
+SW[10] => Mux30.IN2
+SW[10] => Mux31.IN2
 SW[10] => LEDR[10].DATAIN
-SW[11] => Mux16.IN1
-SW[11] => Mux17.IN1
-SW[11] => Mux18.IN1
-SW[11] => Mux19.IN1
-SW[11] => Mux20.IN1
-SW[11] => Mux21.IN1
-SW[11] => Mux22.IN1
-SW[11] => Mux23.IN1
-SW[11] => Mux24.IN0
-SW[11] => Mux25.IN0
+SW[11] => Mux24.IN1
+SW[11] => Mux25.IN1
 SW[11] => Mux26.IN1
-SW[11] => Mux27.IN16
-SW[11] => Mux28.IN16
-SW[11] => Mux29.IN16
-SW[11] => Mux30.IN16
+SW[11] => Mux27.IN1
+SW[11] => Mux28.IN1
+SW[11] => Mux29.IN1
+SW[11] => Mux30.IN1
+SW[11] => Mux31.IN1
 SW[11] => LEDR[11].DATAIN
 SW[12] => Mux0.IN1
 SW[12] => Mux1.IN1
@@ -95,8 +67,6 @@ SW[12] => Mux4.IN1
 SW[12] => Mux5.IN1
 SW[12] => Mux6.IN1
 SW[12] => Mux7.IN1
-SW[12] => Mux25.IN4
-SW[12] => Mux31.IN2
 SW[12] => Mux32.IN2
 SW[12] => Mux33.IN2
 SW[12] => Mux34.IN2
@@ -128,6 +98,7 @@ SW[12] => Mux59.IN2
 SW[12] => Mux60.IN2
 SW[12] => Mux61.IN2
 SW[12] => Mux62.IN2
+SW[12] => Mux63.IN2
 SW[12] => LEDR[12].DATAIN
 SW[13] => Mux0.IN0
 SW[13] => Mux1.IN0
@@ -137,8 +108,6 @@ SW[13] => Mux4.IN0
 SW[13] => Mux5.IN0
 SW[13] => Mux6.IN0
 SW[13] => Mux7.IN0
-SW[13] => Mux24.IN4
-SW[13] => Mux31.IN1
 SW[13] => Mux32.IN1
 SW[13] => Mux33.IN1
 SW[13] => Mux34.IN1
@@ -170,6 +139,7 @@ SW[13] => Mux59.IN1
 SW[13] => Mux60.IN1
 SW[13] => Mux61.IN1
 SW[13] => Mux62.IN1
+SW[13] => Mux63.IN1
 SW[13] => LEDR[13].DATAIN
 SW[14] => Mux8.IN1
 SW[14] => Mux9.IN1
@@ -221,22 +191,6 @@ SW[16] => R0[4].ACLR
 SW[16] => R0[5].ACLR
 SW[16] => R0[6].ACLR
 SW[16] => R0[7].ACLR
-SW[16] => state~3.DATAIN
-SW[16] => div_reset.ENA
-SW[16] => res[7].ENA
-SW[16] => res[6].ENA
-SW[16] => res[5].ENA
-SW[16] => res[4].ENA
-SW[16] => res[3].ENA
-SW[16] => res[2].ENA
-SW[16] => res[1].ENA
-SW[16] => res[0].ENA
-SW[16] => div_dest[1].ENA
-SW[16] => div_dest[0].ENA
-KEY[0] => divider:DIV.clk
-KEY[0] => div_reset.CLK
-KEY[0] => div_dest[0].CLK
-KEY[0] => div_dest[1].CLK
 KEY[0] => R3[0].CLK
 KEY[0] => R3[1].CLK
 KEY[0] => R3[2].CLK
@@ -269,15 +223,6 @@ KEY[0] => R0[4].CLK
 KEY[0] => R0[5].CLK
 KEY[0] => R0[6].CLK
 KEY[0] => R0[7].CLK
-KEY[0] => res[0].CLK
-KEY[0] => res[1].CLK
-KEY[0] => res[2].CLK
-KEY[0] => res[3].CLK
-KEY[0] => res[4].CLK
-KEY[0] => res[5].CLK
-KEY[0] => res[6].CLK
-KEY[0] => res[7].CLK
-KEY[0] => state~1.DATAIN
 LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -1761,523 +1706,6 @@ res <= res.DB_MAX_OUTPUT_PORT_TYPE
 cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
 set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
 overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV
-clk => repetition[0].CLK
-clk => repetition[1].CLK
-clk => repetition[2].CLK
-clk => repetition[3].CLK
-clk => repetition[4].CLK
-clk => repetition[5].CLK
-clk => repetition[6].CLK
-clk => repetition[7].CLK
-clk => remainder[0]~reg0.CLK
-clk => remainder[1]~reg0.CLK
-clk => remainder[2]~reg0.CLK
-clk => remainder[3]~reg0.CLK
-clk => remainder[4]~reg0.CLK
-clk => remainder[5]~reg0.CLK
-clk => remainder[6]~reg0.CLK
-clk => remainder[7]~reg0.CLK
-clk => remainder[8]~reg0.CLK
-clk => remainder[9]~reg0.CLK
-clk => remainder[10]~reg0.CLK
-clk => remainder[11]~reg0.CLK
-clk => remainder[12]~reg0.CLK
-clk => remainder[13]~reg0.CLK
-clk => remainder[14]~reg0.CLK
-clk => remainder[15]~reg0.CLK
-clk => state~1.DATAIN
-clear => repetition[0].ACLR
-clear => repetition[1].ACLR
-clear => repetition[2].ACLR
-clear => repetition[3].ACLR
-clear => repetition[4].ACLR
-clear => repetition[5].ACLR
-clear => repetition[6].ACLR
-clear => repetition[7].ACLR
-clear => remainder[0]~reg0.ALOAD
-clear => remainder[1]~reg0.ALOAD
-clear => remainder[2]~reg0.ALOAD
-clear => remainder[3]~reg0.ALOAD
-clear => remainder[4]~reg0.ALOAD
-clear => remainder[5]~reg0.ALOAD
-clear => remainder[6]~reg0.ALOAD
-clear => remainder[7]~reg0.ALOAD
-clear => remainder[8]~reg0.ALOAD
-clear => remainder[9]~reg0.ALOAD
-clear => remainder[10]~reg0.ALOAD
-clear => remainder[11]~reg0.ALOAD
-clear => remainder[12]~reg0.ALOAD
-clear => remainder[13]~reg0.ALOAD
-clear => remainder[14]~reg0.ALOAD
-clear => remainder[15]~reg0.ALOAD
-clear => state~3.DATAIN
-divisor[0] => adder8:ADD.Y[0]
-divisor[0] => adder8:SUB.Y[0]
-divisor[1] => adder8:ADD.Y[1]
-divisor[1] => adder8:SUB.Y[1]
-divisor[2] => adder8:ADD.Y[2]
-divisor[2] => adder8:SUB.Y[2]
-divisor[3] => adder8:ADD.Y[3]
-divisor[3] => adder8:SUB.Y[3]
-divisor[4] => adder8:ADD.Y[4]
-divisor[4] => adder8:SUB.Y[4]
-divisor[5] => adder8:ADD.Y[5]
-divisor[5] => adder8:SUB.Y[5]
-divisor[6] => adder8:ADD.Y[6]
-divisor[6] => adder8:SUB.Y[6]
-divisor[7] => adder8:ADD.Y[7]
-divisor[7] => adder8:SUB.Y[7]
-dividend[0] => Selector14.IN11
-dividend[1] => Selector13.IN11
-dividend[2] => Selector12.IN11
-dividend[3] => Selector11.IN11
-dividend[4] => Selector10.IN11
-dividend[5] => Selector9.IN11
-dividend[6] => Selector8.IN11
-dividend[7] => Selector7.IN10
-remainder[0] <= remainder[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[1] <= remainder[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[2] <= remainder[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[3] <= remainder[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[4] <= remainder[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[5] <= remainder[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[6] <= remainder[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[7] <= remainder[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[8] <= remainder[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[9] <= remainder[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[10] <= remainder[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[11] <= remainder[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[12] <= remainder[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[13] <= remainder[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[14] <= remainder[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-remainder[15] <= remainder[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-done <= done.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:SUB
-cin => adder1:FA0.cin
-X[0] => adder1:FA0.x
-X[1] => adder1:FA1.x
-X[2] => adder1:FA2.x
-X[3] => adder1:FA3.x
-X[4] => adder1:FA4.x
-X[5] => adder1:FA5.x
-X[6] => adder1:FA6.x
-X[7] => adder1:FA7.x
-Y[0] => adder1:FA0.y
-Y[1] => adder1:FA1.y
-Y[2] => adder1:FA2.y
-Y[3] => adder1:FA3.y
-Y[4] => adder1:FA4.y
-Y[5] => adder1:FA5.y
-Y[6] => adder1:FA6.y
-Y[7] => adder1:FA7.y
-S[0] <= adder1:FA0.s
-S[1] <= adder1:FA1.s
-S[2] <= adder1:FA2.s
-S[3] <= adder1:FA3.s
-S[4] <= adder1:FA4.s
-S[5] <= adder1:FA5.s
-S[6] <= adder1:FA6.s
-S[7] <= adder1:FA7.s
-cout <= adder1:FA7.cout
-
-
-|target1|divider:DIV|adder8:SUB|adder1:FA0
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:SUB|adder1:FA1
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:SUB|adder1:FA2
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:SUB|adder1:FA3
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:SUB|adder1:FA4
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:SUB|adder1:FA5
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:SUB|adder1:FA6
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:SUB|adder1:FA7
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:ADD
-cin => adder1:FA0.cin
-X[0] => adder1:FA0.x
-X[1] => adder1:FA1.x
-X[2] => adder1:FA2.x
-X[3] => adder1:FA3.x
-X[4] => adder1:FA4.x
-X[5] => adder1:FA5.x
-X[6] => adder1:FA6.x
-X[7] => adder1:FA7.x
-Y[0] => adder1:FA0.y
-Y[1] => adder1:FA1.y
-Y[2] => adder1:FA2.y
-Y[3] => adder1:FA3.y
-Y[4] => adder1:FA4.y
-Y[5] => adder1:FA5.y
-Y[6] => adder1:FA6.y
-Y[7] => adder1:FA7.y
-S[0] <= adder1:FA0.s
-S[1] <= adder1:FA1.s
-S[2] <= adder1:FA2.s
-S[3] <= adder1:FA3.s
-S[4] <= adder1:FA4.s
-S[5] <= adder1:FA5.s
-S[6] <= adder1:FA6.s
-S[7] <= adder1:FA7.s
-cout <= adder1:FA7.cout
-
-
-|target1|divider:DIV|adder8:ADD|adder1:FA0
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:ADD|adder1:FA1
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:ADD|adder1:FA2
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:ADD|adder1:FA3
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:ADD|adder1:FA4
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:ADD|adder1:FA5
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:ADD|adder1:FA6
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:ADD|adder1:FA7
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:REP_SUB
-cin => adder1:FA0.cin
-X[0] => adder1:FA0.x
-X[1] => adder1:FA1.x
-X[2] => adder1:FA2.x
-X[3] => adder1:FA3.x
-X[4] => adder1:FA4.x
-X[5] => adder1:FA5.x
-X[6] => adder1:FA6.x
-X[7] => adder1:FA7.x
-Y[0] => adder1:FA0.y
-Y[1] => adder1:FA1.y
-Y[2] => adder1:FA2.y
-Y[3] => adder1:FA3.y
-Y[4] => adder1:FA4.y
-Y[5] => adder1:FA5.y
-Y[6] => adder1:FA6.y
-Y[7] => adder1:FA7.y
-S[0] <= adder1:FA0.s
-S[1] <= adder1:FA1.s
-S[2] <= adder1:FA2.s
-S[3] <= adder1:FA3.s
-S[4] <= adder1:FA4.s
-S[5] <= adder1:FA5.s
-S[6] <= adder1:FA6.s
-S[7] <= adder1:FA7.s
-cout <= adder1:FA7.cout
-
-
-|target1|divider:DIV|adder8:REP_SUB|adder1:FA0
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:REP_SUB|adder1:FA1
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:REP_SUB|adder1:FA2
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:REP_SUB|adder1:FA3
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:REP_SUB|adder1:FA4
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:REP_SUB|adder1:FA5
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:REP_SUB|adder1:FA6
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|target1|divider:DIV|adder8:REP_SUB|adder1:FA7
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |target1|hex_to_7seg:H0
