@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+package cpu_pkg is
+	component cpu is
+		port (
+			data:   in std_logic_vector(7 downto 0);
+			opcode: in std_logic_vector(4 downto 0);
+			rs, rt: in std_logic_vector(1 downto 0);
+			clock:  in std_logic;
+			
+			hazard:  out std_logic;
+			exeBusy: out std_logic;
+		)
+	end component;
+end cpu_pkg;
+
