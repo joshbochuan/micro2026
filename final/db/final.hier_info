@@ -1,0 +1,2834 @@
+|final
+SW[0] => cpu:CPU_STAGE.data[0]
+SW[0] => LEDR[0].DATAIN
+SW[1] => cpu:CPU_STAGE.data[1]
+SW[1] => LEDR[1].DATAIN
+SW[2] => cpu:CPU_STAGE.data[2]
+SW[2] => LEDR[2].DATAIN
+SW[3] => cpu:CPU_STAGE.data[3]
+SW[3] => LEDR[3].DATAIN
+SW[4] => cpu:CPU_STAGE.data[4]
+SW[4] => LEDR[4].DATAIN
+SW[5] => cpu:CPU_STAGE.data[5]
+SW[5] => LEDR[5].DATAIN
+SW[6] => cpu:CPU_STAGE.data[6]
+SW[6] => LEDR[6].DATAIN
+SW[7] => cpu:CPU_STAGE.data[7]
+SW[7] => LEDR[7].DATAIN
+SW[8] => cpu:CPU_STAGE.opcode[0]
+SW[9] => cpu:CPU_STAGE.opcode[1]
+SW[10] => cpu:CPU_STAGE.opcode[2]
+SW[11] => cpu:CPU_STAGE.opcode[3]
+SW[12] => cpu:CPU_STAGE.rs[0]
+SW[13] => cpu:CPU_STAGE.rs[1]
+SW[14] => cpu:CPU_STAGE.rt[0]
+SW[15] => cpu:CPU_STAGE.rt[1]
+KEY[0] => cpu:CPU_STAGE.clock
+HEX0[0] <= hex_to_7seg:HEX_RT0.res[0]
+HEX0[1] <= hex_to_7seg:HEX_RT0.res[1]
+HEX0[2] <= hex_to_7seg:HEX_RT0.res[2]
+HEX0[3] <= hex_to_7seg:HEX_RT0.res[3]
+HEX0[4] <= hex_to_7seg:HEX_RT0.res[4]
+HEX0[5] <= hex_to_7seg:HEX_RT0.res[5]
+HEX0[6] <= hex_to_7seg:HEX_RT0.res[6]
+HEX1[0] <= hex_to_7seg:HEX_RT1.res[0]
+HEX1[1] <= hex_to_7seg:HEX_RT1.res[1]
+HEX1[2] <= hex_to_7seg:HEX_RT1.res[2]
+HEX1[3] <= hex_to_7seg:HEX_RT1.res[3]
+HEX1[4] <= hex_to_7seg:HEX_RT1.res[4]
+HEX1[5] <= hex_to_7seg:HEX_RT1.res[5]
+HEX1[6] <= hex_to_7seg:HEX_RT1.res[6]
+HEX2[0] <= hex_to_7seg:HEX_RS0.res[0]
+HEX2[1] <= hex_to_7seg:HEX_RS0.res[1]
+HEX2[2] <= hex_to_7seg:HEX_RS0.res[2]
+HEX2[3] <= hex_to_7seg:HEX_RS0.res[3]
+HEX2[4] <= hex_to_7seg:HEX_RS0.res[4]
+HEX2[5] <= hex_to_7seg:HEX_RS0.res[5]
+HEX2[6] <= hex_to_7seg:HEX_RS0.res[6]
+HEX3[0] <= hex_to_7seg:HEX_RS1.res[0]
+HEX3[1] <= hex_to_7seg:HEX_RS1.res[1]
+HEX3[2] <= hex_to_7seg:HEX_RS1.res[2]
+HEX3[3] <= hex_to_7seg:HEX_RS1.res[3]
+HEX3[4] <= hex_to_7seg:HEX_RS1.res[4]
+HEX3[5] <= hex_to_7seg:HEX_RS1.res[5]
+HEX3[6] <= hex_to_7seg:HEX_RS1.res[6]
+HEX4[0] <= hex_to_7seg:HEX_EXOP.res[0]
+HEX4[1] <= hex_to_7seg:HEX_EXOP.res[1]
+HEX4[2] <= hex_to_7seg:HEX_EXOP.res[2]
+HEX4[3] <= hex_to_7seg:HEX_EXOP.res[3]
+HEX4[4] <= hex_to_7seg:HEX_EXOP.res[4]
+HEX4[5] <= hex_to_7seg:HEX_EXOP.res[5]
+HEX4[6] <= hex_to_7seg:HEX_EXOP.res[6]
+HEX5[0] <= hex_to_7seg:HEX_IDOP.res[0]
+HEX5[1] <= hex_to_7seg:HEX_IDOP.res[1]
+HEX5[2] <= hex_to_7seg:HEX_IDOP.res[2]
+HEX5[3] <= hex_to_7seg:HEX_IDOP.res[3]
+HEX5[4] <= hex_to_7seg:HEX_IDOP.res[4]
+HEX5[5] <= hex_to_7seg:HEX_IDOP.res[5]
+HEX5[6] <= hex_to_7seg:HEX_IDOP.res[6]
+HEX6[0] <= hex_to_7seg:HEX_IFOP.res[0]
+HEX6[1] <= hex_to_7seg:HEX_IFOP.res[1]
+HEX6[2] <= hex_to_7seg:HEX_IFOP.res[2]
+HEX6[3] <= hex_to_7seg:HEX_IFOP.res[3]
+HEX6[4] <= hex_to_7seg:HEX_IFOP.res[4]
+HEX6[5] <= hex_to_7seg:HEX_IFOP.res[5]
+HEX6[6] <= hex_to_7seg:HEX_IFOP.res[6]
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= SW[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= SW[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= SW[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= cpu:CPU_STAGE.hazardOut
+LEDG[1] <= cpu:CPU_STAGE.exeBusyOut
+
+
+|final|cpu:CPU_STAGE
+data[0] => IFID_data.DATAB
+data[1] => IFID_data.DATAB
+data[2] => IFID_data.DATAB
+data[3] => IFID_data.DATAB
+data[4] => IFID_data.DATAB
+data[5] => IFID_data.DATAB
+data[6] => IFID_data.DATAB
+data[7] => IFID_data.DATAB
+opcode[0] => IFID_opcode.DATAB
+opcode[0] => ifOpOut[0].DATAIN
+opcode[1] => IFID_opcode.DATAB
+opcode[1] => ifOpOut[1].DATAIN
+opcode[2] => IFID_opcode.DATAB
+opcode[2] => ifOpOut[2].DATAIN
+opcode[3] => IFID_opcode.DATAB
+opcode[3] => ifOpOut[3].DATAIN
+rs[0] => IFID_rsID.DATAB
+rs[0] => Mux56.IN1
+rs[0] => Mux57.IN1
+rs[0] => Mux58.IN1
+rs[0] => Mux59.IN1
+rs[0] => Mux60.IN1
+rs[0] => Mux61.IN1
+rs[0] => Mux62.IN1
+rs[0] => Mux63.IN1
+rs[1] => IFID_rsID.DATAB
+rs[1] => Mux56.IN0
+rs[1] => Mux57.IN0
+rs[1] => Mux58.IN0
+rs[1] => Mux59.IN0
+rs[1] => Mux60.IN0
+rs[1] => Mux61.IN0
+rs[1] => Mux62.IN0
+rs[1] => Mux63.IN0
+rt[0] => IFID_rtID.DATAB
+rt[0] => Mux64.IN1
+rt[0] => Mux65.IN1
+rt[0] => Mux66.IN1
+rt[0] => Mux67.IN1
+rt[0] => Mux68.IN1
+rt[0] => Mux69.IN1
+rt[0] => Mux70.IN1
+rt[0] => Mux71.IN1
+rt[1] => IFID_rtID.DATAB
+rt[1] => Mux64.IN0
+rt[1] => Mux65.IN0
+rt[1] => Mux66.IN0
+rt[1] => Mux67.IN0
+rt[1] => Mux68.IN0
+rt[1] => Mux69.IN0
+rt[1] => Mux70.IN0
+rt[1] => Mux71.IN0
+clock => divider:DIV.clk
+clock => regs[0].CLK
+clock => regs[1].CLK
+clock => regs[2].CLK
+clock => regs[3].CLK
+clock => regs[4].CLK
+clock => regs[5].CLK
+clock => regs[6].CLK
+clock => regs[7].CLK
+clock => regs[8].CLK
+clock => regs[9].CLK
+clock => regs[10].CLK
+clock => regs[11].CLK
+clock => regs[12].CLK
+clock => regs[13].CLK
+clock => regs[14].CLK
+clock => regs[15].CLK
+clock => regs[16].CLK
+clock => regs[17].CLK
+clock => regs[18].CLK
+clock => regs[19].CLK
+clock => regs[20].CLK
+clock => regs[21].CLK
+clock => regs[22].CLK
+clock => regs[23].CLK
+clock => regs[24].CLK
+clock => regs[25].CLK
+clock => regs[26].CLK
+clock => regs[27].CLK
+clock => regs[28].CLK
+clock => regs[29].CLK
+clock => regs[30].CLK
+clock => regs[31].CLK
+clock => EXWB_res[0].CLK
+clock => EXWB_res[1].CLK
+clock => EXWB_res[2].CLK
+clock => EXWB_res[3].CLK
+clock => EXWB_res[4].CLK
+clock => EXWB_res[5].CLK
+clock => EXWB_res[6].CLK
+clock => EXWB_res[7].CLK
+clock => EXWB_rsID[0].CLK
+clock => EXWB_rsID[1].CLK
+clock => IDEX_rtData[0].CLK
+clock => IDEX_rtData[1].CLK
+clock => IDEX_rtData[2].CLK
+clock => IDEX_rtData[3].CLK
+clock => IDEX_rtData[4].CLK
+clock => IDEX_rtData[5].CLK
+clock => IDEX_rtData[6].CLK
+clock => IDEX_rtData[7].CLK
+clock => IDEX_rsData[0].CLK
+clock => IDEX_rsData[1].CLK
+clock => IDEX_rsData[2].CLK
+clock => IDEX_rsData[3].CLK
+clock => IDEX_rsData[4].CLK
+clock => IDEX_rsData[5].CLK
+clock => IDEX_rsData[6].CLK
+clock => IDEX_rsData[7].CLK
+clock => IDEX_rtID[0].CLK
+clock => IDEX_rtID[1].CLK
+clock => IDEX_rsID[0].CLK
+clock => IDEX_rsID[1].CLK
+clock => IDEX_opcode[0].CLK
+clock => IDEX_opcode[1].CLK
+clock => IDEX_opcode[2].CLK
+clock => IDEX_opcode[3].CLK
+clock => IFID_data[0].CLK
+clock => IFID_data[1].CLK
+clock => IFID_data[2].CLK
+clock => IFID_data[3].CLK
+clock => IFID_data[4].CLK
+clock => IFID_data[5].CLK
+clock => IFID_data[6].CLK
+clock => IFID_data[7].CLK
+clock => IFID_rtID[0].CLK
+clock => IFID_rtID[1].CLK
+clock => IFID_rsID[0].CLK
+clock => IFID_rsID[1].CLK
+clock => IFID_opcode[0].CLK
+clock => IFID_opcode[1].CLK
+clock => IFID_opcode[2].CLK
+clock => IFID_opcode[3].CLK
+clock => divideInit.CLK
+clock => exeBusy.CLK
+rsValueOut[0] <= Mux63.DB_MAX_OUTPUT_PORT_TYPE
+rsValueOut[1] <= Mux62.DB_MAX_OUTPUT_PORT_TYPE
+rsValueOut[2] <= Mux61.DB_MAX_OUTPUT_PORT_TYPE
+rsValueOut[3] <= Mux60.DB_MAX_OUTPUT_PORT_TYPE
+rsValueOut[4] <= Mux59.DB_MAX_OUTPUT_PORT_TYPE
+rsValueOut[5] <= Mux58.DB_MAX_OUTPUT_PORT_TYPE
+rsValueOut[6] <= Mux57.DB_MAX_OUTPUT_PORT_TYPE
+rsValueOut[7] <= Mux56.DB_MAX_OUTPUT_PORT_TYPE
+rtValueOut[0] <= Mux71.DB_MAX_OUTPUT_PORT_TYPE
+rtValueOut[1] <= Mux70.DB_MAX_OUTPUT_PORT_TYPE
+rtValueOut[2] <= Mux69.DB_MAX_OUTPUT_PORT_TYPE
+rtValueOut[3] <= Mux68.DB_MAX_OUTPUT_PORT_TYPE
+rtValueOut[4] <= Mux67.DB_MAX_OUTPUT_PORT_TYPE
+rtValueOut[5] <= Mux66.DB_MAX_OUTPUT_PORT_TYPE
+rtValueOut[6] <= Mux65.DB_MAX_OUTPUT_PORT_TYPE
+rtValueOut[7] <= Mux64.DB_MAX_OUTPUT_PORT_TYPE
+hazardOut <= hazard.DB_MAX_OUTPUT_PORT_TYPE
+exeBusyOut <= exeBusy.DB_MAX_OUTPUT_PORT_TYPE
+ifOpOut[0] <= opcode[0].DB_MAX_OUTPUT_PORT_TYPE
+ifOpOut[1] <= opcode[1].DB_MAX_OUTPUT_PORT_TYPE
+ifOpOut[2] <= opcode[2].DB_MAX_OUTPUT_PORT_TYPE
+ifOpOut[3] <= opcode[3].DB_MAX_OUTPUT_PORT_TYPE
+idOpOut[0] <= IFID_opcode[0].DB_MAX_OUTPUT_PORT_TYPE
+idOpOut[1] <= IFID_opcode[1].DB_MAX_OUTPUT_PORT_TYPE
+idOpOut[2] <= IFID_opcode[2].DB_MAX_OUTPUT_PORT_TYPE
+idOpOut[3] <= IFID_opcode[3].DB_MAX_OUTPUT_PORT_TYPE
+exOpOut[0] <= IDEX_opcode[0].DB_MAX_OUTPUT_PORT_TYPE
+exOpOut[1] <= IDEX_opcode[1].DB_MAX_OUTPUT_PORT_TYPE
+exOpOut[2] <= IDEX_opcode[2].DB_MAX_OUTPUT_PORT_TYPE
+exOpOut[3] <= IDEX_opcode[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_ADD
+a[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.a
+a[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.a
+a[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.a
+b[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.b
+b[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.b
+b[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.b
+ctrl[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[0]
+ctrl[1] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[1]
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.cin
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.cin
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[2]
+ctrl[3] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[3]
+res[0] <= alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.res
+res[1] <= alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[2] <= alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[3] <= alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[4] <= alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[5] <= alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[6] <= alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[7] <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.res
+cout <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.cout
+overflow <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.overflow
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:8:ALU_LAST:ALU_LAST_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_AND
+a[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.a
+a[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.a
+a[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.a
+b[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.b
+b[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.b
+b[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.b
+ctrl[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[0]
+ctrl[1] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[1]
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.cin
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.cin
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[2]
+ctrl[3] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[3]
+res[0] <= alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.res
+res[1] <= alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[2] <= alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[3] <= alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[4] <= alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[5] <= alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[6] <= alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[7] <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.res
+cout <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.cout
+overflow <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.overflow
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_AND|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_AND|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_AND|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_AND|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_AND|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_AND|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_AND|alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_AND|alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_AND|alu1:\GEN_ALU:8:ALU_LAST:ALU_LAST_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBAB
+a[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.a
+a[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.a
+a[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.a
+b[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.b
+b[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.b
+b[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.b
+ctrl[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[0]
+ctrl[1] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[1]
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.cin
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.cin
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[2]
+ctrl[3] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[3]
+res[0] <= alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.res
+res[1] <= alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[2] <= alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[3] <= alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[4] <= alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[5] <= alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[6] <= alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[7] <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.res
+cout <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.cout
+overflow <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.overflow
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:8:ALU_LAST:ALU_LAST_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBBA
+a[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.a
+a[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.a
+a[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.a
+b[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.b
+b[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.b
+b[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.b
+ctrl[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[0]
+ctrl[1] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[1]
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.cin
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.cin
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[2]
+ctrl[3] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[3]
+res[0] <= alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.res
+res[1] <= alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[2] <= alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[3] <= alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[4] <= alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[5] <= alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[6] <= alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[7] <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.res
+cout <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.cout
+overflow <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.overflow
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:8:ALU_LAST:ALU_LAST_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_NOR
+a[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.a
+a[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.a
+a[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.a
+b[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.b
+b[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.b
+b[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.b
+ctrl[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[0]
+ctrl[1] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[1]
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.cin
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.cin
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[2]
+ctrl[3] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[3]
+res[0] <= alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.res
+res[1] <= alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[2] <= alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[3] <= alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[4] <= alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[5] <= alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[6] <= alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[7] <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.res
+cout <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.cout
+overflow <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.overflow
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_NOR|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_NOR|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_NOR|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_NOR|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_NOR|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_NOR|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_NOR|alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_NOR|alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_NOR|alu1:\GEN_ALU:8:ALU_LAST:ALU_LAST_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SLT
+a[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.a
+a[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.a
+a[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.a
+a[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.a
+b[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.b
+b[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.b
+b[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[4] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[5] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[6] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.b
+b[7] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.b
+ctrl[0] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[0]
+ctrl[0] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[0]
+ctrl[1] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[1]
+ctrl[1] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[1]
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.cin
+ctrl[2] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[2]
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.cin
+ctrl[2] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[2]
+ctrl[3] => alu1:GEN_ALU:0:ALU_LSB:ALU_LSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.ctrl[3]
+ctrl[3] => alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.ctrl[3]
+res[0] <= alu1:GEN_ALU:8:ALU_LAST:ALU_LAST_INST.res
+res[1] <= alu1:GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[2] <= alu1:GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[3] <= alu1:GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[4] <= alu1:GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[5] <= alu1:GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[6] <= alu1:GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST.res
+res[7] <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.res
+cout <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.cout
+overflow <= alu1:GEN_ALU:7:ALU_MSB:ALU_MSB_INST.overflow
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SLT|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SLT|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SLT|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SLT|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SLT|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SLT|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SLT|alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SLT|alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|alu8:ALU_SLT|alu1:\GEN_ALU:8:ALU_LAST:ALU_LAST_INST
+a => Ainvert.IN0
+b => Bnegate.IN0
+cin => AplusB.IN1
+cin => carry.IN1
+cin => carry.IN1
+cin => overflow.IN1
+less => res.IN1
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[0] => res.IN0
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[1] => res.IN1
+ctrl[2] => Bnegate.IN1
+ctrl[3] => Ainvert.IN1
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+cout <= carry.DB_MAX_OUTPUT_PORT_TYPE
+set <= AplusB.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV
+clk => repetition[0].CLK
+clk => repetition[1].CLK
+clk => repetition[2].CLK
+clk => repetition[3].CLK
+clk => repetition[4].CLK
+clk => repetition[5].CLK
+clk => repetition[6].CLK
+clk => repetition[7].CLK
+clk => remainder[0]~reg0.CLK
+clk => remainder[1]~reg0.CLK
+clk => remainder[2]~reg0.CLK
+clk => remainder[3]~reg0.CLK
+clk => remainder[4]~reg0.CLK
+clk => remainder[5]~reg0.CLK
+clk => remainder[6]~reg0.CLK
+clk => remainder[7]~reg0.CLK
+clk => remainder[8]~reg0.CLK
+clk => remainder[9]~reg0.CLK
+clk => remainder[10]~reg0.CLK
+clk => remainder[11]~reg0.CLK
+clk => remainder[12]~reg0.CLK
+clk => remainder[13]~reg0.CLK
+clk => remainder[14]~reg0.CLK
+clk => remainder[15]~reg0.CLK
+clk => state~4.DATAIN
+clear => repetition[0].ACLR
+clear => repetition[1].ACLR
+clear => repetition[2].ACLR
+clear => repetition[3].ACLR
+clear => repetition[4].ACLR
+clear => repetition[5].ACLR
+clear => repetition[6].ACLR
+clear => repetition[7].ACLR
+clear => remainder[0]~reg0.ALOAD
+clear => remainder[1]~reg0.ALOAD
+clear => remainder[2]~reg0.ALOAD
+clear => remainder[3]~reg0.ALOAD
+clear => remainder[4]~reg0.ALOAD
+clear => remainder[5]~reg0.ALOAD
+clear => remainder[6]~reg0.ALOAD
+clear => remainder[7]~reg0.ALOAD
+clear => remainder[8]~reg0.ALOAD
+clear => remainder[9]~reg0.ALOAD
+clear => remainder[10]~reg0.ALOAD
+clear => remainder[11]~reg0.ALOAD
+clear => remainder[12]~reg0.ALOAD
+clear => remainder[13]~reg0.ALOAD
+clear => remainder[14]~reg0.ALOAD
+clear => remainder[15]~reg0.ALOAD
+clear => state~6.DATAIN
+divisor[0] => adder8:ADD.Y[0]
+divisor[0] => adder8:SUB.Y[0]
+divisor[1] => adder8:ADD.Y[1]
+divisor[1] => adder8:SUB.Y[1]
+divisor[2] => adder8:ADD.Y[2]
+divisor[2] => adder8:SUB.Y[2]
+divisor[3] => adder8:ADD.Y[3]
+divisor[3] => adder8:SUB.Y[3]
+divisor[4] => adder8:ADD.Y[4]
+divisor[4] => adder8:SUB.Y[4]
+divisor[5] => adder8:ADD.Y[5]
+divisor[5] => adder8:SUB.Y[5]
+divisor[6] => adder8:ADD.Y[6]
+divisor[6] => adder8:SUB.Y[6]
+divisor[7] => adder8:ADD.Y[7]
+divisor[7] => adder8:SUB.Y[7]
+dividend[0] => Selector14.IN5
+dividend[1] => Selector13.IN5
+dividend[2] => Selector12.IN5
+dividend[3] => Selector11.IN5
+dividend[4] => Selector10.IN5
+dividend[5] => Selector9.IN5
+dividend[6] => Selector8.IN5
+dividend[7] => Selector7.IN5
+remainder[0] <= remainder[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[1] <= remainder[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[2] <= remainder[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[3] <= remainder[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[4] <= remainder[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[5] <= remainder[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[6] <= remainder[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[7] <= remainder[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[8] <= remainder[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[9] <= remainder[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[10] <= remainder[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[11] <= remainder[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[12] <= remainder[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[13] <= remainder[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[14] <= remainder[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+remainder[15] <= remainder[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:SUB
+cin => adder1:FA0.cin
+X[0] => adder1:FA0.x
+X[1] => adder1:FA1.x
+X[2] => adder1:FA2.x
+X[3] => adder1:FA3.x
+X[4] => adder1:FA4.x
+X[5] => adder1:FA5.x
+X[6] => adder1:FA6.x
+X[7] => adder1:FA7.x
+Y[0] => adder1:FA0.y
+Y[1] => adder1:FA1.y
+Y[2] => adder1:FA2.y
+Y[3] => adder1:FA3.y
+Y[4] => adder1:FA4.y
+Y[5] => adder1:FA5.y
+Y[6] => adder1:FA6.y
+Y[7] => adder1:FA7.y
+S[0] <= adder1:FA0.s
+S[1] <= adder1:FA1.s
+S[2] <= adder1:FA2.s
+S[3] <= adder1:FA3.s
+S[4] <= adder1:FA4.s
+S[5] <= adder1:FA5.s
+S[6] <= adder1:FA6.s
+S[7] <= adder1:FA7.s
+cout <= adder1:FA7.cout
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA0
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA1
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA2
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA3
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA4
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA5
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA6
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA7
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD
+cin => adder1:FA0.cin
+X[0] => adder1:FA0.x
+X[1] => adder1:FA1.x
+X[2] => adder1:FA2.x
+X[3] => adder1:FA3.x
+X[4] => adder1:FA4.x
+X[5] => adder1:FA5.x
+X[6] => adder1:FA6.x
+X[7] => adder1:FA7.x
+Y[0] => adder1:FA0.y
+Y[1] => adder1:FA1.y
+Y[2] => adder1:FA2.y
+Y[3] => adder1:FA3.y
+Y[4] => adder1:FA4.y
+Y[5] => adder1:FA5.y
+Y[6] => adder1:FA6.y
+Y[7] => adder1:FA7.y
+S[0] <= adder1:FA0.s
+S[1] <= adder1:FA1.s
+S[2] <= adder1:FA2.s
+S[3] <= adder1:FA3.s
+S[4] <= adder1:FA4.s
+S[5] <= adder1:FA5.s
+S[6] <= adder1:FA6.s
+S[7] <= adder1:FA7.s
+cout <= adder1:FA7.cout
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA0
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA1
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA2
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA3
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA4
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA5
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA6
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA7
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB
+cin => adder1:FA0.cin
+X[0] => adder1:FA0.x
+X[1] => adder1:FA1.x
+X[2] => adder1:FA2.x
+X[3] => adder1:FA3.x
+X[4] => adder1:FA4.x
+X[5] => adder1:FA5.x
+X[6] => adder1:FA6.x
+X[7] => adder1:FA7.x
+Y[0] => adder1:FA0.y
+Y[1] => adder1:FA1.y
+Y[2] => adder1:FA2.y
+Y[3] => adder1:FA3.y
+Y[4] => adder1:FA4.y
+Y[5] => adder1:FA5.y
+Y[6] => adder1:FA6.y
+Y[7] => adder1:FA7.y
+S[0] <= adder1:FA0.s
+S[1] <= adder1:FA1.s
+S[2] <= adder1:FA2.s
+S[3] <= adder1:FA3.s
+S[4] <= adder1:FA4.s
+S[5] <= adder1:FA5.s
+S[6] <= adder1:FA6.s
+S[7] <= adder1:FA7.s
+cout <= adder1:FA7.cout
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB|adder1:FA0
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB|adder1:FA1
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB|adder1:FA2
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB|adder1:FA3
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB|adder1:FA4
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB|adder1:FA5
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB|adder1:FA6
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB|adder1:FA7
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|hex_to_7seg:HEX_RT0
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN0
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+res[0] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[4] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[5] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[6] <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|hex_to_7seg:HEX_RT1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN0
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+res[0] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[4] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[5] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[6] <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|hex_to_7seg:HEX_RS0
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN0
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+res[0] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[4] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[5] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[6] <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|hex_to_7seg:HEX_RS1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN0
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+res[0] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[4] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[5] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[6] <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|hex_to_7seg:HEX_IFOP
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN0
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+res[0] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[4] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[5] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[6] <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|hex_to_7seg:HEX_IDOP
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN0
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+res[0] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[4] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[5] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[6] <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|hex_to_7seg:HEX_EXOP
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN0
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[0] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN1
+hex[1] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN0
+hex[2] => res.IN1
+hex[2] => res.IN0
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+hex[3] => res.IN1
+res[0] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[4] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[5] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[6] <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+

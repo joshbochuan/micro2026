@@ -1,7 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
-use work.shift_reg_pkg.all;
 use work.adder_pkg.all;
 
 package divider_pkg is
@@ -20,7 +19,6 @@ end package;
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
-use work.shift_reg_pkg.all;
 use work.adder_pkg.all;
 
 entity divider is
@@ -86,18 +84,12 @@ begin
 					remainder <= subValue;
 					if subValue(15) = '0' then
 						-- success, go to s2a
-						state <= s2a;
+						remainder <= successValue;
 					else
 						-- fail, go to s2b
-						state <= s2b;
+						remainder <= failValue;
 					end if;
-				when s2a =>
-					remainder <= successValue;
-					state <= s3;
-				when s2b =>
-					remainder <= failValue;
-					state <= s3;
-				when s3 =>
+					
 					if repetition = "00000111" then -- 9th time when repetition is 8
 						remainder <= finalValue;
 						state <= s4;
@@ -105,8 +97,7 @@ begin
 						repetition <= nextRep;
 						state <= s1;
 					end if;
-				when others =>
-					state <= state;
+				when others => null;
 			end case;
 		end if;
 			

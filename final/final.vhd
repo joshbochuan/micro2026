@@ -23,7 +23,7 @@ end final;
 
 architecture Structural of final is
 	signal data: std_logic_vector(7 downto 0);
-	signal opcode: std_logic_vector(4 downto 0);
+	signal opcode: std_logic_vector(3 downto 0);
 	signal rs, rt: std_logic_vector(1 downto 0);
 	signal clock: std_logic;
 	
@@ -43,7 +43,8 @@ begin
 		opcode, 
 		rs, 
 		rt, 
-		clock, 
+		clock,
+		
 		rsValue, 
 		rtValue, 
 		hazard, 
