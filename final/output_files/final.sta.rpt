@@ -1,5 +1,5 @@
 Timing Analyzer report for final
-Tue Jun 16 19:42:43 2026
+Tue Jun 16 21:07:50 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -107,14 +107,14 @@ on the Quartus Prime software download page.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.17        ;
+; Average used               ; 1.19        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.3%      ;
-;     Processor 3            ;   4.1%      ;
-;     Processor 4            ;   3.8%      ;
+;     Processor 2            ;   4.9%      ;
+;     Processor 3            ;   4.7%      ;
+;     Processor 4            ;   4.4%      ;
 ;     Processors 5-12        ;   0.6%      ;
 +----------------------------+-------------+
 
@@ -302,10 +302,10 @@ HTML report is unavailable in plain text report export.
 +-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.440 ; cpu:CPU_STAGE|divider:DIV|repetition[1] ; cpu:CPU_STAGE|divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; cpu:CPU_STAGE|divider:DIV|repetition[3] ; cpu:CPU_STAGE|divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; cpu:CPU_STAGE|divider:DIV|repetition[0] ; cpu:CPU_STAGE|divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; cpu:CPU_STAGE|divider:DIV|repetition[2] ; cpu:CPU_STAGE|divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; cpu:CPU_STAGE|divider:DIV|repetition[0] ; cpu:CPU_STAGE|divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; cpu:CPU_STAGE|divider:DIV|repetition[1] ; cpu:CPU_STAGE|divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; cpu:CPU_STAGE|divider:DIV|repetition[4] ; cpu:CPU_STAGE|divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; cpu:CPU_STAGE|divider:DIV|repetition[5] ; cpu:CPU_STAGE|divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; cpu:CPU_STAGE|divider:DIV|repetition[6] ; cpu:CPU_STAGE|divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
@@ -328,8 +328,8 @@ HTML report is unavailable in plain text report export.
 ; 0.690 ; cpu:CPU_STAGE|IDEX_rtData[1]            ; cpu:CPU_STAGE|divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.471      ; 1.347      ;
 ; 0.690 ; cpu:CPU_STAGE|divider:DIV|state.s1      ; cpu:CPU_STAGE|divider:DIV|remainder[4]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.093      ; 0.969      ;
 ; 0.693 ; cpu:CPU_STAGE|divider:DIV|state.s1      ; cpu:CPU_STAGE|divider:DIV|remainder[2]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.093      ; 0.972      ;
-; 0.696 ; cpu:CPU_STAGE|divider:DIV|remainder[13] ; cpu:CPU_STAGE|divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.928      ;
 ; 0.696 ; cpu:CPU_STAGE|divider:DIV|remainder[5]  ; cpu:CPU_STAGE|divider:DIV|remainder[6]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.928      ;
+; 0.696 ; cpu:CPU_STAGE|divider:DIV|remainder[13] ; cpu:CPU_STAGE|divider:DIV|remainder[14] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.928      ;
 ; 0.697 ; cpu:CPU_STAGE|divider:DIV|remainder[6]  ; cpu:CPU_STAGE|divider:DIV|remainder[7]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.929      ;
 ; 0.698 ; cpu:CPU_STAGE|divider:DIV|remainder[2]  ; cpu:CPU_STAGE|divider:DIV|remainder[3]  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.046      ; 0.930      ;
 ; 0.701 ; cpu:CPU_STAGE|EXWB_res[1]               ; cpu:CPU_STAGE|regs[25]                  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.511      ; 1.398      ;
@@ -649,10 +649,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.387 ; cpu:CPU_STAGE|divider:DIV|repetition[0] ; cpu:CPU_STAGE|divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; cpu:CPU_STAGE|divider:DIV|repetition[1] ; cpu:CPU_STAGE|divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; cpu:CPU_STAGE|divider:DIV|repetition[2] ; cpu:CPU_STAGE|divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; cpu:CPU_STAGE|divider:DIV|repetition[3] ; cpu:CPU_STAGE|divider:DIV|repetition[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; cpu:CPU_STAGE|divider:DIV|repetition[2] ; cpu:CPU_STAGE|divider:DIV|repetition[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; cpu:CPU_STAGE|divider:DIV|repetition[1] ; cpu:CPU_STAGE|divider:DIV|repetition[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; cpu:CPU_STAGE|divider:DIV|repetition[0] ; cpu:CPU_STAGE|divider:DIV|repetition[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; cpu:CPU_STAGE|divider:DIV|repetition[4] ; cpu:CPU_STAGE|divider:DIV|repetition[4] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; cpu:CPU_STAGE|divider:DIV|repetition[5] ; cpu:CPU_STAGE|divider:DIV|repetition[5] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; cpu:CPU_STAGE|divider:DIV|repetition[6] ; cpu:CPU_STAGE|divider:DIV|repetition[6] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
@@ -917,8 +917,8 @@ No synchronizer chains to report.
 ; -1.306 ; cpu:CPU_STAGE|IDEX_rtData[1]           ; cpu:CPU_STAGE|IDEX_rsData[7]            ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.130      ; 2.443      ;
 ; -1.301 ; cpu:CPU_STAGE|IDEX_rtData[3]           ; cpu:CPU_STAGE|IDEX_rtData[6]            ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.117      ; 2.425      ;
 ; -1.300 ; cpu:CPU_STAGE|IDEX_rsData[1]           ; cpu:CPU_STAGE|IDEX_rsData[2]            ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.037     ; 2.270      ;
-; -1.298 ; cpu:CPU_STAGE|IDEX_rtData[4]           ; cpu:CPU_STAGE|IDEX_rtData[7]            ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.026     ; 2.279      ;
 ; -1.298 ; cpu:CPU_STAGE|IDEX_rtData[2]           ; cpu:CPU_STAGE|IDEX_rtData[6]            ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.056     ; 2.249      ;
+; -1.298 ; cpu:CPU_STAGE|IDEX_rtData[4]           ; cpu:CPU_STAGE|IDEX_rtData[7]            ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.026     ; 2.279      ;
 ; -1.297 ; cpu:CPU_STAGE|IDEX_rsData[3]           ; cpu:CPU_STAGE|IDEX_rtData[4]            ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.127      ; 2.431      ;
 ; -1.295 ; cpu:CPU_STAGE|IDEX_opcode[0]           ; cpu:CPU_STAGE|IDEX_rsData[2]            ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.042      ; 2.344      ;
 ; -1.293 ; cpu:CPU_STAGE|IDEX_rtData[3]           ; cpu:CPU_STAGE|IDEX_rtData[5]            ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.117      ; 2.417      ;
@@ -1744,7 +1744,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Tue Jun 16 19:42:42 2026
+    Info: Processing started: Tue Jun 16 21:07:49 2026
 Info: Command: quartus_sta final -c final
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "packages" -- entity does not exist in design
@@ -1860,7 +1860,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 30 warnings
     Info: Peak virtual memory: 4989 megabytes
-    Info: Processing ended: Tue Jun 16 19:42:43 2026
+    Info: Processing ended: Tue Jun 16 21:07:50 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final
-Tue Jun 16 19:42:28 2026
+Tue Jun 16 21:07:34 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -65,7 +65,7 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 16 19:42:28 2026           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 16 21:07:34 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; final                                           ;
 ; Top-level Entity Name              ; final                                           ;
@@ -593,7 +593,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Tue Jun 16 19:42:22 2026
+    Info: Processing started: Tue Jun 16 21:07:28 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final -c final
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -632,10 +632,10 @@ Info (12021): Found 3 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: divider File: C:/Users/joshb/micro2026/Lab09/target1/divider_pkg.vhd Line: 24
 Info (12127): Elaborating entity "final" for the top level hierarchy
 Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CPU_STAGE" File: C:/Users/joshb/micro2026/final/final.vhd Line: 41
-Warning (10036): Verilog HDL or VHDL warning at cpu_pkg.vhd(77): object "sltValue" assigned a value but never read File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 77
-Info (12128): Elaborating entity "alu8" for hierarchy "cpu:CPU_STAGE|alu8:ALU_ADD" File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 81
+Warning (10036): Verilog HDL or VHDL warning at cpu_pkg.vhd(76): object "sltValue" assigned a value but never read File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 76
+Info (12128): Elaborating entity "alu8" for hierarchy "cpu:CPU_STAGE|alu8:ALU_ADD" File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 80
 Info (12128): Elaborating entity "alu1" for hierarchy "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST" File: C:/Users/joshb/micro2026/final/alu_pkg.vhd Line: 95
-Info (12128): Elaborating entity "divider" for hierarchy "cpu:CPU_STAGE|divider:DIV" File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 88
+Info (12128): Elaborating entity "divider" for hierarchy "cpu:CPU_STAGE|divider:DIV" File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 87
 Warning (10492): VHDL Process Statement warning at divider_pkg.vhd(74): signal "clearValue" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshb/micro2026/Lab09/target1/divider_pkg.vhd Line: 74
 Info (12128): Elaborating entity "adder8" for hierarchy "cpu:CPU_STAGE|divider:DIV|adder8:SUB" File: C:/Users/joshb/micro2026/Lab09/target1/divider_pkg.vhd Line: 54
 Info (12128): Elaborating entity "adder1" for hierarchy "cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA0" File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 104
@@ -675,7 +675,7 @@ Info (21057): Implemented 420 device resources after synthesis - the final resou
     Info (21061): Implemented 344 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
     Info: Peak virtual memory: 4931 megabytes
-    Info: Processing ended: Tue Jun 16 19:42:28 2026
+    Info: Processing ended: Tue Jun 16 21:07:34 2026
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:11
 

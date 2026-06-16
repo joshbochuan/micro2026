@@ -70,7 +70,6 @@ architecture logicfunc of cpu is
 	-- forwarding
 	signal IDEXInA, IDEXInB: std_logic_vector(7 downto 0); -- mux i think
 	signal regOutA, regOutB: std_logic_vector(7 downto 0);
-	signal aluInA, aluInB: std_logic_vector(7 downto 0);
 	signal aluRes: std_logic_vector(7 downto 0); -- uses aluRes and EXWB_res for forwarding input
 	
 	-- temporary values
