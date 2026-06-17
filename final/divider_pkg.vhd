@@ -57,9 +57,7 @@ begin
 	successValue(15 downto 1) <= subValue(14 downto 0);
 	successValue(0) <= '1';
 	
-	ADD: adder8 port map('0', subValue(15 downto 8), divisor, failSum, open);
-	failValue(15 downto 9) <= failSum(6 downto 0);
-	failValue(8 downto 1) <= subValue(7 downto 0);
+	failValue(15 downto 1) <= remainder(14 downto 0);
 	failValue(0) <= '0';
 	
 	finalValue(15) <= '0';
@@ -81,12 +79,9 @@ begin
 					repetition <= "00000000";
 					state <= S1;
 				when s1 =>
-					remainder <= subValue;
 					if subValue(15) = '0' then
-						-- success, go to s2a
 						remainder <= successValue;
 					else
-						-- fail, go to s2b
 						remainder <= failValue;
 					end if;
 					

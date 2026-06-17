@@ -2016,21 +2016,13 @@ clear => remainder[13]~reg0.ALOAD
 clear => remainder[14]~reg0.ALOAD
 clear => remainder[15]~reg0.ALOAD
 clear => state~5.DATAIN
-divisor[0] => adder8:ADD.Y[0]
 divisor[0] => adder8:SUB.Y[0]
-divisor[1] => adder8:ADD.Y[1]
 divisor[1] => adder8:SUB.Y[1]
-divisor[2] => adder8:ADD.Y[2]
 divisor[2] => adder8:SUB.Y[2]
-divisor[3] => adder8:ADD.Y[3]
 divisor[3] => adder8:SUB.Y[3]
-divisor[4] => adder8:ADD.Y[4]
 divisor[4] => adder8:SUB.Y[4]
-divisor[5] => adder8:ADD.Y[5]
 divisor[5] => adder8:SUB.Y[5]
-divisor[6] => adder8:ADD.Y[6]
 divisor[6] => adder8:SUB.Y[6]
-divisor[7] => adder8:ADD.Y[7]
 divisor[7] => adder8:SUB.Y[7]
 dividend[0] => Selector14.IN7
 dividend[1] => Selector13.IN7
@@ -2187,147 +2179,6 @@ cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA7
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD
-cin => adder1:FA0.cin
-X[0] => adder1:FA0.x
-X[1] => adder1:FA1.x
-X[2] => adder1:FA2.x
-X[3] => adder1:FA3.x
-X[4] => adder1:FA4.x
-X[5] => adder1:FA5.x
-X[6] => adder1:FA6.x
-X[7] => adder1:FA7.x
-Y[0] => adder1:FA0.y
-Y[1] => adder1:FA1.y
-Y[2] => adder1:FA2.y
-Y[3] => adder1:FA3.y
-Y[4] => adder1:FA4.y
-Y[5] => adder1:FA5.y
-Y[6] => adder1:FA6.y
-Y[7] => adder1:FA7.y
-S[0] <= adder1:FA0.s
-S[1] <= adder1:FA1.s
-S[2] <= adder1:FA2.s
-S[3] <= adder1:FA3.s
-S[4] <= adder1:FA4.s
-S[5] <= adder1:FA5.s
-S[6] <= adder1:FA6.s
-S[7] <= adder1:FA7.s
-cout <= adder1:FA7.cout
-
-
-|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA0
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA1
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA2
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA3
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA4
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA5
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA6
-cin => s.IN1
-cin => cout.IN0
-cin => cout.IN0
-x => s.IN0
-x => cout.IN0
-x => cout.IN1
-y => s.IN1
-y => cout.IN1
-y => cout.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA7
 cin => s.IN1
 cin => cout.IN0
 cin => cout.IN0

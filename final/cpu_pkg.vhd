@@ -35,8 +35,8 @@ entity cpu is
 		rt:     in std_logic_vector(1 downto 0);
 		clock:  in std_logic;
 		
-		rsValueOut: out std_logic_vector(7 downto 0); -- done
-		rtValueOut: out std_logic_vector(7 downto 0); -- done
+		rsValueOut: out std_logic_vector(7 downto 0);
+		rtValueOut: out std_logic_vector(7 downto 0);
 		hazardOut:  out std_logic;
 		exeBusyOut: out std_logic;
 		ifOpOut:    out std_logic_vector(3 downto 0);
@@ -68,7 +68,7 @@ architecture logicfunc of cpu is
 	signal hazard: std_logic;
 	
 	-- forwarding
-	signal IDEXInA, IDEXInB: std_logic_vector(7 downto 0); -- mux i think
+	signal IDEXInA, IDEXInB: std_logic_vector(7 downto 0);
 	signal regOutA, regOutB: std_logic_vector(7 downto 0);
 	signal aluRes: std_logic_vector(7 downto 0); -- uses aluRes and EXWB_res for forwarding input
 	
@@ -88,8 +88,8 @@ begin
 	
 	-- alu signal
 	with IDEX_opcode select
-		aluRes <= IDEX_rtData            when "0000",
-					 IDEX_rtData  				when "0001",
+		aluRes <= IDEX_rtData            when "0000", -- load
+					 IDEX_rtData  				when "0001", -- move
 					 addValue   			   when "0010",
 					 andValue               when "0011",
 					 subABValue             when "0101",
@@ -127,7 +127,6 @@ begin
 	
 	process(clock)
 	begin
-		-- things go here
 		if rising_edge(clock) then
 			if IDEX_opcode = "1000" and divideDone = '0' then
 				exeBusy <= '1';

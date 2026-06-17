@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final
-Wed Jun 17 10:03:25 2026
+Wed Jun 17 18:46:05 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -18,27 +18,26 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Port Connectivity Checks: "cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB"
- 13. Port Connectivity Checks: "cpu:CPU_STAGE|divider:DIV|adder8:ADD"
- 14. Port Connectivity Checks: "cpu:CPU_STAGE|divider:DIV|adder8:SUB"
- 15. Port Connectivity Checks: "cpu:CPU_STAGE|divider:DIV"
- 16. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_SLT"
- 17. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_NOR"
- 18. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_SUBBA"
- 19. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_SUBAB"
- 20. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_AND"
- 21. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:8:ALU_LAST:ALU_LAST_INST"
- 22. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST"
- 23. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST"
- 24. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST"
- 25. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST"
- 26. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST"
- 27. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST"
- 28. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST"
- 29. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST"
- 30. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD"
- 31. Post-Synthesis Netlist Statistics for Top Partition
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
+ 13. Port Connectivity Checks: "cpu:CPU_STAGE|divider:DIV|adder8:SUB"
+ 14. Port Connectivity Checks: "cpu:CPU_STAGE|divider:DIV"
+ 15. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_SLT"
+ 16. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_NOR"
+ 17. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_SUBBA"
+ 18. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_SUBAB"
+ 19. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_AND"
+ 20. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:8:ALU_LAST:ALU_LAST_INST"
+ 21. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST"
+ 22. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 23. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 24. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 25. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 26. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 27. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST"
+ 28. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST"
+ 29. Port Connectivity Checks: "cpu:CPU_STAGE|alu8:ALU_ADD"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
 
 
 
@@ -65,13 +64,13 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 17 10:03:25 2026           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 17 18:46:05 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; final                                           ;
 ; Top-level Entity Name              ; final                                           ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 360                                             ;
-;     Total combinational functions  ; 301                                             ;
+; Total logic elements               ; 350                                             ;
+;     Total combinational functions  ; 291                                             ;
 ;     Dedicated logic registers      ; 111                                             ;
 ; Total registers                    ; 111                                             ;
 ; Total pins                         ; 76                                              ;
@@ -173,30 +172,30 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 28          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                          ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                   ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
-; divider_pkg.vhd                  ; yes             ; User VHDL File  ; C:/Users/User/micro2026/final/divider_pkg.vhd  ;         ;
-; adder_pkg.vhd                    ; yes             ; User VHDL File  ; C:/Users/User/micro2026/final/adder_pkg.vhd    ;         ;
-; sevenseg_pkg.vhd                 ; yes             ; User VHDL File  ; C:/Users/User/micro2026/final/sevenseg_pkg.vhd ;         ;
-; alu_pkg.vhd                      ; yes             ; User VHDL File  ; C:/Users/User/micro2026/final/alu_pkg.vhd      ;         ;
-; final.vhd                        ; yes             ; User VHDL File  ; C:/Users/User/micro2026/final/final.vhd        ;         ;
-; cpu_pkg.vhd                      ; yes             ; User VHDL File  ; C:/Users/User/micro2026/final/cpu_pkg.vhd      ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                    ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
+; divider_pkg.vhd                  ; yes             ; User VHDL File  ; C:/Users/joshb/micro2026/final/divider_pkg.vhd  ;         ;
+; adder_pkg.vhd                    ; yes             ; User VHDL File  ; C:/Users/joshb/micro2026/final/adder_pkg.vhd    ;         ;
+; sevenseg_pkg.vhd                 ; yes             ; User VHDL File  ; C:/Users/joshb/micro2026/final/sevenseg_pkg.vhd ;         ;
+; alu_pkg.vhd                      ; yes             ; User VHDL File  ; C:/Users/joshb/micro2026/final/alu_pkg.vhd      ;         ;
+; final.vhd                        ; yes             ; User VHDL File  ; C:/Users/joshb/micro2026/final/final.vhd        ;         ;
+; cpu_pkg.vhd                      ; yes             ; User VHDL File  ; C:/Users/joshb/micro2026/final/cpu_pkg.vhd      ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -204,16 +203,16 @@ on the Quartus Prime software download page.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 360          ;
+; Estimated Total logic elements              ; 350          ;
 ;                                             ;              ;
-; Total combinational functions               ; 301          ;
+; Total combinational functions               ; 291          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 222          ;
-;     -- 3 input functions                    ; 69           ;
+;     -- 4 input functions                    ; 219          ;
+;     -- 3 input functions                    ; 62           ;
 ;     -- <=2 input functions                  ; 10           ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 301          ;
+;     -- normal mode                          ; 291          ;
 ;     -- arithmetic mode                      ; 0            ;
 ;                                             ;              ;
 ; Total registers                             ; 111          ;
@@ -226,7 +225,7 @@ on the Quartus Prime software download page.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 111          ;
-; Total fan-out                               ; 1609         ;
+; Total fan-out                               ; 1577         ;
 ; Average fan-out                             ; 2.85         ;
 +---------------------------------------------+--------------+
 
@@ -236,43 +235,38 @@ on the Quartus Prime software download page.
 +-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name ; Library Name ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+-------------+--------------+
-; |final                                                ; 301 (0)             ; 111 (0)                   ; 0           ; 0            ; 0       ; 0         ; 76   ; 0            ; |final                                                                         ; final       ; work         ;
-;    |cpu:CPU_STAGE|                                    ; 252 (161)           ; 111 (83)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE                                                           ; cpu         ; work         ;
+; |final                                                ; 291 (0)             ; 111 (0)                   ; 0           ; 0            ; 0       ; 0         ; 76   ; 0            ; |final                                                                         ; final       ; work         ;
+;    |cpu:CPU_STAGE|                                    ; 242 (158)           ; 111 (83)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE                                                           ; cpu         ; work         ;
 ;       |alu8:ALU_ADD|                                  ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_ADD                                              ; alu8        ; work         ;
 ;          |alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST   ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST   ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST   ; alu1        ; work         ;
-;       |alu8:ALU_SUBAB|                                ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBAB                                            ; alu8        ; work         ;
+;       |alu8:ALU_SUBAB|                                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBAB                                            ; alu8        ; work         ;
 ;          |alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
+;          |alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBAB|alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST       ; alu1        ; work         ;
-;       |alu8:ALU_SUBBA|                                ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBBA                                            ; alu8        ; work         ;
+;       |alu8:ALU_SUBBA|                                ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBBA                                            ; alu8        ; work         ;
 ;          |alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:1:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:2:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:3:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:4:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:5:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
+;          |alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:6:ALU_MIDDLE:ALU_MIDDLE_INST ; alu1        ; work         ;
 ;          |alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|alu8:ALU_SUBBA|alu1:\GEN_ALU:7:ALU_MSB:ALU_MSB_INST       ; alu1        ; work         ;
-;       |divider:DIV|                                   ; 66 (49)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV                                               ; divider     ; work         ;
-;          |adder8:ADD|                                 ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:ADD                                    ; adder8      ; work         ;
-;             |adder1:FA1|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA1                         ; adder1      ; work         ;
-;             |adder1:FA2|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA2                         ; adder1      ; work         ;
-;             |adder1:FA3|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA3                         ; adder1      ; work         ;
-;             |adder1:FA4|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA4                         ; adder1      ; work         ;
-;             |adder1:FA5|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:ADD|adder1:FA5                         ; adder1      ; work         ;
+;       |divider:DIV|                                   ; 56 (45)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV                                               ; divider     ; work         ;
 ;          |adder8:REP_SUB|                             ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB                                ; adder8      ; work         ;
 ;             |adder1:FA3|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB|adder1:FA3                     ; adder1      ; work         ;
 ;             |adder1:FA6|                              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:REP_SUB|adder1:FA6                     ; adder1      ; work         ;
-;          |adder8:SUB|                                 ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB                                    ; adder8      ; work         ;
+;          |adder8:SUB|                                 ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB                                    ; adder8      ; work         ;
 ;             |adder1:FA1|                              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA1                         ; adder1      ; work         ;
 ;             |adder1:FA2|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA2                         ; adder1      ; work         ;
 ;             |adder1:FA3|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA3                         ; adder1      ; work         ;
 ;             |adder1:FA4|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA4                         ; adder1      ; work         ;
 ;             |adder1:FA5|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA5                         ; adder1      ; work         ;
-;             |adder1:FA6|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA6                         ; adder1      ; work         ;
 ;             |adder1:FA7|                              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA7                         ; adder1      ; work         ;
 ;    |hex_to_7seg:HEX_EXOP|                             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|hex_to_7seg:HEX_EXOP                                                    ; hex_to_7seg ; work         ;
 ;    |hex_to_7seg:HEX_IDOP|                             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|hex_to_7seg:HEX_IDOP                                                    ; hex_to_7seg ; work         ;
@@ -322,7 +316,7 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 28    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 94    ;
+; Number of registers using Clock Enable       ; 95    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -336,8 +330,8 @@ Encoding Type:  One-Hot
 ; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |final|cpu:CPU_STAGE|IDEX_rsData[7]            ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |final|cpu:CPU_STAGE|divider:DIV|remainder[5]  ;
 ; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |final|cpu:CPU_STAGE|IDEX_rtData[2]            ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |final|cpu:CPU_STAGE|divider:DIV|remainder[10] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |final|cpu:CPU_STAGE|Mux64                     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |final|cpu:CPU_STAGE|divider:DIV|remainder[10] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |final|cpu:CPU_STAGE|Mux68                     ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |final|cpu:CPU_STAGE|Mux56                     ;
 ; 11:1               ; 7 bits    ; 49 LEs        ; 35 LEs               ; 14 LEs                 ; No         ; |final|cpu:CPU_STAGE|Mux0                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
@@ -353,17 +347,6 @@ Encoding Type:  One-Hot
 ; y[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; cout    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:CPU_STAGE|divider:DIV|adder8:ADD"                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; s[7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -565,19 +548,19 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; boundary_port         ; 76                          ;
 ; cycloneiii_ff         ; 111                         ;
-;     CLR               ; 16                          ;
+;     CLR               ; 15                          ;
 ;     ENA               ; 74                          ;
-;     ENA CLR           ; 12                          ;
+;     ENA CLR           ; 13                          ;
 ;     ENA SLD           ; 8                           ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 301                         ;
-;     normal            ; 301                         ;
+; cycloneiii_lcell_comb ; 291                         ;
+;     normal            ; 291                         ;
 ;         2 data inputs ; 10                          ;
-;         3 data inputs ; 69                          ;
-;         4 data inputs ; 222                         ;
+;         3 data inputs ; 62                          ;
+;         4 data inputs ; 219                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 4.95                        ;
+; Average LUT depth     ; 4.84                        ;
 +-----------------------+-----------------------------+
 
 
@@ -586,7 +569,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -596,53 +579,53 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Wed Jun 17 10:03:14 2026
+    Info: Processing started: Wed Jun 17 18:45:59 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final -c final
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 3 design units, including 1 entities, in source file divider_pkg.vhd
-    Info (12022): Found design unit 1: divider_pkg File: C:/Users/User/micro2026/final/divider_pkg.vhd Line: 6
-    Info (12022): Found design unit 2: divider-logicfunc File: C:/Users/User/micro2026/final/divider_pkg.vhd Line: 35
-    Info (12023): Found entity 1: divider File: C:/Users/User/micro2026/final/divider_pkg.vhd Line: 24
+    Info (12022): Found design unit 1: divider_pkg File: C:/Users/joshb/micro2026/final/divider_pkg.vhd Line: 6
+    Info (12022): Found design unit 2: divider-logicfunc File: C:/Users/joshb/micro2026/final/divider_pkg.vhd Line: 35
+    Info (12023): Found entity 1: divider File: C:/Users/joshb/micro2026/final/divider_pkg.vhd Line: 24
 Info (12021): Found 10 design units, including 4 entities, in source file adder_pkg.vhd
-    Info (12022): Found design unit 1: adder_pkg File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 4
-    Info (12022): Found design unit 2: adder_pkg-body File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 45
-    Info (12022): Found design unit 3: adder1-func File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 57
-    Info (12022): Found design unit 4: adder4-structural File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 76
-    Info (12022): Found design unit 5: adder8-Structural File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 100
-    Info (12022): Found design unit 6: bcd_adder4-structural File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 128
-    Info (12023): Found entity 1: adder1 File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 50
-    Info (12023): Found entity 2: adder4 File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 66
-    Info (12023): Found entity 3: adder8 File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 90
-    Info (12023): Found entity 4: bcd_adder4 File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 118
+    Info (12022): Found design unit 1: adder_pkg File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 4
+    Info (12022): Found design unit 2: adder_pkg-body File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 45
+    Info (12022): Found design unit 3: adder1-func File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 57
+    Info (12022): Found design unit 4: adder4-structural File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 76
+    Info (12022): Found design unit 5: adder8-Structural File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 100
+    Info (12022): Found design unit 6: bcd_adder4-structural File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 128
+    Info (12023): Found entity 1: adder1 File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 50
+    Info (12023): Found entity 2: adder4 File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 66
+    Info (12023): Found entity 3: adder8 File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 90
+    Info (12023): Found entity 4: bcd_adder4 File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 118
 Info (12021): Found 4 design units, including 1 entities, in source file sevenseg_pkg.vhd
-    Info (12022): Found design unit 1: sevenseg_pkg File: C:/Users/User/micro2026/final/sevenseg_pkg.vhd Line: 4
-    Info (12022): Found design unit 2: sevenseg_pkg-body File: C:/Users/User/micro2026/final/sevenseg_pkg.vhd Line: 13
-    Info (12022): Found design unit 3: hex_to_7seg-structural File: C:/Users/User/micro2026/final/sevenseg_pkg.vhd Line: 27
-    Info (12023): Found entity 1: hex_to_7seg File: C:/Users/User/micro2026/final/sevenseg_pkg.vhd Line: 20
+    Info (12022): Found design unit 1: sevenseg_pkg File: C:/Users/joshb/micro2026/final/sevenseg_pkg.vhd Line: 4
+    Info (12022): Found design unit 2: sevenseg_pkg-body File: C:/Users/joshb/micro2026/final/sevenseg_pkg.vhd Line: 13
+    Info (12022): Found design unit 3: hex_to_7seg-structural File: C:/Users/joshb/micro2026/final/sevenseg_pkg.vhd Line: 27
+    Info (12023): Found entity 1: hex_to_7seg File: C:/Users/joshb/micro2026/final/sevenseg_pkg.vhd Line: 20
 Info (12021): Found 5 design units, including 2 entities, in source file alu_pkg.vhd
-    Info (12022): Found design unit 1: alu_pkg File: C:/Users/User/micro2026/final/alu_pkg.vhd Line: 4
-    Info (12022): Found design unit 2: alu1-structural File: C:/Users/User/micro2026/final/alu_pkg.vhd Line: 49
-    Info (12022): Found design unit 3: alu8-structural File: C:/Users/User/micro2026/final/alu_pkg.vhd Line: 87
-    Info (12023): Found entity 1: alu1 File: C:/Users/User/micro2026/final/alu_pkg.vhd Line: 35
-    Info (12023): Found entity 2: alu8 File: C:/Users/User/micro2026/final/alu_pkg.vhd Line: 76
+    Info (12022): Found design unit 1: alu_pkg File: C:/Users/joshb/micro2026/final/alu_pkg.vhd Line: 4
+    Info (12022): Found design unit 2: alu1-structural File: C:/Users/joshb/micro2026/final/alu_pkg.vhd Line: 49
+    Info (12022): Found design unit 3: alu8-structural File: C:/Users/joshb/micro2026/final/alu_pkg.vhd Line: 87
+    Info (12023): Found entity 1: alu1 File: C:/Users/joshb/micro2026/final/alu_pkg.vhd Line: 35
+    Info (12023): Found entity 2: alu8 File: C:/Users/joshb/micro2026/final/alu_pkg.vhd Line: 76
 Info (12021): Found 2 design units, including 1 entities, in source file final.vhd
-    Info (12022): Found design unit 1: final-Structural File: C:/Users/User/micro2026/final/final.vhd Line: 24
-    Info (12023): Found entity 1: final File: C:/Users/User/micro2026/final/final.vhd Line: 6
+    Info (12022): Found design unit 1: final-Structural File: C:/Users/joshb/micro2026/final/final.vhd Line: 24
+    Info (12023): Found entity 1: final File: C:/Users/joshb/micro2026/final/final.vhd Line: 6
 Info (12021): Found 3 design units, including 1 entities, in source file cpu_pkg.vhd
-    Info (12022): Found design unit 1: cpu_pkg File: C:/Users/User/micro2026/final/cpu_pkg.vhd Line: 4
-    Info (12022): Found design unit 2: cpu-logicfunc File: C:/Users/User/micro2026/final/cpu_pkg.vhd Line: 48
-    Info (12023): Found entity 1: cpu File: C:/Users/User/micro2026/final/cpu_pkg.vhd Line: 30
+    Info (12022): Found design unit 1: cpu_pkg File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 4
+    Info (12022): Found design unit 2: cpu-logicfunc File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 48
+    Info (12023): Found entity 1: cpu File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 30
 Info (12127): Elaborating entity "final" for the top level hierarchy
-Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CPU_STAGE" File: C:/Users/User/micro2026/final/final.vhd Line: 41
-Warning (10036): Verilog HDL or VHDL warning at cpu_pkg.vhd(76): object "sltValue" assigned a value but never read File: C:/Users/User/micro2026/final/cpu_pkg.vhd Line: 76
-Info (12128): Elaborating entity "alu8" for hierarchy "cpu:CPU_STAGE|alu8:ALU_ADD" File: C:/Users/User/micro2026/final/cpu_pkg.vhd Line: 80
-Info (12128): Elaborating entity "alu1" for hierarchy "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST" File: C:/Users/User/micro2026/final/alu_pkg.vhd Line: 95
-Info (12128): Elaborating entity "divider" for hierarchy "cpu:CPU_STAGE|divider:DIV" File: C:/Users/User/micro2026/final/cpu_pkg.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at divider_pkg.vhd(74): signal "clearValue" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/micro2026/final/divider_pkg.vhd Line: 74
-Info (12128): Elaborating entity "adder8" for hierarchy "cpu:CPU_STAGE|divider:DIV|adder8:SUB" File: C:/Users/User/micro2026/final/divider_pkg.vhd Line: 54
-Info (12128): Elaborating entity "adder1" for hierarchy "cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA0" File: C:/Users/User/micro2026/final/adder_pkg.vhd Line: 104
-Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:HEX_RT0" File: C:/Users/User/micro2026/final/final.vhd Line: 57
+Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CPU_STAGE" File: C:/Users/joshb/micro2026/final/final.vhd Line: 41
+Warning (10036): Verilog HDL or VHDL warning at cpu_pkg.vhd(76): object "sltValue" assigned a value but never read File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 76
+Info (12128): Elaborating entity "alu8" for hierarchy "cpu:CPU_STAGE|alu8:ALU_ADD" File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 80
+Info (12128): Elaborating entity "alu1" for hierarchy "cpu:CPU_STAGE|alu8:ALU_ADD|alu1:\GEN_ALU:0:ALU_LSB:ALU_LSB_INST" File: C:/Users/joshb/micro2026/final/alu_pkg.vhd Line: 95
+Info (12128): Elaborating entity "divider" for hierarchy "cpu:CPU_STAGE|divider:DIV" File: C:/Users/joshb/micro2026/final/cpu_pkg.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at divider_pkg.vhd(72): signal "clearValue" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshb/micro2026/final/divider_pkg.vhd Line: 72
+Info (12128): Elaborating entity "adder8" for hierarchy "cpu:CPU_STAGE|divider:DIV|adder8:SUB" File: C:/Users/joshb/micro2026/final/divider_pkg.vhd Line: 54
+Info (12128): Elaborating entity "adder1" for hierarchy "cpu:CPU_STAGE|divider:DIV|adder8:SUB|adder1:FA0" File: C:/Users/joshb/micro2026/final/adder_pkg.vhd Line: 104
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:HEX_RT0" File: C:/Users/joshb/micro2026/final/final.vhd Line: 57
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 24 assignments for entity "packages" -- entity does not exist in design
@@ -672,14 +655,14 @@ Warning (20013): Ignored 24 assignments for entity "packages" -- entity does not
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity packages -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 445 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 435 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 59 output pins
-    Info (21061): Implemented 369 logic cells
+    Info (21061): Implemented 359 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4940 megabytes
-    Info: Processing ended: Wed Jun 17 10:03:25 2026
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4931 megabytes
+    Info: Processing ended: Wed Jun 17 18:46:05 2026
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:11
 
 
