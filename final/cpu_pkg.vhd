@@ -80,11 +80,11 @@ begin
 	ALU_ADD: alu8 port map(IDEX_rsData, IDEX_rtData, "0010", addValue);
 	ALU_AND: alu8 port map(IDEX_rsData, IDEX_rtData, "0000", andValue);
 	ALU_SUBAB: alu8 port map(IDEX_rsData, IDEX_rtData, "0110", subABValue);
-	ALU_SUBBA: alu8 port map(IDEX_rsData, IDEX_rtData, "0110", subBAValue);
+	ALU_SUBBA: alu8 port map(IDEX_rtData, IDEX_rsData, "0110", subBAValue);
 	ALU_NOR: alu8 port map(IDEX_rsData, IDEX_rtData, "1100", norValue);
 	ALU_SLT: alu8 port map(IDEX_rsData, IDEX_rtData, "0111", sltValue);
 	
-	DIV: divider port map(clock, divideInit, IDEX_rsData, IDEX_rtData, remainder, divideDone);
+	DIV: divider port map(clock, divideInit, IDEX_rtData, IDEX_rsData, remainder, divideDone);
 	
 	-- alu signal
 	with IDEX_opcode select
