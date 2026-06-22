@@ -2016,13 +2016,21 @@ clear => remainder[13]~reg0.ALOAD
 clear => remainder[14]~reg0.ALOAD
 clear => remainder[15]~reg0.ALOAD
 clear => state~5.DATAIN
+divisor[0] => subValueOut[0].DATAIN
 divisor[0] => adder8:SUB.Y[0]
+divisor[1] => subValueOut[1].DATAIN
 divisor[1] => adder8:SUB.Y[1]
+divisor[2] => subValueOut[2].DATAIN
 divisor[2] => adder8:SUB.Y[2]
+divisor[3] => subValueOut[3].DATAIN
 divisor[3] => adder8:SUB.Y[3]
+divisor[4] => subValueOut[4].DATAIN
 divisor[4] => adder8:SUB.Y[4]
+divisor[5] => subValueOut[5].DATAIN
 divisor[5] => adder8:SUB.Y[5]
+divisor[6] => subValueOut[6].DATAIN
 divisor[6] => adder8:SUB.Y[6]
+divisor[7] => subValueOut[7].DATAIN
 divisor[7] => adder8:SUB.Y[7]
 dividend[0] => Selector14.IN7
 dividend[1] => Selector13.IN7
@@ -2049,6 +2057,14 @@ remainder[13] <= remainder[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 remainder[14] <= remainder[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 remainder[15] <= remainder[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 done <= done.DB_MAX_OUTPUT_PORT_TYPE
+subValueOut[0] <= divisor[0].DB_MAX_OUTPUT_PORT_TYPE
+subValueOut[1] <= divisor[1].DB_MAX_OUTPUT_PORT_TYPE
+subValueOut[2] <= divisor[2].DB_MAX_OUTPUT_PORT_TYPE
+subValueOut[3] <= divisor[3].DB_MAX_OUTPUT_PORT_TYPE
+subValueOut[4] <= divisor[4].DB_MAX_OUTPUT_PORT_TYPE
+subValueOut[5] <= divisor[5].DB_MAX_OUTPUT_PORT_TYPE
+subValueOut[6] <= divisor[6].DB_MAX_OUTPUT_PORT_TYPE
+subValueOut[7] <= divisor[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |final|cpu:CPU_STAGE|divider:DIV|adder8:SUB

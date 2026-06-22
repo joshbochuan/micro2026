@@ -11,7 +11,8 @@ package divider_pkg is
 			divisor: in std_logic_vector(7 downto 0);
 			dividend: in std_logic_vector(7 downto 0);
 			remainder: buffer std_logic_vector(15 downto 0);
-			done      : out std_logic
+			done      : out std_logic;
+			subValueOut: out std_logic_vector(7 downto 0)
 		);
 	end component;
 end package;
@@ -28,7 +29,8 @@ entity divider is
 		divisor: in std_logic_vector(7 downto 0);
 		dividend: in std_logic_vector(7 downto 0);
 		remainder: buffer std_logic_vector(15 downto 0);
-		done      : out std_logic
+		done      : out std_logic;
+		subValueOut: out std_logic_vector(7 downto 0)
 	);
 end divider;
 
@@ -85,7 +87,7 @@ begin
 						remainder <= failValue;
 					end if;
 					
-					if repetition = "00000111" then -- 9th time when repetition is 8
+					if repetition = "00000111" then
 						state <= s3;
 					else
 						repetition <= nextRep;
@@ -100,5 +102,6 @@ begin
 			
 	end process;
 	
+	subValueOut <= divisor;
 	done <= '1' when state = s4 else '0';
 end logicfunc;

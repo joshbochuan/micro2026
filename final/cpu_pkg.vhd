@@ -60,6 +60,7 @@ architecture logicfunc of cpu is
 	signal IDEX_rsData, IDEX_rtData: std_logic_vector(7 downto 0);
 	
 	-- exwb register
+	signal EXWB_opcode: std_logic_vector(3 downto 0);
 	signal EXWB_res: std_logic_vector(7 downto 0);
 	signal EXWB_rsID: std_logic_vector(1 downto 0);
 	
@@ -76,6 +77,8 @@ architecture logicfunc of cpu is
 	signal addValue, andValue, subABValue, subBAValue, norValue, sltValue: std_logic_vector(7 downto 0);
 	signal remainder: std_logic_vector(15 downto 0);
 	signal divideInit, divideDone: std_logic;
+	
+	signal subValueOut: std_logic_vector(7 downto 0);
 begin
 	ALU_ADD: alu8 port map(IDEX_rsData, IDEX_rtData, "0010", addValue);
 	ALU_AND: alu8 port map(IDEX_rsData, IDEX_rtData, "0000", andValue);
@@ -84,7 +87,7 @@ begin
 	ALU_NOR: alu8 port map(IDEX_rsData, IDEX_rtData, "1100", norValue);
 	ALU_SLT: alu8 port map(IDEX_rsData, IDEX_rtData, "0111", sltValue);
 	
-	DIV: divider port map(clock, divideInit, IDEX_rtData, IDEX_rsData, remainder, divideDone);
+	DIV: divider port map(clock, divideInit, IDEX_rtData, IDEX_rsData, remainder, divideDone, subValueOut);
 	
 	-- alu signal
 	with IDEX_opcode select
@@ -94,17 +97,18 @@ begin
 					 andValue               when "0011",
 					 subABValue             when "0101",
 					 subBAValue             when "1001",
-					 norValue               when "0100",
+					 norValue               when "0110",
+					 sltValue               when "0100",
 					 remainder(7 downto 0)  when "1000", -- division
 					 IDEX_rsData            when others;
 	
 	-- registers
-	with IDEX_rsID select
+	with IFID_rsID select
 		regOutA <= regs(7 downto 0)   when "00",
 					  regs(15 downto 8)  when "01",
 					  regs(23 downto 16) when "10",
 					  regs(31 downto 24) when others;
-	with IDEX_rtID select
+	with IFID_rtID select
 		regOutB <= regs(7 downto 0)   when "00",
 					  regs(15 downto 8)  when "01",
 					  regs(23 downto 16) when "10",
@@ -131,7 +135,7 @@ begin
 			if IDEX_opcode = "1000" and divideDone = '0' then
 				exeBusy <= '1';
 				divideInit <= '0'; -- actually let the divider start doing stuff
-			elsif exeBusy = '0' or divideDone = '1' then -- division either never started or now finished 
+			elsif exeBusy = '0' or divideDone = '1' then -- division either never started or now finished
 				-- IF
 				IFID_opcode <= opcode;
 				IFID_rsID <= rs;
@@ -146,6 +150,7 @@ begin
 				IDEX_rtData <= IDEXInB;
 								
 				-- EX
+				EXWB_opcode <= IDEX_opcode;
 				EXWB_rsID <= IDEX_rsID;
 				EXWB_res <= aluRes;
 				exeBusy <= '0';
@@ -162,12 +167,11 @@ begin
 		end if;
 	end process;
 	
-	-- output
 	with rs select
-		rsValueOut <= regs(7 downto 0)   when "00",
-						  regs(15 downto 8)  when "01",
-						  regs(23 downto 16) when "10",
-						  regs(31 downto 24) when others;
+	 	rsValueOut <= regs(7 downto 0)   when "00",
+	 					  regs(15 downto 8)  when "01",
+	 					  regs(23 downto 16) when "10",
+	 					  regs(31 downto 24) when others;
 	with rt select
 		rtValueOut <= regs(7 downto 0)   when "00",
 						  regs(15 downto 8)  when "01",
